@@ -1,0 +1,42 @@
+POINTS TO CONSIDER BEFORE STARTING A PYTHON PROJECT--
+
+You need to create templates and static folders in your project folder, put all .html files in templates folder and all other files (CSS, JS, JPG, etc) in static folder and then in your html
+file use url_for to load the static files, instead of the default HTML way.
+i.e bootstrap looks into templates folder for user templates 'by default' and in static folder for all other files.
+* Here in this project-->
+
+-imdb
+    flaskk.py
+    script.py
+    venv/
+    - templates
+        strap.html
+    -static
+        -css
+          style.css
+        -js
+          example.js
+        -img 
+          example.jpg
+
+Know how HTML CSS and JS works for getting familiar with bootstrap.
+
+How APIs work(HTTP methods).
+
+Work in a virtual environment (venv)
+
+Using Git.
+
+Various python modules to work with:
+	Requests
+	re
+	imaplib(gmail accessing)
+
+
+check the status: git status
+track and stage a single file: git add [filename]
+track and stage all files: git add .
+commit with a message: git commit -m "description of commit"
+view the log: git log
+push changes: git push [remotename] [branchname]
+	
