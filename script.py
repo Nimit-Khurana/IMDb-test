@@ -4,17 +4,20 @@ import json
 
 def jsonp_converter(url):
     req = requests.get(url)
-    json_data = req.text.split("(",1)[1].strip(")")
+    json_data = req.text.split("(", 1)[1].strip(")")
 
     data = json.loads(json_data)
     parsed_data = []
+    # For no results !! #
     try:
         movies = data['d']
     except KeyError:
         return parsed_data
+
     for movie in movies:
         new_movie_format = {}
-        new_movie_format["name"] = movie["l"]
+        if 'l' in movie.keys():
+            new_movie_format["name"] = movie["l"]
         if 'y' in movie.keys():
             new_movie_format["year"] = movie["y"]
         if 's' in movie.keys():
@@ -23,6 +26,7 @@ def jsonp_converter(url):
             new_movie_format["image"] = movie["i"][0]
         parsed_data.append(new_movie_format)
     return json.dumps(parsed_data)
+
 
 def query(parameter):
     query_url = "https://v2.sg.media-imdb.com/suggests/" + parameter[0] + "/" + parameter + ".json"
