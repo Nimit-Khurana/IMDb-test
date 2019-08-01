@@ -15,20 +15,20 @@ def data():
 # query Parameters used instead of complete url #
 @app.route("/get", methods=['GET'])
 def get_data():
-    arg = request.args['q']
+    arg = request.args['query']
     return json.dumps(query(arg), indent=4)
 
 
 # Included Bootstrap here !!! #
-@app.route('/strap')
+@app.route('/html')
 def create_strap():
-    return render_template('strap.html')
+    return render_template('index.html')
 
 '''
 The term ‘web templating system’ refers to designing an HTML script in which the variable data can be inserted
 dynamically. A web template system comprises of a template engine, some kind of data source and a template processor.
 
-Flask uses jinga2 template engine. A web template contains HTML syntax interspersed placeholders for variables and
+Flask uses jinja2 template engine. A web template contains HTML syntax interspersed placeholders for variables and
 expressions (in these case Python expressions) which are replaced values when the template is rendered.
 
 @app.route('/strap/<int:num>')                                {% for x in range(10) %}
