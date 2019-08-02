@@ -19,7 +19,7 @@ def get_data():
     return json.dumps(query(arg), indent=4)
 
 
-# Included Bootstrap here !!! #
+# Included jquery and ajax here !!! #
 @app.route('/search', methods=['GET'])
 def create_strap():
     return render_template('index.html')

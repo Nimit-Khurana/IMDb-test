@@ -7,22 +7,39 @@
             src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
     </script>
 	<script type="text/javascript">
-        $(document).ready(function () {
+		$(document).ready(function () {
 
-		 $('#ajaxBtn').click(function(){
-			$.ajax('/search',
-			{
-				success: function (data, status, xhr) {    // success callback function
-						$('#ajax_data').append(data);
-				}
-			});
-		 });
+		 $('#butt').click(function(){
+			var inputValue = $("#query_input").val();
 
+    		// Output the value
+
+    			$.ajax({
+				  type: "GET",
+				  url: "/about?query=" + inputValue,
+				  data: JSON.stringify({inputValue}),
+				  dataType: "json",
+				  success:function(data) {
+					if (data) {
+						$('#pop').append(data);
+					}else {
+						$('#pop').append(inputValue);
+				    }
+				    console.log(data);
+				  }
+				});
+
+			console.log(inputValue);
         });
+       });
     </script>
 </head>
+
 <body>
-	<p id="ajax_data"></p>
-	<input type="button" id="ajaxBtn" value="Send Ajax request" />
+	<form>
+		<input class="form-control" id="query_input" name=query type="text" placeholder="Enter what to look for">
+		<button type="button" id="butt">Click Me!</button>
+	</form>
+	<p id="pop"></p>
 </body>
 </html>
