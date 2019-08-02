@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+	<script type="text/javascript"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+
+		 $('#ajaxBtn').click(function(){
+			$.ajax('/search',
+			{
+				success: function (data, status, xhr) {    // success callback function
+						$('#ajax_data').append(data);
+				}
+			});
+		 });
+
+        });
+    </script>
+</head>
+<body>
+	<p id="ajax_data"></p>
+	<input type="button" id="ajaxBtn" value="Send Ajax request" />
+</body>
+</html>
