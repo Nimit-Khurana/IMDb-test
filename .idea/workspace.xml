@@ -3,38 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="73cdb4d0-c28c-4161-9e99-3f2a39f37d59" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/notes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/script.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/dom_manipulation.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/dom_manipulation.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/about-mission.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/about-plan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/about-vision.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/call-to-action-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/clients/client-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/clients/client-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/clients/client-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/clients/client-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/clients/client-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/clients/client-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/clients/client-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/clients/client-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/facts-img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/intro-carousel/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/intro-carousel/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/intro-carousel/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/intro-carousel/3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/intro-carousel/4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/intro-carousel/5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/team-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/team-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/team-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/team-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/testimonial-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/testimonial-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/testimonial-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/testimonial-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/testimonial-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/temp_css.txt" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/temp_css.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/dom_manipulation.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/dom_manipulation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/dom_manipulation.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="289">
+              <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -74,8 +45,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/js/dom_manipulation.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="103" selection-start-line="18" selection-start-column="103" selection-end-line="18" selection-end-column="103" />
+            <state relative-caret-position="340">
+              <caret line="20" column="173" selection-start-line="20" selection-start-column="173" selection-end-line="20" selection-end-column="173" />
             </state>
           </provider>
         </entry>
@@ -83,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/temp_css.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="17" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="496">
+              <caret line="62" column="29" lean-forward="true" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -159,6 +130,7 @@
         <option value="$PROJECT_DIR$/script.py" />
         <option value="$PROJECT_DIR$/notes.txt" />
         <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/static/css/temp_css.txt" />
         <option value="$PROJECT_DIR$/static/css/dom_manipulation.css" />
         <option value="$PROJECT_DIR$/static/js/dom_manipulation.js" />
       </list>
@@ -374,20 +346,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/temp_css.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/dom_manipulation.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flaskk.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -402,10 +360,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/temp_css.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="62" column="29" lean-forward="true" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/dom_manipulation.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/dom_manipulation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="103" selection-start-line="18" selection-start-column="103" selection-end-line="18" selection-end-column="103" />
+        <state relative-caret-position="340">
+          <caret line="20" column="173" selection-start-line="20" selection-start-column="173" selection-end-line="20" selection-end-column="173" />
         </state>
       </provider>
     </entry>

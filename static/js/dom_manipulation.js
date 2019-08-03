@@ -1,7 +1,6 @@
 $(document).ready(function () {
-
-		 $('#ajax_button').click(function(){
-			var inputValue = $("#query_input").val();
+         var callback = function() {
+            var inputValue = $("#query_input").val();
 
     		// Output the value
 
@@ -16,13 +15,21 @@ $(document).ready(function () {
 
                         // looping through items in 'response' object which is a list of dicts here..
                         for(i=0;i<data.length;i++) {
-                            const myHtml = "<div class='card'>" + "<a href='https://www.imdb.com/title/" + data[i]['id'] + "'><img class='poster' src='"+ data[i]['image'] +"' ></a>" + "<p style='text-align:center;'>"+data[i]['name']+"</p></div>";
+                            const imdblink = "https://www.imdb.com/title/" + data[i]['id']
+                            const movieposter = data[i]['image']
+                            const moviename = data[i]['name']
+                            const myHtml = "<div class='card'><a target='_blank' href='"+imdblink+"'><img alt='No image available' class='poster' src='"+movieposter+"' ></a><a href='"+imdblink+"'><p style='text-align:center;'>"+moviename+"</p></a></div>";
                             // console.log(typeof(myHtml));
                             if (data) {
                                 $('#main_div').append(myHtml);
                             }
                         }
 				   }
-			});
-         });
+			})
+         };
+
+		 $('#query_input').keypress(function(event) {
+		    if (event.which == 13) callback();
+		 });
+		 $('#ajax_button').click(callback);
 });

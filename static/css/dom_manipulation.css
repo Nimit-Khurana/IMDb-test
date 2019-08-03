@@ -2,7 +2,6 @@
 
 #main_div {
     width: 100%;
-    height: auto;
     border: 1px solid #ccc;
     background-color: black;
     display:block;
@@ -16,7 +15,7 @@
   margin: auto;
   text-align: center;
   font-family: arial;
-
+    height: 350px;
     width: 200px;
     float: left;
     border: 1px solid #ccc;

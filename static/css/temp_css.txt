@@ -10,11 +10,10 @@
 }
 
 .card-front {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  text-align: center;
-  font-family: arial;
-
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    text-align: center;
+    font-family: arial;
     width: 200px;
     max-height: 350px;
     float: right;
@@ -31,8 +30,8 @@
 }
 
 #main_flip {
-  background-color: transparent;
-  perspective: 1000px;
+    background-color: transparent;
+    perspective: 1000px;
 }
 
 .card-inner {
@@ -46,7 +45,7 @@
 }
 
 .flip-card:hover .card-inner {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .card-front, .card-back {

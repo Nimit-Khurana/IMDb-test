@@ -1,4 +1,3 @@
---------------------------------------------------------------------------------------------
 WORKFLOW OF A FLASK PROJECT--
 	* creating a hello world flask app
 	* creating a py script to get data from imdb api
@@ -10,7 +9,7 @@ WORKFLOW OF A FLASK PROJECT--
 	* add jquery and ajax to handle the request
 	* add jquery dom maipulation and css for the results
 	* deploy it to a server
-
+--------------------------------------------------------------------------------------------
 What you get to learn throughout--
     Know how HTML CSS and JS works for getting familiar with bootstrap.
     How APIs work(HTTP methods).
