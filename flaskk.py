@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template
 from script import *
 from flask_bootstrap import Bootstrap
 
@@ -9,7 +9,7 @@ Bootstrap(app)
 # search for movie **complete given url #
 @app.route("/")
 def data():
-    return jsonify(jsonp_converter("https://v2.sg.media-imdb.com/suggests/a/avengers.json"))
+    return jsonp_converter("https://v2.sg.media-imdb.com/suggests/a/avengers.json")
 
 
 # query Parameters used instead of complete url #

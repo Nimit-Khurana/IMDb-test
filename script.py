@@ -16,6 +16,8 @@ def jsonp_converter(url):
 
     for movie in movies:
         new_movie_format = {}
+        if 'id' in movie.keys():
+            new_movie_format['id'] = movie["id"]
         if 'l' in movie.keys():
             new_movie_format["name"] = movie["l"]
         if 'y' in movie.keys():

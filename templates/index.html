@@ -26,39 +26,16 @@
 
   <!-- Main Stylesheet File -->
   <link href="static/css/style.css" rel="stylesheet">
+  <!-- =======================================================
+    CUSTOM style sheet
+  ======================================================= -->
+  <link href="static/css/dom_manipulation.css" rel="stylesheet">
 
   <!-- =======================================================
     AJAX request section
   ======================================================= -->
   <script type="text/javascript"
             src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
-  </script>
-  <script type="text/javascript">
-    $(document).ready(function () {
-
-		 $('#ajax_button').click(function(){
-			var inputValue = $("#query_input").val();
-
-    		// Output the value
-
-    			$.ajax({
-				  type: "GET",
-				  url: "/about?query=" + inputValue,
-				  data: JSON.stringify({inputValue}),
-				  dataType: "json",
-				  success:function(data) {
-					if (data) {
-						$('#pop').append(data);
-					}else {
-						$('#pop').append(inputValue);
-				    }
-				    console.log(data);
-				  }
-				});
-
-			console.log(inputValue);
-        });
-       });
   </script>
 </head>
 
@@ -100,7 +77,7 @@
 				  <div class="md-form mt-0">
                     <form>
 					  <input class="form-control" type="text" id="query_input" name="query" placeholder="Enter what to look for">
-                      <a href="#featured-services" id="ajax_button" class="btn-get-started scrollto">Get Started</a>
+                      <a href="#" id="ajax_button" class="btn-get-started scrollto">Search</a>
                     </form>
               </div>
             </div>
@@ -109,26 +86,12 @@
     </div>
   </section><!-- #intro -->
 
+  <div id="main_div">
 
+  </div>
   <!--==========================
-    Footer
+    Add Footer here <footer>
   ============================-->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>IMDb</h3>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </footer><!-- #footer -->
-
-  <p id="pop"></p>
-
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <!-- Uncomment below i you want to use a preloader -->
@@ -152,6 +115,12 @@
 
   <!-- Template Main Javascript File -->
   <script src="static/js/main.js"></script>
+<!-- ===================================
+  Custom js scripts
+  1 DOM manipulation
+  2 DOM CSS
+  =====================================-->
+  <script src="static/js/dom_manipulation.js"></script>
 
 </body>
 </html>
