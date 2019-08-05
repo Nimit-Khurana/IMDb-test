@@ -18,7 +18,7 @@ $(document).ready(function () {
                             const imdblink = "https://www.imdb.com/title/" + data[i]['id']
                             const movieposter = data[i]['image']
                             const moviename = data[i]['name']
-                            const myHtml = "<div class='card'><a target='_blank' href='"+imdblink+"'><img alt='No image available' class='poster' src='"+movieposter+"' ></a><a href='"+imdblink+"'><p style='text-align:center;'>"+moviename+"</p></a></div>";
+                            const myHtml = "<div class='card'><a target='_blank' href='"+imdblink+"'><img alt='No image available' class='poster' src='"+movieposter+"' ></a><a href='"+imdblink+"'><p id='card_p' style='text-align:center;'>"+moviename+"</p></a></div>";
                             // console.log(typeof(myHtml));
                             if (data) {
                                 $('#main_div').append(myHtml);
@@ -28,8 +28,10 @@ $(document).ready(function () {
 			})
          };
 
-		 $('#query_input').keypress(function(event) {
-		    if (event.which == 13) callback();
+		 $('#query_input').keypress(function(e) {
+		    if (e.which == 13) {
+		    callback();
+		    }
 		 });
-		 $('#ajax_button').click(callback);
+		 $('#ajax_button').one('click',callback);
 });

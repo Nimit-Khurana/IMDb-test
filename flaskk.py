@@ -7,9 +7,9 @@ Bootstrap(app)
 
 
 # search for movie **complete given url #
-@app.route("/")
+@app.route("/", methods=['GET'])
 def data():
-    return jsonp_converter("https://v2.sg.media-imdb.com/suggests/a/avengers.json")
+    return render_template('index.html')
 
 
 # query Parameters used instead of complete url #

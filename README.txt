@@ -24,7 +24,7 @@ What you get to learn throughout--
         push changes: git push [remotename] [branchname]
     Server handling
 
-    Issues faced in api response--
+    <==>Issues faced in api response-->
         *Use only IMDb api not any other. Using that gives a JSON-p response.
         *You need to create templates and static folders in your project folder, put all .html
          files in templates folder and all other files (CSS, JS, JPG, etc) in static folder
@@ -67,11 +67,16 @@ What you get to learn throughout--
         link="https://www.youtube.com/watch?v=vtiiO5I90Tc"
 
     jquery---passing form data to a variable and appending it to a <p> tag.
-        link="https://stackoverflow.com/questions/42078242/store-html-form-data-in-js-variable-using-jquery-serializearray"
+        link="https://stackoverflow.com/questions/42078242/store-html-form-data-in-js-variable
+	-using-jquery-serializearray"
 
     DOM (Document Object Model)
         link="https://www.w3.org/TR/WD-DOM/introduction.html"
         link="https://www.tutorialsteacher.com/jquery/jquery-dom-manipulation"
+
+    <==>Learn in-browser editing html and css-->
+	localhost cache
+	browser console
 
     Server handling(ubuntu)--
         server is of 2 types: physical and application server(flask, django, ssh, etc)
@@ -92,10 +97,11 @@ What you get to learn throughout--
         installing nginx
         'a records' in DomainNameSystem.
             now create nameserver on domain host's website to create your URL.
+    link="https://medium.com/@jgefroh/a-guide-to-using-nginx-for-static-websites-d96a9d034940"
         push your files to the server and run your flask app at 0.0.0.0:80 in tmux.
         Why tmux?  tmux creates a session and not ends it when you log out of your server or
                close your terminal unless tmux is ended.
-        Issues faced when starting app-->
+        <==>Issues faced when starting app-->
             1.) flask wont run as a user on port 80, which is universal port for listening
                 default port for flask is 5000
             2.) app won't run on root user at port 80
@@ -103,3 +109,8 @@ What you get to learn throughout--
 
         install TMUX on server and push the directory on server.
         virtual host in linux
+
+
+Tricks-->
+	ctrl + shift + r in browser to load page w/o cache.
+	jquery .one() method to limit number of clicks.
