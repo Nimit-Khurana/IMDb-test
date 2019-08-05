@@ -1,0 +1,111 @@
+{% macro render_field(field) %} 
+{{ field.label(class_="login-fieldname")}}
+{{ field(class_="login-field")}}
+<ul>
+    {% for error in field.errors %}
+    <li style="color:red;">{{ error }} </li>
+    {% endfor %}
+</ul>
+{% endmacro %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap css -->
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link href="static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
+  <link href="static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="static/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="static/lib/modal-video/css/modal-video.min.css" rel="stylesheet">
+
+  <!-- Login Stylesheet File -->
+  <link href="static/css/login.css" rel="stylesheet">
+  
+
+
+</head>
+
+<body>
+
+  <header id="header" class="header header-hide">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#body" class="scrollto"><span>N</span>K</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+      <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <li class="menu-active"><a href="/moviesearch">ImDb</a></li>
+            
+          </ul>
+      </nav>
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Hero Section
+  ============================-->
+  <section id="hero" class="wow fadeIn">
+    <div class="hero-container">
+      <img src="static/img/login.jpg" alt="login img">
+      <a href="/login"><div class="login-text">login</div></a>
+      <p class="login-text move-down">&#751;</p>
+      <div class="login">
+          <p class="login-form"><form method="POST" autocomplete="on" action="{{url_for('Login') }}">
+              {{ form.csrf_token }}
+              {{ render_field(form.username) }}
+              <br>
+              {{ render_field(form.password) }}
+              <br>
+              <input class="submit-btn" type='submit' value='Log In'>
+          </form>
+          <a href="/"><div class="forgot">Forgot Password?</div></a>
+          <a href="#"><div class="register">Register</div></a>
+          <br>
+          <a href="/moviesearch"><div class="back-to">&larr;To Imdb</div></a>
+          </p>
+      </div>
+    </div>
+  </section><!-- #hero -->
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="static/lib/jquery/jquery.min.js"></script>
+  <script src="static/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/lib/superfish/hoverIntent.js"></script>
+  <script src="static/lib/superfish/superfish.min.js"></script>
+  <script src="static/lib/easing/easing.min.js"></script>
+  <script src="static/lib/modal-video/js/modal-video.js"></script>
+  <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="static/lib/wow/wow.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="static/contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+</html>

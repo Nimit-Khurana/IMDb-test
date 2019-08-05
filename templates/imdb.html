@@ -26,6 +26,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="static/css/style.css" rel="stylesheet">
+
   <!-- =======================================================
     CUSTOM style sheet
   ======================================================= -->
@@ -37,6 +38,7 @@
   <script type="text/javascript"
             src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
   </script>
+  
 </head>
 
 <body>
@@ -50,8 +52,12 @@
       <div id="logo" class="pull-left">
         <h1><a href="#intro" class="scrollto">IMDb</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+        <!--<a href="#intro"><img src="static/img/" alt="" title="" /></a>-->
       </div>
+      <div id="connect">
+        <!-- checking if connected to internet-->
+      </div>
+  
 
     </div>
   </header><!-- #header -->
@@ -65,7 +71,7 @@
       <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
 
         <ol class="carousel-indicators"></ol>
-
+        
         <div class="carousel-inner" role="listbox">
 
           <div class="carousel-item active">
@@ -74,9 +80,10 @@
               <div class="carousel-content">
 
                 <h2>Search for movies</h2>
-				  <div class="md-form mt-0">
+				      <div class="md-form mt-0">
+                <a href="https://www.imdb.com"><div class="ball">IMDb</div></a>
                     <form>
-					  <input class="form-control" type="text" id="query_input" name="query" placeholder="Enter what to look for">
+					            <input class="form-control" type="text" id="query_input" name="query" placeholder="Enter what to look for">
                       <a href="#" id="ajax_button" class="btn-get-started scrollto">Search</a>
                     </form>
               </div>
@@ -89,9 +96,11 @@
   <div id="main_div">
 
   </div>
+  
   <!--==========================
     Add Footer here <footer>
   ============================-->
+  
 
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <!-- Uncomment below i you want to use a preloader -->

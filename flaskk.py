@@ -1,15 +1,26 @@
+# flask imports
 from flask import Flask, request, render_template
 from script import *
 from flask_bootstrap import Bootstrap
+# end flask imports
+# form imports
+from login_form import loginform
+# end form imports
 
 app = Flask(__name__)
-Bootstrap(app)
 
 
-# search for movie **complete given url #
+app.config['SECRET_KEY'] = 'secret'
+
+
+@app.route('/login',methods=['GET','POST'])
+def Login():
+    form = loginform()
+    return render_template('login.html', form=form)
+
 @app.route("/", methods=['GET'])
 def data():
-    return render_template('index.html')
+    return render_template()
 
 
 # query Parameters used instead of complete url #
@@ -19,16 +30,16 @@ def get_data():
     return json.dumps(query(arg), indent=4)
 
 
-# Included jquery and ajax here !!! #
-@app.route('/search', methods=['GET'])
+@app.route('/moviesearch', methods=['GET'])
 def create_strap():
-    return render_template('index.html')
+    return render_template('imdb.html')
 
-
+# Included jquery and ajax !!! #
 # Request from ajax to flask--> check ajax_req.html
-@app.route('/test', methods=['GET'])
+
+@app.route('/test')
 def test():
-    return render_template('ajax_req.html')
+    return render_template()    
 
 '''
 The term ‘web templating system’ refers to designing an HTML script in which the variable data can be inserted

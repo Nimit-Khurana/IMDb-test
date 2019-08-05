@@ -11,6 +11,7 @@ WORKFLOW OF A FLASK PROJECT--
 	* deploy it to a server
 =============================================================================
 What you get to learn throughout--
+    Difference b\w static website and a web application
     Know how HTML CSS and JS works for getting familiar with bootstrap.
     How APIs work(HTTP methods).
     Work in a virtual environment (venv)
@@ -103,3 +104,7 @@ What you get to learn throughout--
 
         install TMUX on server and push the directory on server.
         virtual host in linux
+
+
+STUDY LINKS:
+Javascript youtube channel: "https://www.youtube.com/channel/UCWv7vMbMWH4-V0ZXdmDpPBA"

@@ -4,6 +4,7 @@ import json
 
 def jsonp_converter(url):
     req = requests.get(url)
+    #convert p-json to json
     json_data = req.text.split("(", 1)[1].strip(")")
 
     data = json.loads(json_data)
