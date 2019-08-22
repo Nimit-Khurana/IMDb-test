@@ -1,17 +1,18 @@
 $(document).ready(function () {
          var callback = function() {
+            $('.card').remove();
             var inputValue = $("#query_input").val();
 
     		// Output the value
 
     		$.ajax({
 				  'type': "GET",
-				  'url': "/about?query=" + inputValue,
+				  'url': "/moviejson?query=" + inputValue,
 			   	   success: function(response) {
                         const data = JSON.parse(JSON.parse(response));
-                        // debug
-                        console.log(typeof(data));
-                        console.log(data[0]);
+                        // debug**
+                        //console.log(typeof(data));
+                        //console.log(data[0]);
 
                         // looping through items in 'response' object which is a list of objects here..
                         for(i=0;i<data.length;i++) {
@@ -26,9 +27,10 @@ $(document).ready(function () {
                         }
 				   }
             })
+            $("#query_input").val("");
          };
 
-         $('#ajax_button').one('click',callback);
+         $('#ajax_button').click(callback);
 
          // check connection status...
          setTimeout(()=> {

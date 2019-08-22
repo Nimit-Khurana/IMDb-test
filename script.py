@@ -31,6 +31,6 @@ def jsonp_converter(url):
     return json.dumps(parsed_data)
 
 
-def query(parameter):
+def movie_query(parameter):
     query_url = "https://v2.sg.media-imdb.com/suggests/" + parameter[0] + "/" + parameter + ".json"
     return jsonp_converter(query_url)

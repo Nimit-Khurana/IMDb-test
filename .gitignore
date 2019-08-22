@@ -10,3 +10,6 @@ index_test.html
 ajax_test.html
 temp.css
 .idea/
+users.db
+templates/
+static/

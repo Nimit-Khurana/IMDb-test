@@ -19,7 +19,7 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="static/img/favicon.png" rel="icon">
+  <link href="" rel="icon">
   <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -49,14 +49,14 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#body" class="scrollto"><span>N</span>K</a></h1>
+        <h1><a href="{{ url_for('root') }}" class="scrollto"><span>N</span>K</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+        <!-- <a href="#body"><img src="static/img/favicon.png" alt="" title="" /></a> -->
       </div>
       <nav id="nav-menu-container">
           <ul class="nav-menu">
-            <li class="menu-active"><a href="/moviesearch">ImDb</a></li>
-            
+            <li class="menu-active"><a href="#">Option</a></li>
+            <li class="menu-active"><a href="#">another Option</a></li>
           </ul>
       </nav>
     </div>
@@ -68,22 +68,37 @@
   <section id="hero" class="wow fadeIn">
     <div class="hero-container">
       <img src="static/img/login.jpg" alt="login img">
-      <a href="/login"><div class="login-text">login</div></a>
+
+      <div id="home-side-nav">
+          <a href="#" id="home">Home</a>
+      </div>
+      <div id="register-side-nav">
+          <a href="{{ url_for('register') }}" id="register">Register</a>
+      </div>
+      <div id="projects-side-nav">
+          <a href="#" id="projects">Projects</a>
+      </div>
+
+      <div class="login-text">login</div>
       <p class="login-text move-down">&#751;</p>
       <div class="login">
-          <p class="login-form"><form method="POST" autocomplete="on" action="{{url_for('Login') }}">
+          <p class="login-form">
+            <form method="POST" autocomplete="on" action="{{url_for('login') }}">
               {{ form.csrf_token }}
               {{ render_field(form.username) }}
               <br>
               {{ render_field(form.password) }}
               <br>
-              <input class="submit-btn" type='submit' value='Log In'>
+              <div style="color:whitesmoke; float:left; padding-left:20px;">{{ form.remember }} {{form.remember.label}}</div> 
+              <br>
+              <input class="login-btn" type='submit' value='Log In'>
           </form>
-          <a href="/"><div class="forgot">Forgot Password?</div></a>
-          <a href="#"><div class="register">Register</div></a>
+          <a href="#"><div class="forgot">Forgot Password?</div></a>
           <br>
-          <a href="/moviesearch"><div class="back-to">&larr;To Imdb</div></a>
           </p>
+          {% if error %}
+            <p style="color:red;font-size: 14px;float:left;" class="error">Error: {{ error }}
+          {% endif %}
       </div>
     </div>
   </section><!-- #hero -->

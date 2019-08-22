@@ -1,14 +1,17 @@
-WORKFLOW OF A FLASK PROJECT--
+WORKFLOW OF THIS FLASK PROJECT--
 	* crearing a hello world flask app
 	* creating a py script to get data from imdb api
 	* integrate above steps to run on route '/'
 	* movie name as user input in search bar search parameter
 	* creating a bootstrap loaded html page and rendered it in flask
-	* defining a search bar that takes in the movie name as search parameter instead of
-	  adding manually in the url
+	* defining a search bar that takes in the (text)movie name as search parameter
+		instead of adding manually in the url and getting that text through jquery
 	* add jquery and ajax to handle the request
 	* add jquery dom maipulation and css for the results
-	* deploy it to a server
+	* Intro of forms for login - wtf form
+		instead of getting search param for movie, used forms instead ie POST req.
+	* Intro of database to save user credentials and posts if anyi
+	* deploy it on a server
 =============================================================================
 What you get to learn throughout--
     Difference b\w static website and a web application
@@ -17,12 +20,13 @@ What you get to learn throughout--
     Work in a virtual environment (venv)
     Using Git.
         GIT comms to push commits--
-        check the status: git status
-        track and stage a single file: git add [filename]
-        track and stage all files: git add .
-        commit with a message: git commit -m "description of commit"
-        view the log: git log
-        push changes: git push [remotename] [branchname]
+       	 check the status: git status
+       	 track and stage a single file: git add [filename]
+       	 track and stage all files: git add .
+       	 commit with a message: git commit -m "description of commit"
+       	 view the log: git log
+       	 push changes: git push [remotename] [branchname]
+	 revert back to prev. saved file: git checkout --<filename>
     Server handling
 
     Issues faced in api response--
