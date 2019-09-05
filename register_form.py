@@ -9,8 +9,4 @@ class registerform(FlaskForm):
     username = StringField('Username',validators=[DataRequired()], render_kw={"placeholder": "Username"})
     email = StringField('Email', validators=[Length(min=5, max=16,message="Enter between 5 and 16")], render_kw={"placeholder": "Email"})
     password = PasswordField('password', validators=[DataRequired()],render_kw={"placeholder": "New Password"})
-    #avatar 
-    gender = RadioField('Gender', choices=[('m','male'),('f','female')])
-    
-
-    #language = SelectField(u'Programming Language', choices=[('cpp', 'C++'), ('py', 'Python'), ('text', 'Plain Text')])
+    #avatar

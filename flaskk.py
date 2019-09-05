@@ -11,6 +11,11 @@ from flask_login import LoginManager, login_user, logout_user, login_required, c
 from dbconfig import DBconfig
 from flask_sqlalchemy import SQLAlchemy
 from models import *
+# image/file upload by user
+from werkzeug.utils import secure_filename
+
+
+UPLOAD_FOLDER = '/home/richie/python/imdb/static/img/user_images'
 
 app = Flask(__name__)
 
@@ -25,6 +30,8 @@ app.config.from_object(DBconfig)
 
 db = SQLAlchemy(app)
 
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def root():
@@ -52,7 +59,7 @@ def login():
         else:
             if request.form.get('password') == user.password_hash :
                 ## Doesn't work <======== remember me ========>
-                login_user(user, remember=remember_me )
+                login_user(user)
                 return redirect( url_for('home', logged_in_user_name=current_user.name)  )
             else:
                 error = "Wrong Password"
@@ -61,9 +68,12 @@ def login():
     return render_template('login.html', form=form, error=error)
 
 
-@app.route("/home/<logged_in_user_name>")
+@app.route("/home/<logged_in_user_name>", methods=['GET','POST'])
 @login_required
 def home(logged_in_user_name):
+    if request.method == 'POST':
+        post_submitted = post_submit(request.form['post_input'], current_user.get_id())
+        # to DO--- reset form after submission #
     return render_template("user_page.html", name=logged_in_user_name)
 
 @app.route("/logout")
@@ -77,8 +87,19 @@ def logout():
 def register():
     error = None
     form = registerform()
+
+    def allowed_file(filename):
+        return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
     if request.method == 'POST':
-        return user_register(request.form['username'], request.form['fname'], request.form['lname'], request.form['email'], request.form['password'])
+        reg_result = user_register(request.form['username'], request.form['fname'], request.form['lname'], request.form['email'], request.form['password'])
+        if not reg_result:
+            # for invalid request error on Database
+            DBrollback()
+            redirect( url_for('register') )
+        else:
+            return redirect(url_for('login') )
         
 
     return render_template('register.html', regform=form)
@@ -106,9 +127,12 @@ def imdb():
 
 # Included jquery and ajax !!! #
 # Request from ajax to flask--> check ajax_req.html
-@app.route('/test')
+@app.route('/test', methods=['GET','POST'])
 def test():
-    return render_template('home.html')
+    if request.method == 'POST':
+        post_submitted = post_submit(request.form['post_input'])
+        return redirect(url_for('test'))
+    return render_template('test.html')
 
 
 '''

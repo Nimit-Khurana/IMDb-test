@@ -220,7 +220,7 @@ body {
     position: absolute;
     font-size: 19px;
     top: 27%;
-    left: 50%;
+    left: 65%;
     transform: translate(-50%, -15%);
     width: 25%;
     min-height: 350px;
@@ -257,7 +257,7 @@ body {
   width: 120px;
   text-decoration: none;
   font-size: 20px;
-  color: white;
+  color: black;
   border-radius: 0 5px 5px 0;
 }
 #home-side-nav a {
@@ -268,22 +268,28 @@ body {
 }
 
 #login-side-nav a:hover{
+  background-color: black;
+  color: #f1f1f1;
   left: 0;
 }
 #home-side-nav a:hover{
+  background-color: black;
+  color: #f1f1f1;
   left: 0;
 }
 #projects-side-nav a:hover{
+  background-color: black;
+  color: #f1f1f1;
   left: 0;
 }
 #login {
-  background-color: #4CAF50;
+  background-color: #f1f1f1;
 }
 #projects {
-  background-color: #f44336;
+  background-color: #f1f1f1;
 }
 #home {
-  background-color: #2196F3;
+  background-color: #f1f1f1;
 }
   
   

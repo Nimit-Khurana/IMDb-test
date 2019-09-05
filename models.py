@@ -32,12 +32,18 @@ def user_register(uname, fname, lname, email, password):
 
     return "user created"
 
-def user_query(args):
-    user = args
-    return user
+def DBrollback():
+    return db.session.rollback()
 
 def user_cookie(user_id):
     return User.query.get(int(user_id))
 
 def user_if_exists(name):
     return User.query.filter_by(username=name).first()
+
+
+def post_submit(post_input, current_userid):
+    user_post = Post(post=post_input, user_id=current_userid)
+    db.session.add(user_post)
+    db.session.flush()
+    db.session.commit()
