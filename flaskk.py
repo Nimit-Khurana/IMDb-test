@@ -46,12 +46,15 @@ def load_user(id):
 
 @app.route('/login',methods=['GET','POST'])
 def login():
+    if current_user.is_active and current_user.is_authenticated:
+        return redirect( url_for('home') )
     error = None
     form = loginform()
 
     remember_me = request.form.get('remember')
     uname = request.form.get('username')
-    user = user_if_exists(uname)
+    user = user_exists(uname)
+
     if form.validate_on_submit():
         if not user:
             error = "Username not found!"
@@ -60,7 +63,7 @@ def login():
             if request.form.get('password') == user.password_hash :
                 ## Doesn't work <======== remember me ========>
                 login_user(user)
-                return redirect( url_for('home', logged_in_user_name=current_user.name)  )
+                return redirect( url_for('home')  )
             else:
                 error = "Wrong Password"
                 return render_template('login.html', form=form, error=error)
@@ -68,13 +71,13 @@ def login():
     return render_template('login.html', form=form, error=error)
 
 
-@app.route("/home/<logged_in_user_name>", methods=['GET','POST'])
+@app.route("/home", methods=['GET','POST'])
 @login_required
-def home(logged_in_user_name):
+def home():
     if request.method == 'POST':
         post_submitted = post_submit(request.form['post_input'], current_user.get_id())
         # to DO--- reset form after submission #
-    return render_template("user_page.html", name=logged_in_user_name)
+    return render_template("user_page.html", name=current_user.name)
 
 @app.route("/logout")
 @login_required
@@ -127,12 +130,14 @@ def imdb():
 
 # Included jquery and ajax !!! #
 # Request from ajax to flask--> check ajax_req.html
-@app.route('/test', methods=['GET','POST'])
+@app.route('/test')
 def test():
-    if request.method == 'POST':
-        post_submitted = post_submit(request.form['post_input'])
-        return redirect(url_for('test'))
-    return render_template('test.html')
+    message = None
+    posts = get_user_post(current_user.get_id())
+    if posts is None:
+        message = "No posts yet!"
+        return render_template('test.html', html_message=message)
+    return render_template('test.html', posts = posts)
 
 
 '''

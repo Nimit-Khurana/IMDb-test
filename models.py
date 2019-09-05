@@ -21,7 +21,7 @@ class Post(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     def __repr__(self):
-        return '<Post {}>'.format(self.post)
+        return self.post
 
 
 def user_register(uname, fname, lname, email, password):
@@ -38,7 +38,7 @@ def DBrollback():
 def user_cookie(user_id):
     return User.query.get(int(user_id))
 
-def user_if_exists(name):
+def user_exists(name):
     return User.query.filter_by(username=name).first()
 
 
@@ -47,3 +47,7 @@ def post_submit(post_input, current_userid):
     db.session.add(user_post)
     db.session.flush()
     db.session.commit()
+    return "post created"
+
+def get_user_post(current_userid):
+    return Post.query.filter_by(user_id=current_userid).all()
