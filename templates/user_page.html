@@ -8,7 +8,7 @@
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!--=======================================
-    CUSTOM STYLESHEET *not working*
+    CUSTOM STYLESHEET
   ========================================-->
   <link rel="stylesheet" href="static/css/user_page.css">
 <style>
@@ -21,7 +21,6 @@
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="#" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-theme-d4"><i class="fa fa-home w3-margin-right"></i>Home</a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
   <div class="w3-dropdown-hover w3-hide-small">
@@ -34,7 +33,7 @@
   </div>
   <a href="{{ url_for('logout') }}" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">Logout</a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-    <img src="static/img/project.png" class="w3-circle" style="height:23px;width:23px" alt="useravatar">
+    <img src="static/img/title.png            " class="w3-circle" style="height:23px;width:23px" alt="useravatar">
   </a>
   
  </div>
@@ -45,7 +44,7 @@
   <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
   <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
   <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">My Profile</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large">          {{ name }}         </a>
 </div>
 
 
@@ -58,9 +57,9 @@
       <!-- Profile -->
       <div class="w3-card w3-round w3-white">
         <div class="w3-container">
-         <h4 class="w3-center">My Profile</h4>
+         <h4 class="w3-center">      {{name}}      </h4>
 
-          <p class="w3-center"><img src="/w3images/avatar2.png" class="w3-circle" style="height:106px;width:106px" alt="avatar"></p>
+          <p class="w3-center"><img src="static/img/title.png       " class="w3-circle" style="height:106px;width:106px" alt="useravatar"></p>
 
          <hr>
          <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> Designer, UI</p>
@@ -114,30 +113,12 @@
         <div class="w3-container">
           <p>Interests</p>
           <p>
-            <span class="w3-tag w3-small w3-theme-d5">News</span>
-            <span class="w3-tag w3-small w3-theme-d4">W3Schools</span>
-            <span class="w3-tag w3-small w3-theme-d3">Labels</span>
-            <span class="w3-tag w3-small w3-theme-d2">Games</span>
-            <span class="w3-tag w3-small w3-theme-d1">Friends</span>
-            <span class="w3-tag w3-small w3-theme">Games</span>
-            <span class="w3-tag w3-small w3-theme-l1">Friends</span>
-            <span class="w3-tag w3-small w3-theme-l2">Food</span>
-            <span class="w3-tag w3-small w3-theme-l3">Design</span>
-            <span class="w3-tag w3-small w3-theme-l4">Art</span>
             <span class="w3-tag w3-small w3-theme-l5">Photos</span>
           </p>
         </div>
       </div>
       <br>
-      
-      <!-- Alert Box -->
-      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
-        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
-          <i class="fa fa-remove"></i>
-        </span>
-        <p><strong>Hey!</strong></p>
-        <p>People are looking at your profile. Find out who.</p>
-      </div>
+    
     
     <!-- End Left Column -->
     </div>
@@ -149,11 +130,12 @@
         <div class="w3-col m12">
           <div class="w3-card w3-round w3-white">
             <div class="w3-container w3-padding">
-              <h6 class="w3-opacity">Write what you want to share!!</h6>
+
+              <h6 class="w3-opacity">       Write what you want to share!!    </h6>
               
               <div class="div_textarea">
                   <form method="POST">
-                      <textarea class="textarea w3-border w3-padding" style="width:100%;" name="post_input" placeholder="Write a post"></textarea>
+                      <textarea class="textarea w3-border w3-padding" name="post_input" placeholder="Write a post"></textarea>
                       <br>
                       <button type="submit" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Post</button> 
                   </form>
@@ -168,7 +150,7 @@
         <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
         <span class="w3-right w3-opacity">1 min</span>
 
-        <h4>{{ name }}</h4><br>
+        <h4>John Doe</h4><br>
 
         <hr class="w3-clear">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -212,12 +194,12 @@
     <!-- Right Column -->
     <div class="w3-col m2">
       <div class="w3-card w3-round w3-white w3-center">
-        <div class="w3-container">
-          <p>Upcoming Events:</p>
-          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
-          <p><strong>Holiday</strong></p>
-          <p>Friday 15:00</p>
-          <p><button class="w3-button w3-block w3-theme-l4">Info</button></p>
+        <div class="w3-container" style="overflow:hidden;">
+          <br>  
+          <a href="#" style="text-decoration:none;"><button class="w3-button w3-block w3-theme-l4">Check Your Posts</button></a>
+          <br>
+          <a href="{{ url_for('allpost') }}" style="text-decoration:none;"><button class="w3-button w3-block w3-theme-l4">Check Posts</button></a>
+          <br>
         </div>
       </div>
       <br>
@@ -240,7 +222,7 @@
       <br>
       
       <div class="w3-card w3-round w3-white w3-padding-16 w3-center">
-        <p>ADS</p>
+        <p>EMPTY</p>
       </div>
       <br>
       

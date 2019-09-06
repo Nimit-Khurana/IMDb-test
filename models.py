@@ -22,6 +22,13 @@ class Post(db.Model):
 
     def __repr__(self):
         return self.post
+    
+    def post_post(self):
+        return self.post
+    def post_time(self):
+        return str(self.timestamp)
+    def post_userid(self):
+        return str(User.query.filter_by( id=self.user_id).first() )
 
 
 def user_register(uname, fname, lname, email, password):
@@ -29,7 +36,6 @@ def user_register(uname, fname, lname, email, password):
     db.session.add(user)
     db.session.flush()
     db.session.commit()
-
     return "user created"
 
 def DBrollback():
@@ -51,3 +57,11 @@ def post_submit(post_input, current_userid):
 
 def get_user_post(current_userid):
     return Post.query.filter_by(user_id=current_userid).all()
+
+def get_user_post_all():
+    post_list = []
+
+    posts = Post.query.all()
+    for post in posts:
+        post_list.append( [Post.post_userid(post), Post.post_time(post), Post.post_post(post)] )
+    return post_list

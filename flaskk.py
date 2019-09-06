@@ -46,8 +46,10 @@ def load_user(id):
 
 @app.route('/login',methods=['GET','POST'])
 def login():
+    # CHECK if already user is logged in from a client #
     if current_user.is_active and current_user.is_authenticated:
         return redirect( url_for('home') )
+
     error = None
     form = loginform()
 
@@ -62,7 +64,7 @@ def login():
         else:
             if request.form.get('password') == user.password_hash :
                 ## Doesn't work <======== remember me ========>
-                login_user(user)
+                login_user(user, remember=remember_me)
                 return redirect( url_for('home')  )
             else:
                 error = "Wrong Password"
@@ -74,10 +76,27 @@ def login():
 @app.route("/home", methods=['GET','POST'])
 @login_required
 def home():
+    message = None
     if request.method == 'POST':
         post_submitted = post_submit(request.form['post_input'], current_user.get_id())
+    # GET user posts HERE #
+    posts = get_user_post(current_user.get_id())
+    # TO-DO-- CHECK return type for 'posts' : message not working #
+    if posts is None:
+        message = "No posts yet!"
         # to DO--- reset form after submission #
-    return render_template("user_page.html", name=current_user.name)
+    return render_template("user_page.html", html_message=message, name=current_user.name, posts = posts)
+
+@app.route("/home/posts", methods=['GET'])
+@login_required
+def allpost():
+    post = None
+    post = get_user_post_all()
+    # post gets a list return type #
+    if post==None:
+        return "No user posts!!"
+    return render_template("allPosts.html", posts=post)
+
 
 @app.route("/logout")
 @login_required
@@ -132,12 +151,12 @@ def imdb():
 # Request from ajax to flask--> check ajax_req.html
 @app.route('/test')
 def test():
-    message = None
-    posts = get_user_post(current_user.get_id())
-    if posts is None:
-        message = "No posts yet!"
-        return render_template('test.html', html_message=message)
-    return render_template('test.html', posts = posts)
+    post = None
+    post = get_user_post_all()
+    # post gets a list return type #
+    if not post:
+        return "No user posts!!"
+    return render_template('test.html', posts=post)
 
 
 '''

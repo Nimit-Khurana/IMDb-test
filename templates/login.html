@@ -1,6 +1,6 @@
 {% macro render_field(field) %} 
-{{ field.label(class_="login-fieldname")}}
-{{ field(class_="login-field")}}
+{{ field.label(class_="login-fieldname") }}
+{{ field(class_="login-field") }}
 <ul>
     {% for error in field.errors %}
     <li style="color:red;">{{ error }} </li>
