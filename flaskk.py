@@ -145,7 +145,7 @@ def movie_json():
         for i in range(len(data_load)):
             if 'image' not in data_load[i].keys():
                 data_load[i]['image'] = ""
-            upload = search_cache(search=arg+"_"+str(i),name=data_load[i]['name'],movieid=data_load[i]['id'],image=data_load[i]['image'])
+            upload = search_cache(search=arg,name=data_load[i]['name'],movieid=data_load[i]['id'],image=data_load[i]['image'])
             #if not upload:
             #    # for invalid request error on Database
             #    DBrollback()

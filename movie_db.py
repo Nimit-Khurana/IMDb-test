@@ -29,6 +29,8 @@ def if_search_exists(name):
 def return_search_data(name):
     result = movie.query.filter_by(searchString=name).all()
     db_list_movie = []
+    #db_list_movie.append(str(result))
+    #return result
     for r in result:
         db_list_movie.append({'name':r.searchString, 'image':r.image_url, 'id':r.movieid})
-        return db_list_movie
+    return db_list_movie
