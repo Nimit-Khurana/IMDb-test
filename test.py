@@ -11,7 +11,7 @@ data = movie_query("avengers")
 #print (type(json.dumps(data)))
 #print (type(data))
 
-from movie_db import movie,return_search_data
+from movie_db import movie,return_search_data,check_update_time
 from flaskk import db
 
-print (return_search_data("avengers"))
+print (check_update_time("avengers"))

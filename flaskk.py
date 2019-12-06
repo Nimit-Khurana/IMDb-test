@@ -1,3 +1,4 @@
+from datetime import datetime
 import json
 from script import movie_query
 # flask imports
@@ -138,19 +139,22 @@ def register():
 @app.route("/moviejson", methods=['GET'])
 def movie_json():
     arg = request.args['query']
-    if if_search_exists(arg)==None:
-        data = movie_query(arg)
-        data_load = json.loads(data)
-        data_dump = json.dumps(data)
-        for i in range(len(data_load)):
-            if 'image' not in data_load[i].keys():
-                data_load[i]['image'] = ""
-            upload = search_cache(search=arg,name=data_load[i]['name'],movieid=data_load[i]['id'],image=data_load[i]['image'])
-            #if not upload:
-            #    # for invalid request error on Database
-            #    DBrollback()
-            #    redirect( url_for('movie_json') )
-        return json.dumps(data, indent=4)
+    time_now = datetime.now()
+    time_diff = time_now - check_update_time(arg)
+    if divmod(time_diff.total_seconds(),60)[0] > 600:
+        if if_search_exists(arg)==None:
+            data = movie_query(arg)
+            data_load = json.loads(data)
+            data_dump = json.dumps(data)
+            for i in range(len(data_load)):
+                if 'image' not in data_load[i].keys():
+                    data_load[i]['image'] = ""
+                upload = search_cache(search=arg,name=data_load[i]['name'],movieid=data_load[i]['id'],image=data_load[i]['image'])
+                #if not upload:
+                #    # for invalid request error on Database
+                #    DBrollback()
+                #    redirect( url_for('movie_json') )
+            return json.dumps(data, indent=4)
     else:
         return json.dumps(json.dumps(return_search_data(arg)))
         

@@ -1,5 +1,6 @@
 from datetime import datetime
 from flaskk import db
+import json
 
 class movie(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -7,11 +8,16 @@ class movie(db.Model):
     movie_name = db.Column(db.String(64), index=True)
     image_url = db.Column(db.String(128), index=True)
     movieid = db.Column(db.Integer, index=True)
+    update_time = db.Column(db.DateTime, index=True, default=datetime.utcnow)
 
     #def __repr__(self):
     #    return self.movieid
     def __repr__(self):
         return {"name":self.movie_name, "image":self.image_url, "id":self.movieid}
+
+def check_update_time(name):
+    ret = movie.query.filter_by(searchString=name).first()
+    return ret.update_time
 
 def search_cache(search, name, image, movieid):
     varSearch = movie(searchString=search,movie_name=name, image_url=image, movieid=movieid)
@@ -32,5 +38,5 @@ def return_search_data(name):
     #db_list_movie.append(str(result))
     #return result
     for r in result:
-        db_list_movie.append({'name':r.searchString, 'image':r.image_url, 'id':r.movieid})
+        db_list_movie.append({'name':r.movie_name, 'image':r.image_url, 'id':r.movieid})
     return db_list_movie
