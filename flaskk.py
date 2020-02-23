@@ -2,36 +2,35 @@ import json
 from script import movie_query
 # flask imports
 from flask import Flask, request, render_template, redirect, url_for
-# flask form EXTENTION imports
-from login_form import loginform
-from register_form import registerform
-# Flask login EXTENTION
+## flask form EXTENTION imports
+#from login_form import loginform
+#from register_form import registerform
+## Flask login EXTENTION
 from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 # flask sqlalchemy EXTENSION import
 from dbconfig import DBconfig
 from flask_sqlalchemy import SQLAlchemy
-from models import *
+#from models import *
+from movie_db import *
 # image/file upload by user
-from werkzeug.utils import secure_filename
+#from werkzeug.utils import secure_filename
 
-
-UPLOAD_FOLDER = '/home/richie/python/imdb/static/img/user_images'
 
 app = Flask(__name__)
 
-login_manager = LoginManager()
-login_manager.init_app(app)
+#login_manager = LoginManager()
+#login_manager.init_app(app)
 # login_view will redirect to "login" instead of showing unauth user which comes when user is not logged in
 # i.e if user not logged in, then it will redirect to a route, in this case login.
-login_manager.login_view = 'login'
+#login_manager.login_view = 'login'
 
 app.config['SECRET_KEY'] = 'secret'
 app.config.from_object(DBconfig)
 
 db = SQLAlchemy(app)
 
-ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+#ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
+#app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route('/')
 def root():
@@ -40,7 +39,7 @@ def root():
 # check if user(id) is logged in-- (flask-login EXT.)
 #Flask-Login stores the user ID in a cookie. When it reads that cookie, it takes the user
 #ID and calls the query in the user_loader to find the user associated with that cookie.
-@login_manager.user_loader
+'''@login_manager.user_loader
 def load_user(id):
     return user_cookie(id)
 
@@ -79,23 +78,31 @@ def home():
     message = None
     if request.method == 'POST':
         post_submitted = post_submit(request.form['post_input'], current_user.get_id())
-    # GET user posts HERE #
-    posts = get_user_post(current_user.get_id())
     # TO-DO-- CHECK return type for 'posts' : message not working #
-    if posts is None:
-        message = "No posts yet!"
+    
         # to DO--- reset form after submission #
-    return render_template("user_page.html", html_message=message, name=current_user.name, posts = posts)
+    return render_template("user_page.html", html_message=message, name=current_user.name)
 
-@app.route("/home/posts", methods=['GET'])
+@app.route("/allposts", methods=['GET'])
 @login_required
-def allpost():
+def allposts():
     post = None
     post = get_user_post_all()
     # post gets a list return type #
     if post==None:
         return "No user posts!!"
-    return render_template("allPosts.html", posts=post)
+    return render_template("allPosts.html", posts=post, name=current_user.name)
+
+@app.route("/userposts", methods=['GET'])
+@login_required
+def userposts():
+    posts = None
+    # GET user posts HERE #
+    posts = get_user_post(current_user.get_id())
+    # post gets a list return type #
+    if posts==None:
+        return "No user posts!!"
+    return render_template("userPost.html", posts=posts, name=current_user.name)
 
 
 @app.route("/logout")
@@ -125,13 +132,26 @@ def register():
         
 
     return render_template('register.html', regform=form)
-
+'''
 
 # query Parameters used instead of complete url #
 @app.route("/moviejson", methods=['GET'])
 def movie_json():
     arg = request.args['query']
-    return json.dumps(movie_query(arg), indent=4)
+    if not if_search_exists(arg):
+        data = movie_query(arg)
+        data_load = json.loads(data)
+        data_dump = json.dumps(data)
+        for i in range(len(data_load)):
+            upload = search_cache(search=arg,name=data_load[i]['name'],id=data_load[i]['id'],image=data_load[i]['image'])
+            if not upload:
+                # for invalid request error on Database
+                DBrollback()
+                redirect( url_for('movie_json') )
+            return json.dumps(data, indent=4)
+    else:
+        return json.dumps(json.dumps(return_search_data(arg)))
+        
 
 
 @app.route("/moviejson/post", methods=['GET', 'POST'])
@@ -139,7 +159,7 @@ def movie_json_post():
     q = None
     content = request.form.get('contents')
     if request.method == 'POST':
-        return render_template('post_movie.html', q =json.dumps(query(content), indent=4))
+        return render_template('post_movie.html', q =json.dumps(movie_query(content), indent=4))
     return render_template('post_movie.html')
 
 
@@ -147,16 +167,15 @@ def movie_json_post():
 def imdb():
     return render_template('imdb.html')
 
+@app.route('/projects')
+def projects():
+    return render_template('projects.html')
+
 # Included jquery and ajax !!! #
 # Request from ajax to flask--> check ajax_req.html
 @app.route('/test')
 def test():
-    post = None
-    post = get_user_post_all()
-    # post gets a list return type #
-    if not post:
-        return "No user posts!!"
-    return render_template('test.html', posts=post)
+    return render_template('test.html')
 
 
 '''
@@ -171,6 +190,9 @@ def create_strap_intvar(num):                                   <h> {{x}} </h>
     return render_template('strap.html', x=num)               {%endfor%}
 '''
 
+def printname():
+    for name, func in app.view_functions.items():
+        print(name)
 
 
 if __name__ == "__main__":

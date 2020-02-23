@@ -30,7 +30,7 @@
   
   <a href="{{ url_for('logout') }}" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white">Logout</a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-padding-large w3-hover-white" title="My Account">
-    <img src="static/img/title.png" class="w3-circle" style="height:23px;width:23px" alt="useravatar">
+    <img src="static/img/title.png"        class="w3-circle" style="height:23px;width:23px" alt="useravatar">
   </a>
   
  </div>
@@ -58,14 +58,11 @@
         <div class="w3-col m12">
           <div class="w3-card w3-round w3-white">
             <div class="w3-container w3-padding">
-
+                    <h3> Your Posts</h3><br>
                     <div style="width:100%;background-color: white;">
                         {% for post in posts %}
-                            <div style="float:right;font-size: 15px;">{{ post[1] }}</div>
-                            <div style="font-size: 15px;">{{ post[0] }}</div>
-                            <div class="post">{{ post[2] }}</div>
+                            <div class="post" style="font-size: 15px;">{{ post }}</div>
                             <br>
-                            <br><br>
                         {% endfor %}
                     </div>
               

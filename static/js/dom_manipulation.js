@@ -7,7 +7,8 @@ $(document).ready(function () {
 
     		$.ajax({
 				  'type': "GET",
-				  'url': "/moviejson?query=" + inputValue,
+                  'url': "/moviejson?query=" + inputValue,
+                  contentType:  'application/json;charset=UTF-8',
 			   	   success: function(response) {
                         const data = JSON.parse(JSON.parse(response));
                         // debug**
@@ -25,21 +26,10 @@ $(document).ready(function () {
                                 $('#main_div').append(myHtml);
                             }
                         }
-				   }
+                   }
             })
             $("#query_input").val("");
          };
 
          $('#ajax_button').click(callback);
-
-         // check connection status...
-         setTimeout(()=> {
-         if (navigator.onLine) {
-            $('#connect').append("<span class='dot'></span>");
-        }
-        else { 
-            $('.dot').remove();
-            $('#connect').append("Offline"); 
-        }
-        },3000 );
 });

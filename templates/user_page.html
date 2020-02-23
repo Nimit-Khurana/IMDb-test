@@ -21,6 +21,7 @@
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align w3-large">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-theme-d2" href="#" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Account Settings"><i class="fa fa-user"></i></a>
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
   <div class="w3-dropdown-hover w3-hide-small">
@@ -147,7 +148,7 @@
       </div>
       
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="/w3images/avatar2.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <img src="static/img/avatar.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
         <span class="w3-right w3-opacity">1 min</span>
 
         <h4>John Doe</h4><br>
@@ -167,7 +168,7 @@
       </div>
       
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="/w3images/avatar5.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <img src="static/img/avatar.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
         <span class="w3-right w3-opacity">16 min</span>
         <h4>Jane Doe</h4><br>
         <hr class="w3-clear">
@@ -177,7 +178,7 @@
       </div>  
 
       <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-        <img src="/w3images/avatar6.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+        <img src="static/img/avatar.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
         <span class="w3-right w3-opacity">32 min</span>
         <h4>Angie Jane</h4><br>
         <hr class="w3-clear">
@@ -196,9 +197,9 @@
       <div class="w3-card w3-round w3-white w3-center">
         <div class="w3-container" style="overflow:hidden;">
           <br>  
-          <a href="#" style="text-decoration:none;"><button class="w3-button w3-block w3-theme-l4">Check Your Posts</button></a>
+          <a href="{{ url_for('userposts') }}" style="text-decoration:none;"><button class="w3-button w3-block w3-theme-l4">Check Your Posts</button></a>
           <br>
-          <a href="{{ url_for('allpost') }}" style="text-decoration:none;"><button class="w3-button w3-block w3-theme-l4">Check Posts</button></a>
+          <a href="{{ url_for('allposts') }}" style="text-decoration:none;"><button class="w3-button w3-block w3-theme-l4">Check Posts</button></a>
           <br>
         </div>
       </div>
@@ -207,7 +208,7 @@
       <div class="w3-card w3-round w3-white w3-center">
         <div class="w3-container">
           <p>Friend Request</p>
-          <img src="/w3images/avatar6.png" alt="Avatar" style="width:50%"><br>
+          <img src="static/img/avatar.png" alt="Avatar" style="width:50%"><br>
           <span>Jane Doe</span>
           <div class="w3-row w3-opacity">
             <div class="w3-half">

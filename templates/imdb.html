@@ -8,7 +8,7 @@
   <meta content="" name="description">
 
   <!-- Favicons -->
-  <link href="static/img/favicon.png" rel="icon">
+  <link href="static/img/title.png" rel="icon">
   <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -54,9 +54,6 @@
         <!-- Uncomment below if you prefer to use an image logo -->
         <!--<a href="#intro"><img src="static/img/" alt="" title="" /></a>-->
       </div>
-      <div id="connect">
-        <!-- checking if connected to internet-->
-      </div>
   
 
     </div>
@@ -80,22 +77,25 @@
               <div class="carousel-content">
 
                 <h2>Search for movies</h2>
-				      <div class="md-form mt-0">
-                <a href="https://www.imdb.com"><div class="ball">IMDb</div></a>
+				          <div class="md-form mt-0">
+                    <a href="https://www.imdb.com"><div class="ball">IMDb</div></a>
                     <form>
 					            <input class="form-control" type="text" id="query_input" name="query" placeholder="Enter what to look for">
                       <a href="#" id="ajax_button" class="btn-get-started scrollto">Search</a>
-                    </form>
+                      </form>
+                  </div>
               </div>
             </div>
           </div>
-      </div>
     </div>
   </section><!-- #intro -->
 
   <div id="main_div">
-
+    {%if q%}
+    <p>{{ q }}</p>
+  {%endif%}
   </div>
+  
   
   <!--==========================
     Add Footer here <footer>

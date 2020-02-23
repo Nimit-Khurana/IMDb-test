@@ -13,7 +13,7 @@
     text-align: center;
     font-family: arial;
     height: 350px;
-    width: 200px;
+    width: 15%; /* OR put 200px*/
     float: left;
     /*border: 1px solid #ccc;*/
     margin-left: 3.7%;
@@ -106,7 +106,6 @@
   animation-name: bouncy;
   animation-duration:1s;
   animation-iteration-count: infinite;
-  transform: rotate(60deg);
 }
 .ball:hover {
   filter: blur(0px);
