@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>IMDb</title>
@@ -7,129 +8,61 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
 
-  <!-- Favicons -->
   <link href="static/img/title.png" rel="icon">
   <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+    rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap CSS File -->
-  <link href="static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="static/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="static/lib/animate/animate.min.css" rel="stylesheet">
-  <link href="static/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="static/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
   <link href="static/css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    CUSTOM style sheet
-  ======================================================= -->
+  <link href="static/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="static/css/dom_manipulation.css" rel="stylesheet">
-
-  <!-- =======================================================
-    AJAX request section
-  ======================================================= -->
-  <script type="text/javascript"
-            src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
-  </script>
-  
 </head>
 
 <body>
-
-  <!--==========================
-    Header
-  ============================-->
   <header id="header">
     <div class="container-fluid">
-
       <div id="logo" class="pull-left">
         <h1><a href="#intro" class="scrollto">IMDb</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!--<a href="#intro"><img src="static/img/" alt="" title="" /></a>-->
       </div>
-  
-
     </div>
-  </header><!-- #header -->
-
-  <!--==========================
-    Intro Section
-  ============================-->
+  </header>
 
   <section id="intro">
     <div class="intro-container">
       <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
-
         <ol class="carousel-indicators"></ol>
-        
         <div class="carousel-inner" role="listbox">
-
           <div class="carousel-item active">
             <div class="carousel-background"><img src="static/img/intro-carousel/1.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-
                 <h2>Search for movies</h2>
-				          <div class="md-form mt-0">
-                    <a href="https://www.imdb.com"><div class="ball">IMDb</div></a>
-                    <form>
-					            <input class="form-control" type="text" id="query_input" name="query" placeholder="Enter what to look for">
-                      <a href="#" id="ajax_button" class="btn-get-started scrollto">Search</a>
-                      </form>
-                  </div>
+                <div class="md-form mt-0">
+                  <form>
+                    <input class="form-control" type="text" id="query_input" name="query"
+                      placeholder="Enter what to look for">
+                    <a href="#" id="ajax_button" class="btn-get-started scrollto">Search</a>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-    </div>
-  </section><!-- #intro -->
+        </div>
+  </section>
 
   <div id="main_div">
     {%if q%}
     <p>{{ q }}</p>
-  {%endif%}
+    {%endif%}
   </div>
-  
-  
-  <!--==========================
-    Add Footer here <footer>
-  ============================-->
-  
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-  <!-- Uncomment below i you want to use a preloader -->
-  <!-- <div id="preloader"></div> -->
-
-  <!-- JavaScript Libraries -->
-  <script src="static/lib/jquery/jquery.min.js"></script>
-  <script src="static/lib/jquery/jquery-migrate.min.js"></script>
-  <script src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="static/lib/easing/easing.min.js"></script>
-  <script src="static/lib/superfish/hoverIntent.js"></script>
-  <script src="static/lib/superfish/superfish.min.js"></script>
-  <script src="static/lib/wow/wow.min.js"></script>
-  <script src="static/lib/waypoints/waypoints.min.js"></script>
-  <script src="static/lib/counterup/counterup.min.js"></script>
-  <script src="static/lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="static/lib/isotope/isotope.pkgd.min.js"></script>
-  <script src="static/lib/liglet formId = $('#regform_js')htbox/js/lightbox.min.js"></script>
-  <!-- Contact Form JavaScript File -->
-  <script src="static/contactform/contactform.js"></script>
-
-  <!-- Template Main Javascript File -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
   <script src="static/js/main.js"></script>
-<!-- ===================================
-  Custom js scripts
-  1 DOM manipulation
-  2 DOM CSS
-  =====================================-->
   <script src="static/js/dom_manipulation.js"></script>
-
 </body>
+
 </html>

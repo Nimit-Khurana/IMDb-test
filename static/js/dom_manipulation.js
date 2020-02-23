@@ -6,10 +6,10 @@ $(document).ready(function () {
     		// Output the value
 
     		$.ajax({
-				  'type': "GET",
-                  'url': "/moviejson?query=" + inputValue,
-                  contentType:  'application/json;charset=UTF-8',
-			   	   success: function(response) {
+                    'type': "GET",
+                    'url': "/moviejson?query=" + inputValue,
+                    contentType:  'application/json;charset=UTF-8',
+			   	    success: function(response) {
                         const data = JSON.parse(JSON.parse(response));
                         // debug**
                         //console.log(typeof(data));
