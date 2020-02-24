@@ -72,17 +72,6 @@ def movie_json():
         return json.dumps(json.dumps(get_results_from_cache(arg)))
 
 
-@app.route("/moviejson/post", methods=["GET", "POST"])
-def movie_json_post():
-    q = None
-    content = request.form.get("contents")
-    if request.method == "POST":
-        return render_template(
-            "post_movie.html", q=json.dumps(movie_query(content), indent=4)
-        )
-    return render_template("post_movie.html")
-
-
 if __name__ == "__main__":
     db.init_app(app)
     app.run(debug=True)
