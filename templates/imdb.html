@@ -21,6 +21,11 @@
 </head>
 
 <body>
+
+  <div class="loading-div">
+    <img src="static/img/loading.gif">
+  </div>
+
   <header id="header">
     <div class="container-fluid">
       <div id="logo" class="pull-left">
@@ -32,17 +37,16 @@
   <section id="intro">
     <div class="intro-container">
       <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
-        <ol class="carousel-indicators"></ol>
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
             <div class="carousel-background"><img src="static/img/intro-carousel/1.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2>Search for movies</h2>
+                <h2 class="search-text">Search for movies</h2>
                 <div class="md-form mt-0">
-                  <form>
-                    <input class="form-control" type="text" id="query_input" name="query"
-                      placeholder="Enter what to look for">
+                  <form id="form">
+                    <input class="form-control" type="text" id="query_input" name="query" placeholder="Search for movies...">
+		    <p class="required" style="z-index:1;display:none;color:red">Required!</p>
                     <a href="#" id="ajax_button" class="btn-get-started scrollto">Search</a>
                   </form>
                 </div>
@@ -53,10 +57,30 @@
   </section>
 
   <div id="main_div">
-    {%if q%}
-    <p>{{ q }}</p>
-    {%endif%}
+
   </div>
+
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>Text</h3>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact</h4>
+            <p>
+              <strong>Phone:</strong> +91 9501138443<br>
+              <strong>Email:</strong> nimitkhuranaa@gmail.com<br>
+            </p>
+          </div>
+
+        </div>
+        <p>© Since 2019</p>
+      </div>
+    </div>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>

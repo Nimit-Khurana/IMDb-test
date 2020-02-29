@@ -1,7 +1,12 @@
 $(document).ready(function () {
          var callback = function() {
-            $('.card').remove();
+            //$('.card').remove();
             var inputValue = $("#query_input").val();
+	    if(inputValue.length == 0) {
+		    $('.required').show();
+		    return;
+	    }
+	    $('.card').remove();
 
     		// Output the value
 
@@ -9,6 +14,8 @@ $(document).ready(function () {
                     'type': "GET",
                     'url': "/moviejson?query=" + inputValue,
                     contentType:  'application/json;charset=UTF-8',
+                    beforeSend: function() {
+                    },
 			   	    success: function(response) {
                         const data = JSON.parse(JSON.parse(response));
                         // debug**
@@ -20,14 +27,23 @@ $(document).ready(function () {
                             const imdblink = "https://www.imdb.com/title/" + data[i]['id']
                             const movieposter = data[i]['image']
                             const moviename = data[i]['name']
-                            const myHtml = "<div class='card'><img alt='No image available' class='poster' src='"+movieposter+"' ><a target='_blank' href='"+imdblink+"'><p id='card_p' style='text-align:center;'>"+moviename+"</p></a></div>";
+                            const myHtml = "<div class='card'><img alt='No image available' class='poster' src='"+movieposter+"' ><a target='_blank' href='"+imdblink+"'><p id='card_p' style='text-align:center;color:white;'>"+moviename+"</p></a></div>";
                             // console.log(typeof(myHtml));
                             if (data) {
                                 $('#main_div').append(myHtml);
                             }
                         }
-                   }
+                   },
+                    complete: function() {
+                        $(".loading-div").show().delay(500).fadeOut('slow');
+                        $('html, body').animate({
+                            scrollTop: $("#main_div").offset().top
+                          }, 2000);
+			$('.required').hide();
+
+                    }
             })
+                
             $("#query_input").val("");
          };
 

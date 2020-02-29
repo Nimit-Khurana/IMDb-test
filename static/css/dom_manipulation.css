@@ -1,10 +1,11 @@
 #main_div {
     width: 100%;
     /*border: 1px solid #ccc;*/
-    background-color: #403d3d;
+    background-color: #6A0C0B;
     display:block;
     overflow:auto;
     height: 100%;
+    background: linear-gradient(to bottom,rgb(30, 30, 30), #CC4224, rgb(30, 30, 30));
 }
 
 .newscard {
@@ -193,7 +194,7 @@ input[type=submit]:hover {
 
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #111;
   padding: 20px;
 }
 
