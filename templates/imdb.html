@@ -2,91 +2,102 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>IMDb</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
+    <meta charset="utf-8">
+    <title>IMDb</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-  <link href="static/img/title.png" rel="icon">
-  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="static/img/title.png" rel="icon">
+    <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
-    rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
 
-  <link href="static/css/style.css" rel="stylesheet">
-  <link href="static/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="static/css/dom_manipulation.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <link href="static/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="static/css/dom_manipulation.css" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="loading-div">
-    <img src="static/img/loading.gif">
-  </div>
-
-  <header id="header">
-    <div class="container-fluid">
-      <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto">IMDb</a></h1>
-      </div>
+    <div class="loading-div">
+        <img src="static/img/loading.gif">
     </div>
-  </header>
 
-  <section id="intro">
-    <div class="intro-container">
-      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner" role="listbox">
-          <div class="carousel-item active">
-            <div class="carousel-background"><img src="static/img/intro-carousel/1.jpg" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="search-text">Search for movies</h2>
-                <div class="md-form mt-0">
-                  <form id="form">
-                    <input class="form-control" type="text" id="query_input" name="query" placeholder="Search for movies...">
-		    <p class="required" style="z-index:1;display:none;color:red">Required!</p>
-                    <a href="#" id="ajax_button" class="btn-get-started scrollto">Search</a>
-                  </form>
-                </div>
-              </div>
+    <header id="header">
+        <div class="container-fluid">
+            <div id="logo" class="pull-left">
+                <h1><a href="#intro" class="scrollto">IMDb</a></h1>
             </div>
-          </div>
         </div>
-  </section>
+    </header>
 
-  <div id="main_div">
+    <section id="intro">
+        <div class="intro-container">
+            <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="carousel-background"><img src="static/img/intro-carousel/1.jpg" alt=""></div>
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <h2 class="search-text">Search for movies</h2>
+                                <div class="md-form mt-0">
+                                    <form id="form">
+                                        <input class="form-control" type="text" id="query_input" name="query" placeholder="Search for movies...">
+                                        <p class="required" style="z-index:1;display:none;color:red">Required!</p>
+                                        <a href="#" id="ajax_button" class="btn-get-started scrollto">Search</a>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </section>
 
-  </div>
-
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-info">
-            <h3>Text</h3>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact</h4>
-            <p>
-              <strong>Phone:</strong> +91 9501138443<br>
-              <strong>Email:</strong> nimitkhuranaa@gmail.com<br>
-            </p>
-          </div>
-
+    <section id="about">
+        <div class="container">
+            <div class="moviegif1"><img src="static/img/movie1.gif"></div>
+            <header class="section-header">
+                <h3>About</h3>
+                <p>! Lights|Camera|Action !</p>
+                <p><strong>Search for movies without any hassle</strong></p>
+            </header>
         </div>
-        <p>© Since 2019</p>
-      </div>
+    </section>
+
+    <div id="main_div">
+
     </div>
-  </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-  <script src="static/js/main.js"></script>
-  <script src="static/js/dom_manipulation.js"></script>
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-info">
+                        <h3>Nimit Khurana</h3>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h4>Contact</h4>
+                        <p>
+                            <strong>Phone:</strong> +91 9501138443<br>
+                            <strong>Email:</strong> nimitkhuranaa@gmail.com<br>
+                            <p><img src="static/img/pin.png"> Panchkula, India</p>
+                        </p>
+                    </div>
+
+                </div>
+                <p>© Since 2019</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/main.js"></script>
+    <script src="static/js/dom_manipulation.js"></script>
 </body>
 
 </html>

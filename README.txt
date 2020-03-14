@@ -22,6 +22,9 @@ What you get to learn throughout--
         commit with a message: git commit -m "description of commit"
         view the log: git log
         push changes: git push [remotename] [branchname]
+        *add file names to .gitignore to ignore pushing
+        *if the file still gets pushed, then it is already tracked by git.
+        to remove file from git tracking: git rm --cached [filename]
     Server handling
 
     <==>Issues faced in api response-->

@@ -2,26 +2,27 @@
     width: 100%;
     /*border: 1px solid #ccc;*/
     background-color: #6A0C0B;
-    display:block;
-    overflow:auto;
+    display: block;
+    overflow: auto;
     height: 100%;
-    background: linear-gradient(to bottom,rgb(30, 30, 30), #CC4224, rgb(30, 30, 30));
+    background: linear-gradient(to bottom, rgb(30, 30, 30), #CC4224, rgb(30, 30, 30));
 }
 
 .newscard {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  /*max-width: 300px;*/
-  text-align: center;
-  font-family: arial;
-  height: 400px;
-  width: 20%; /* OR put 200px*/
-  float: left;
-  /*border: 1px solid #ccc;*/
-  margin-left: 3.7%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  background-color: black;
-  overflow:hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /*max-width: 300px;*/
+    text-align: center;
+    font-family: arial;
+    height: 400px;
+    width: 20%;
+    /* OR put 200px*/
+    float: left;
+    /*border: 1px solid #ccc;*/
+    margin-left: 3.7%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: black;
+    overflow: hidden;
 }
 
 .card {
@@ -30,197 +31,227 @@
     text-align: center;
     font-family: arial;
     height: 350px;
-    width: 15%; /* OR put 200px*/
+    width: 15%;
+    /* OR put 200px*/
     float: left;
     /*border: 1px solid #ccc;*/
     margin-left: 3.7%;
     margin-top: 10px;
     margin-bottom: 10px;
     background-color: black;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 #card_p:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #2098D1;
-  height: 4px;
-  -webkit-transform: translateY(4px);
-  transform: translateY(4px);
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098D1;
+    height: 4px;
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
 }
 
 #card_p {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-#card_p:hover:before, #card_p:focus:before, #card_p:active:before {
+#card_p:hover:before,
+#card_p:focus:before,
+#card_p:active:before {
     -webkit-transform: translateY(0);
     transform: translateY(0);
-    overflow:visible;
+    overflow: visible;
 }
 
 .poster {
     width: 100%;
     height: 300px;
 }
+
 .newsposter {
-  width: 100%;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
+
+
 /* ---------------------------------------*/
+
 ::-webkit-scrollbar {
-  width: 10px;
+    width: 10px;
 }
+
+
 /* Track */
+
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  border-radius: 18px;
-  background: black;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 18px;
+    background: black;
 }
+
 
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
-  background: #c7bbbc;
-  border-radius: 10px;
+    background: #c7bbbc;
+    border-radius: 10px;
 }
+
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #330104;
-}
 
+::-webkit-scrollbar-thumb:hover {
+    background: #330104;
+}
 
 .bounce {
-  width:100%;
-  background-color:white;
-  margin: 100px auto 0;
-}
-.ball {
-  text-align: center;
-  filter: blur(4px);
-  font-size: 15px;
-  color:black;
-  height: 50px;
-  width: 50px;
-  border-radius: 100%;
-  background-color:#f3ce13;
-  margin: 0 auto;
-  padding:9px;
-  animation-name: bouncy;
-  animation-duration:1s;
-  animation-iteration-count: infinite;
-}
-.ball:hover {
-  filter: blur(0px);
-  animation-play-state: paused;
-  height:100px;
-  width:100px;
-  border-top-right-radius: 10px;
+    width: 100%;
+    background-color: white;
+    margin: 100px auto 0;
 }
 
-@keyframes bouncy{
-  0% {transform: translateY(0px);}
-  50% {transform: translateY(-30px)}
-  100% {transform:translateY(0px)}
+.ball {
+    text-align: center;
+    filter: blur(4px);
+    font-size: 15px;
+    color: black;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    background-color: #f3ce13;
+    margin: 0 auto;
+    padding: 9px;
+    animation-name: bouncy;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
+
+.ball:hover {
+    filter: blur(0px);
+    animation-play-state: paused;
+    height: 100px;
+    width: 100px;
+    border-top-right-radius: 10px;
+}
+
+@keyframes bouncy {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-30px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+
 
 /* check connection status */
+
 #connect {
-  float:right;
-  color:white;
-  font-size: 12px;
+    float: right;
+    color: white;
+    font-size: 12px;
 }
+
 .dot {
-  height: 15px;
-  width: 15px;
-  background-color: green;
-  border-radius: 50%;
-  display: inline-block;
-  animation-name: blink;
-  animation-iteration-count: infinite;
-  animation-duration: 1s;
+    height: 15px;
+    width: 15px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
 }
+
 @keyframes blink {
-  0% {background-color: white}
-  50% {background-color: green}
-  100% {background-color: white}}
+    0% {
+        background-color: white
+    }
+    50% {
+        background-color: green
+    }
+    100% {
+        background-color: white
+    }
+}
+
+
 }
 
 /*------------------------------------------------*/
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
 }
-
 label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
+    padding: 12px 12px 12px 0;
+    display: inline-block;
 }
-
 input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
 }
-
 input[type=submit]:hover {
-  background-color: #45a049;
+    background-color: #45a049;
 }
-
-.container {
-  border-radius: 5px;
-  background-color: #111;
-  padding: 20px;
-}
-
 .col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
+    float: left;
+    width: 25%;
+    margin-top: 6px;
 }
-
 .col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
+    float: left;
+    width: 75%;
+    margin-top: 6px;
 }
 
 /* Clear floats after the columns */
 .row:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+.moviegif1 {
+    position: absolute;
+    float: left;
 }

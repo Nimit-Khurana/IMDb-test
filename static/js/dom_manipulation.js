@@ -1,6 +1,5 @@
 $(document).ready(function () {
          var callback = function() {
-            //$('.card').remove();
             var inputValue = $("#query_input").val();
 	    if(inputValue.length == 0) {
 		    $('.required').show();
@@ -17,6 +16,7 @@ $(document).ready(function () {
                     beforeSend: function() {
                     },
 			   	    success: function(response) {
+					    console.log(response);
                         const data = JSON.parse(JSON.parse(response));
                         // debug**
                         //console.log(typeof(data));
