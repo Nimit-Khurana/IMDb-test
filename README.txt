@@ -40,7 +40,7 @@ What you get to learn throughout--
         script.py
         venv/
         - templates
-            |strap.html
+            |main.html
         -static
             -css
               |style.css
