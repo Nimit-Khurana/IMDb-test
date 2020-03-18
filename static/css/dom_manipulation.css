@@ -85,11 +85,6 @@
     height: 300px;
 }
 
-.newsposter {
-    width: 100%;
-    height: auto;
-}
-
 
 /* ---------------------------------------*/
 
@@ -164,38 +159,6 @@
 }
 
 
-/* check connection status */
-
-#connect {
-    float: right;
-    color: white;
-    font-size: 12px;
-}
-
-.dot {
-    height: 15px;
-    width: 15px;
-    background-color: green;
-    border-radius: 50%;
-    display: inline-block;
-    animation-name: blink;
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
-}
-
-@keyframes blink {
-    0% {
-        background-color: white
-    }
-    50% {
-        background-color: green
-    }
-    100% {
-        background-color: white
-    }
-}
-
-
 /*------------------------------------------------*/
 
 input[type=text],
@@ -265,8 +228,42 @@ input[type=submit]:hover {
 .moviegif1 {
     position: absolute;
     float: left;
+    z-index: -5;
 }
 
 #query_input {
     background: transparent;
+}
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    [class*="carousel-content"] {
+        width: 100%;
+        background-size: cover;
+    }
+    [class*="carousel-background"] {
+        width: 50%;
+    }
+    [class*="card"] {
+        width: 45%;
+        height: 200px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /*max-width: 300px;*/
+        text-align: center;
+        font-family: arial;
+        /* OR put 200px*/
+        float: left;
+        /*border: 1px solid #ccc;*/
+        margin-left: 3.7%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: black;
+        overflow: hidden;
+    }
+    [class*="poster"] {
+        height: 90%;
+    }
+    [class*="moviegif1"] {
+        display: none;
+    }
 }

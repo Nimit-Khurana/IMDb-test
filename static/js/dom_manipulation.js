@@ -16,6 +16,7 @@ $(document).ready(function() {
             beforeSend: function() {},
             success: function(response) {
                 $(".loading-div").show().delay(500).fadeOut('slow');
+                $('.required').hide();
                 const data = JSON.parse(JSON.parse(response));
                 //console.log(response);
                 // debug**
@@ -38,8 +39,6 @@ $(document).ready(function() {
                 $('html, body').animate({
                     scrollTop: $("#main_div").offset().top
                 }, 2000);
-                $('.required').hide();
-
             }
         })
 
