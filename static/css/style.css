@@ -42,7 +42,7 @@ h5,
 h6 {
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
-    margin: 0 0 20px 0;
+    margin: 0 0 0 0;
     padding: 0;
 }
 
@@ -232,7 +232,6 @@ h6 {
 
 #intro h2 {
     color: #fff;
-    margin-bottom: 30px;
     font-size: 48px;
     font-weight: 700;
 }

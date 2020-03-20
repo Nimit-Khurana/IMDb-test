@@ -44,6 +44,5 @@ $(document).ready(function() {
 
         $("#query_input").val("");
     };
-
-    $('#ajax_button').click(callback);
+    $("#ajax_button").click(callback);
 });
