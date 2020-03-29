@@ -1,11 +1,8 @@
 $(document).ready(function() {
     var callback = function() {
         var inputValue = $("#query_input").val();
-        if (inputValue.length == 0) {
-            $('.required').show();
-            return;
-        }
         $('.card').remove();
+        $(".loading-div").show();
 
         // Output the value
 
@@ -15,8 +12,7 @@ $(document).ready(function() {
             contentType: 'application/json;charset=UTF-8',
             beforeSend: function() {},
             success: function(response) {
-                $(".loading-div").show().delay(500).fadeOut('slow');
-                $('.required').hide();
+
                 const data = JSON.parse(JSON.parse(response));
                 //console.log(response);
                 // debug**
@@ -28,7 +24,7 @@ $(document).ready(function() {
                     const imdblink = "https://www.imdb.com/title/" + data[i]['id']
                     const movieposter = data[i]['image']
                     const moviename = data[i]['name']
-                    const myHtml = "<div class='card'><img alt='No image available' class='poster' src='" + movieposter + "' ><a target='_blank' href='" + imdblink + "'><p id='card_p' style='text-align:center;color:white;'>" + moviename + "</p></a></div>";
+                    const myHtml = "<div class='card'><img class='poster' src='" + movieposter + "' src='static/img/noimage.jpg'><a target='_blank' href='" + imdblink + "'><p id='card_p' style='text-align:center;color:white;'>" + moviename + "</p></a></div>";
                     // console.log(typeof(myHtml));
                     if (data) {
                         $('#main_div').append(myHtml);
@@ -36,6 +32,7 @@ $(document).ready(function() {
                 }
             },
             complete: function() {
+                $(".loading-div").hide();
                 $('html, body').animate({
                     scrollTop: $("#main_div").offset().top
                 }, 2000);
