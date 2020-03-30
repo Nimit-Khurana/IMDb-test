@@ -33,21 +33,29 @@
 
     <section id="intro">
         <div class="intro-container">
-            <div class="carousel-item active">
-                <div class="carousel-background"><img src="static/img/intro.jpg" alt=""></div>
-                <div class="carousel-container">
-                    <div class="carousel-content">
-                        <div class="md-form mt-0">
-                            <h2 class="search-text">Search for movies</h2>
-                            <form id="form">
-                                <input class="form-control" type="text" id="query_input" name="query">
-                                <a href="#" id="ajax_button" class="btn-get-started scrollto">Search</a>
-                            </form>
+            <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators"></ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+
+                        <div class="carousel-background"><img src="static/img/intro.jpg" alt="">
+                            <div class="carousel-container">
+                                <div class="carousel-content">
+                                    <div class="md-form mt-0">
+                                        <h2 class="search-text">Search for movies</h2>
+                                        <form id="form">
+                                            <input class="form-control" type="text" id="query_input" name="query">
+                                            <a href="#" id="ajax_button" class="btn-get-started scrollto">Search</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
 
     <section id="about">
@@ -86,6 +94,7 @@
             </div>
         </div>
     </footer>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>
