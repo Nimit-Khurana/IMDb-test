@@ -21,11 +21,11 @@ $(document).ready(function() {
 
                 // looping through items in 'response' object which is a list of objects here..
                 for (i = 0; i < data.length; i++) {
-                    const imdblink = "https://www.imdb.com/title/" + data[i]['id']
+                    const title = data[i]['id']
                     const movieposter = data[i]['image']
                     const moviename = data[i]['name']
-                    const myHtml = "<div class='card'><img class='poster' src='" + movieposter + "' src='static/img/noimage.jpg'><a target='_blank' href='" + imdblink + "'><p id='card_p' style='text-align:center;color:white;'>" + moviename + "</p></a></div>";
-                    // console.log(typeof(myHtml));
+                    const myHtml = "<div class='card'><img class='poster' src='" + movieposter + "'><a target='_blank' href='/" + moviename + "?t=" + title + "&i=" + movieposter + "'><p id='card_p' style='text-align:center;color:white;'>" + moviename + "</p></a></div>";
+                    console.log(myHtml);
                     if (data) {
                         $('#main_div').append(myHtml);
                     }

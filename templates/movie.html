@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block header %} {{ data["movie"] }} ({{ data["rating"] }}/10) {% endblock %} {% block movie %}
+<div class="movie" style="flex-grow: 2">
+    <div class="video" style="flex-grow: 4">
+        <img src="{{ data['image'] }}" style="width:200px;height:350px;">
+        <hr style="border-top: 1px solid #666;">
+        <h3>Description</h3>
+        <p>{{ data["description"] }}</p>
+    </div>
+    <div style="flex-grow: 8">
+        <h3>Summary</h3>
+        <p>{{ data["summary"] }}</p>
+        <iframe class="movie-video" src="https://www.youtube.com/embed/{{ data['video'] }}">
+        </iframe>
+        <a href="{{ data['imdbLink'] }}" style="text-decoration: none;color: white;">Check this movie at IMDb!</a>
+    </div>
+</div>
+
+{% endblock %}
