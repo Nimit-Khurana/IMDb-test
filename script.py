@@ -57,14 +57,21 @@ def imdb(title):
     soup = BeautifulSoup(html, 'html.parser')
     imdbData = {}
 
-    description_found = soup.find(attrs={'class':'summary_text'}).contents[0].strip()
-    if description_found != None:
+    try:
+        description_found = soup.find(attrs={'class':'summary_text'}).contents[0].strip()
         imdbData["description"] = description_found
-        rating_found = soup.find(attrs={'itemprop':'ratingValue'}).contents[0].strip()
-        if rating_found != None:
-            imdbData["rating"] = rating_found
-        summary_found = soup.find(attrs={'class':'canwrap'}).find("p").find("span").contents[0]
-        if summary_found != None:
-            imdbData["summary"] = summary_found
+    except:
+        imdbData["description"] = "Couldn't find content"
     
+    try:
+        rating_found = soup.find(attrs={'itemprop':'ratingValue'}).contents[0].strip()
+        imdbData["rating"] = rating_found
+    except:
+        imdbData["rating"] = "-"
+        
+    try:
+        summary_found = soup.find(attrs={'class':'canwrap'}).find("p").find("span").contents[0].strip()
+        imdbData["summary"] = summary_found
+    except:
+        imdbData["summary"] = "Couldn't find content"    
     return imdbData

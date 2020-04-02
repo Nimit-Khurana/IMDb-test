@@ -79,9 +79,13 @@ def movie(moviename):
     imdb_data = imdb(title_arg)
 
     imdb_link = "https://www.imdb.com/title/" + str(title_arg)
-    data = {"movie":moviename, "video":link, "image":poster_arg, "title":title_arg, "imdbLink":imdb_link}
+    data = {"movie":moviename, "video":link, "image":poster_arg, "imdbLink":imdb_link}
     data.update(imdb_data)
     return render_template("movie.html" , data=data )
+
+@app.route("/error")
+def error():
+    return render_template("error.html")
 
 
 if __name__ == "__main__":
