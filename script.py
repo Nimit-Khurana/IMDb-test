@@ -47,12 +47,13 @@ def youtube(query):
     text_found = soup.find(attrs={'class':'yt-uix-tile-link'})['href']
     return text_found[9:]
 
-def imdb(title):
+def imdb(url):
     import urllib.request
     from bs4 import BeautifulSoup
-
-    url = "https://imdb.com/title/" + title
+    
+    
     response = urllib.request.urlopen(url)
+    
     html = response.read()
     soup = BeautifulSoup(html, 'html.parser')
     imdbData = {}

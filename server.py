@@ -75,9 +75,16 @@ def movie_json():
 def movie(moviename):
     title_arg = request.args["t"]
     poster_arg = request.args["i"]
-    link = youtube(moviename.split("?")[0])
-    imdb_data = imdb(title_arg)
-
+    if title_arg.startswith("nm"):
+        url = "https://imdb.com/name/" + title_arg
+        link = ""
+    else:
+        url = "https://imdb.com/title/" + title_arg
+        link = youtube(moviename)
+    
+    imdb_data = imdb(url)
+    if imdb_data == False:
+        return render_template("error.html")
     imdb_link = "https://www.imdb.com/title/" + str(title_arg)
     data = {"movie":moviename, "video":link, "image":poster_arg, "imdbLink":imdb_link}
     data.update(imdb_data)

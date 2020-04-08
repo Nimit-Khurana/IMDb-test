@@ -1,187 +1,20 @@
-#main_div {
-    width: 100%;
-    /*border: 1px solid #ccc;*/
-    background-color: #6A0C0B;
-    display: block;
-    overflow: auto;
-    height: 100%;
-    background: linear-gradient(to bottom, rgb(30, 30, 30), #CC4224, rgb(30, 30, 30));
-}
-
-.newscard {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    /*max-width: 300px;*/
-    text-align: center;
-    font-family: arial;
-    height: 400px;
-    width: 20%;
-    /* OR put 200px*/
-    float: left;
-    /*border: 1px solid #ccc;*/
-    margin-left: 3.7%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: black;
-    overflow: hidden;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    /*max-width: 300px;*/
-    text-align: center;
-    font-family: arial;
-    height: 350px;
-    width: 15%;
-    /* OR put 200px*/
-    float: left;
-    /*border: 1px solid #ccc;*/
-    margin-left: 3.7%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: black;
-    overflow: hidden;
-}
-
-#card_p {
-    display: inline-block;
-    vertical-align: middle;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.poster {
-    width: 100%;
-    height: 90%;
-}
-
-
-/* ---------------------------------------*/
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-
-/* Track */
-
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 18px;
-    background: black;
-}
-
-
-/* Handle */
-
-::-webkit-scrollbar-thumb {
-    background: #c7bbbc;
-    border-radius: 10px;
-}
-
-
-/* Handle on hover */
-
-::-webkit-scrollbar-thumb:hover {
-    background: #330104;
-}
-
-
-/*------------------------------------------------*/
-
-input[type=text],
-select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border-style: solid;
-    border-width: 0 0 1px 0;
-    resize: vertical;
-}
-
-label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-}
-
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-.col-25 {
-    float: left;
-    width: 25%;
-    margin-top: 6px;
-}
-
-.col-75 {
-    float: left;
-    width: 75%;
-    margin-top: 6px;
-}
-
-
-/* Clear floats after the columns */
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-
-@media screen and (max-width: 1080px) {
-    .col-25,
-    .col-75,
-    input[type=submit] {
+    #main_div {
         width: 100%;
-        margin-top: 0;
+        /*border: 1px solid #ccc;*/
+        background-color: #6A0C0B;
+        display: block;
+        overflow: auto;
+        height: 100%;
+        background: linear-gradient(to bottom, rgb(30, 30, 30), #CC4224, rgb(30, 30, 30));
     }
-}
-
-.moviegif1 {
-    position: absolute;
-    float: left;
-    z-index: -5;
-}
-
-#query_input {
-    background: white;
-    opacity: 0.9;
-    color: black;
-}
-
-#query_input:focus {
-    outline: none !important
-}
-
-@media only screen and (max-width: 1080px) {
-    /* For mobile phones: */
-    [class*="carousel-content"] {
-        width: 100%;
-        background-size: cover;
-    }
-    [class*="carousel-background"] {
-        width: 100%;
-    }
-    [class*="card"] {
-        width: 45%;
-        height: 200px;
+    
+    .newscard {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         /*max-width: 300px;*/
         text-align: center;
         font-family: arial;
+        height: 400px;
+        width: 20%;
         /* OR put 200px*/
         float: left;
         /*border: 1px solid #ccc;*/
@@ -191,38 +24,195 @@ input[type=submit]:hover {
         background-color: black;
         overflow: hidden;
     }
-    [class*="poster"] {
+    
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        /*max-width: 300px;*/
+        text-align: center;
+        font-family: arial;
+        height: 350px;
+        width: 15%;
+        /* OR put 200px*/
+        float: left;
+        /*border: 1px solid #ccc;*/
+        margin-left: 3.7%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: black;
+        overflow: hidden;
+    }
+    
+    #card_p {
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .poster {
+        width: 100%;
         height: 90%;
     }
-    [class*="moviegif1"] {
-        display: none;
+    /* ---------------------------------------*/
+    
+    ::-webkit-scrollbar {
+        width: 10px;
     }
-}
-
-*:focus {
-    outline: none;
-}
-
-
-/* ----------movie.html---------- */
-
-.movie {
-    display: flex;
-    justify-content: center;
-    height: auto;
-}
-
-.movie-video {
-    width: 100%;
-    height: 330px;
-    margin: 5px 0px 5px 0px;
-    outline: none;
-    border: none;
-}
-
-.movie div {
-    width: 100px;
-    margin: 7% 10px 10px 10px;
-    text-align: center;
-    font-size: 15px;
-}
+    /* Track */
+    
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 18px;
+        background: black;
+    }
+    /* Handle */
+    
+    ::-webkit-scrollbar-thumb {
+        background: #c7bbbc;
+        border-radius: 10px;
+    }
+    /* Handle on hover */
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #330104;
+    }
+    /*------------------------------------------------*/
+    
+    input[type=text],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        resize: vertical;
+    }
+    
+    label {
+        padding: 12px 12px 12px 0;
+        display: inline-block;
+    }
+    
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        float: right;
+    }
+    
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+    
+    .col-25 {
+        float: left;
+        width: 25%;
+        margin-top: 6px;
+    }
+    
+    .col-75 {
+        float: left;
+        width: 75%;
+        margin-top: 6px;
+    }
+    /* Clear floats after the columns */
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    
+    @media screen and (max-width: 1080px) {
+        .col-25,
+        .col-75,
+        input[type=submit] {
+            width: 100%;
+            margin-top: 0;
+        }
+    }
+    
+    .moviegif1 {
+        position: absolute;
+        float: left;
+        z-index: -5;
+    }
+    
+    #query_input {
+        background: white;
+        opacity: 0.9;
+        color: black;
+    }
+    
+    #query_input:focus {
+        outline: none !important
+    }
+    
+    @media only screen and (max-width: 1080px) {
+        /* For mobile phones: */
+        [class*="carousel-content"] {
+            width: 100%;
+            background-size: cover;
+        }
+        [class*="carousel-background"] {
+            width: 100%;
+        }
+        [class*="card"] {
+            width: 45%;
+            height: 200px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            /*max-width: 300px;*/
+            text-align: center;
+            font-family: arial;
+            /* OR put 200px*/
+            float: left;
+            /*border: 1px solid #ccc;*/
+            margin-left: 3.7%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            background-color: black;
+            overflow: hidden;
+        }
+        [class*="poster"] {
+            height: 90%;
+        }
+        [class*="moviegif1"] {
+            display: none;
+        }
+        [class*="div1"] {
+            flex-grow: 2;
+        }
+        [class*="div2"] {
+            flex-grow: 4;
+        }
+    }
+    
+    *:focus {
+        outline: none;
+    }
+    /* ----------movie.html---------- */
+    
+    .movie {
+        display: flex;
+        justify-content: center;
+        height: auto;
+    }
+    
+    .movie-video {
+        width: 100%;
+        height: 330px;
+        margin: 5px 0px 5px 0px;
+        outline: none;
+        border: none;
+    }
+    
+    .movie div {
+        width: 100px;
+        margin: 7% 10px 10px 10px;
+        text-align: center;
+        font-size: 15px;
+    }
