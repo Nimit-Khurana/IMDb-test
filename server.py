@@ -1,6 +1,6 @@
 from datetime import datetime
 import json
-from script import movie_query, youtube, imdb
+from script import movie_query, imdb
 
 from flask import Flask, request, render_template, redirect, url_for
 
@@ -77,16 +77,14 @@ def movie(moviename):
     poster_arg = request.args["i"]
     if title_arg.startswith("nm"):
         url = "https://imdb.com/name/" + title_arg
-        link = ""
     else:
         url = "https://imdb.com/title/" + title_arg
-        link = youtube(moviename)
     
     imdb_data = imdb(url)
     if imdb_data == False:
         return render_template("error.html")
     imdb_link = "https://www.imdb.com/title/" + str(title_arg)
-    data = {"movie":moviename, "video":link, "image":poster_arg, "imdbLink":imdb_link}
+    data = {"movie":moviename, "image":poster_arg, "imdbLink":imdb_link}
     data.update(imdb_data)
     return render_template("movie.html" , data=data )
 
