@@ -66,6 +66,25 @@ h6 {
     z-index: 11;
 }
 
+.floater{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 18px;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 120px;
+    letter-spacing: 1.3px;
+    text-decoration: none;
+    opacity: .9;
+    padding: 2px 0px 2px 0px;
+    text-align: center;
+    position: fixed;
+    z-index: 10;
+}
+
 .back-to-top i {
     padding-top: 12px;
     color: #fff;

@@ -1,6 +1,7 @@
 from datetime import datetime
 import json
 from script import movie_query, imdb
+from wuhan import VirusData
 
 from flask import Flask, request, render_template, redirect, url_for
 
@@ -87,6 +88,14 @@ def movie(moviename):
     data = {"movie":moviename, "image":poster_arg, "imdbLink":imdb_link}
     data.update(imdb_data)
     return render_template("movie.html" , data=data )
+
+@app.route("/wuhan")
+def wuhan():
+    x = VirusData(url="https://covid-india-cases.herokuapp.com/states/")
+    covid_data = [["Total cases",x.total_cases()], ["Total cured",x.total_cured()], ["Total deaths",x.total_deaths()]]
+    state_data = x.state_wise_data()
+    return render_template("wuhan.html", data=covid_data, state_data=state_data)
+
 
 @app.route("/error")
 def error():

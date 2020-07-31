@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>wuhan virus</title>
+</head>
+
+<style>
+    body {
+        background-image: url('static/img/wuhan.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: white;
+    }
+
+    #menu-bar {
+        background-color: black;
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+
+    #circles-body {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-content: space-between;
+        margin-top: 130px;
+    }
+
+    .circle {
+        border-radius: 50%;
+        border-top: 3px solid red;
+        border-right: 3px solid red;
+        width: 180px;
+        height: 180px;
+        background-color: ivory;
+        text-align: center;
+        opacity: 0.3;
+    }
+
+    .circle p {
+        color: black;
+        padding: 10px;
+    }
+
+    .state-table {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
+
+    .state-table,
+    th,
+    td {
+        width: 70%;
+        color: ivory;
+        border: 1px solid;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 5px;
+    }
+
+    .dropbtn {
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropdown {
+        float: right;
+        margin-right: 0%;
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: ivory;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
+
+<body>
+
+    <div id="main">
+        <div id="menu-bar">
+            <h2 style="color:ivory;float: left;margin-left: 10px;">Wuhan Virus</h2>
+            <div class="dropdown">
+                <button class="dropbtn">Visit other sites!</button>
+                <div class="dropdown-content">
+                    <a href="https://www.mygov.in/covid-19">mygov(INDIA)</a>
+                    <a href="https://www.worldometers.info/">worldometers</a>
+                    <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">WHO</a>
+                </div>
+            </div>
+        </div>
+        <div id="circles-body">
+            {% for d in data %}
+            <div class="circle">
+                <p>{{ d[0] }}</p>
+                <p>{{ d[1] }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        <hr style="margin: 4% 20% 4% 20%">
+        <table class="state-table">
+            <tr>
+                <th>State</th>
+                <th>Total cases</th>
+                <th>Total cured</th>
+                <th>Total deaths</th>
+            </tr>
+            {% for item in state_data %}
+            <tr>
+                <th>{{ item["state"] }}</th>
+                <th>{{ item["noOfCases"] }}</th>
+                <th>{{ item["cured"] }}</th>
+                <th>{{ item["deaths"] }}</th>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <footer id="footer">
+
+    </footer>
+
+</body>
