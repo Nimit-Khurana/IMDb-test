@@ -1,0 +1,112 @@
+{
+    "journals": {
+                "iiss"          : {"image": "static/img/iiss.png", "country":"UK", "institute":"International Institute for Strategic Studies", "url":"iiss.org"},
+                "csis"          : {"image": "static/img/csis.jpg", "country":"USA", "institute":"Center for Strategic and International Studies", "url":"csis.org"},
+                "idsa"          : {"image": "static/img/idsa.jpg", "country":"India", "institute":"Manohar Parrikar Institute for Defence Studies and Analyses", "url":"idsa.in"},
+                "fsss"          : {"image": "static/img/fsss.jpg", "country":"India", "institute":"Forum for Strategic and Security Studies","url":"fsss.in"},
+                "dr"            : {"image": "static/img/idr.png", "country":"India", "institute":"Indian Defence Review", "url":"http://www.indiandefencereview.com"},
+                "sipri"         : {"image": "static/img/sipri.png", "country":"Sweden", "institute":"Stockholm International Peace Research Institute", "url":"sipri.org"},
+                "beijing review": {"image": "static/img/br.jpeg", "country":"China", "institute":"Beijing Review", "url":"bjreview.com"},
+                "aviationweek"  : {"image": "static/img/aw.png", "country":"USA", "institute":"Aviation Week and Space Technology", "url":"aviationweek.com"}
+                },
+    "army" :{
+            "image"     : "static/img/ia.png",
+            "site"      : "https://indianarmy.nic.in",
+            "twitter"   : "https://twitter.com/adgpi",
+            "instagram" : "https://instagram.com/indianarmy.adgpi",
+            "facebook"  : "https://facebook.com/Indianarmy.adgpi/",
+            "youtube"   : "https://www.youtube.com/channel/UCvfH3RaugUbIqY-80iOED4Q",
+            "join"      : "joinindianarmy.nic.in"
+            },
+    "air force" :   {
+                    "image"     : "static/img/iaf.png",
+                    "site"      : "https://indianairforce.nic.in",
+                    "twitter"   : "https://twitter.com/IAF_MCC",
+                    "instagram" : "https://instagram.com/indianairforce/",
+                    "facebook"  : "https://facebook.com/IndianAirForce/",
+                    "youtube"   : "https://www.youtube.com/channel/UC4k15Q51NS6ws5Xkt-GDBBw",
+                    "join"      : "https://careerindianairforce.cdac.in/"
+                    },
+    "navy" :{
+            "image"     : "static/img/in.png",
+            "site"      : "https://indiannavy.nic.in",
+            "twitter"   : "https://twitter.com/indiannavy",
+            "instagram" : "https://instagram.com/indiannavy/",
+            "facebook"  : "https://www.facebook.com/IndianNavy",
+            "youtube"   : "https://www.youtube.com/channel/UCwf4mnzdbyCIhyuzNmjCQTw",
+            "join"      : "joinindiannavy.nic.in"
+            },
+    "websites" :    {
+                    "manufacturing" : ["https://www.investindia.gov.in/sector/defence-manufacturing"],
+                    "compare"       : ["https://armedforces.eu/compare/country_India_vs_China"]
+                    },
+    "defence updates" : {
+                            "rstv" : ""
+                        },
+    "initiatives" : {
+                    "Make In India" : {"image": "static/img/min.png"},
+                    "Swach Bharat" : {"image": "static/img/swach.png"},
+                    "Digital India" : {"image": "static/img/digital.png"},
+                    "Jal Shakti"    : {"image": "static/img/jalshakti.png"},
+                    "Smart City"   : {"image": "static/img/smart.png"},
+                    "Skill India"   : {"image": "static/img/skill.png"}
+    },
+    "india" :  {       
+                "name"        : "Republic of India or Bhartiya Ganrajya", 
+                "capital"     : "New Delhi",
+                "area"        : "3,287,263 km2",
+                "time"        : "GMT + 5:30",
+                "climate"     : [
+                                "winter (December-February)",
+                                "summer (March-June)",
+                                "south-west monsoon season (June-September)",
+                                "post monsoon season (October-November)"
+                                ],
+                "geography-division"   : [
+                                "The Himalayan region in the north",
+                                "The Gangetic Plain",
+                                "The plateau region in the south and central areas"
+                                ],
+                "neighbours"  : ["Afghanistan", "China", "Nepal", "Bangladesh", "Bhutan", "Myanmar", "Sri Lanka", "Maldives", "Pakistan"],
+                "native lang" : "447",
+                "membership"  : "UN, WTO, BRICS, SAARC, SCO, G4 nations, Group of Five, G8+5, G20, Commonwealth of Nations",
+                "govt"        : ["Federal", "Parliamentary", "Constitutional Republic"],
+                "legislature" : ["Lower House : Lok Sabha", "Upper House : Rajya Sabha"],
+                "population"  : {
+                                "Pop" : "1,210,854,977",
+                                "Density"     : "407.3",
+                                "Sex ratio"     : "940",
+                                "Ethnicities"   : "Australoid, Mongoloid, Europoid, Caucasian, Negroid",
+                                "Literacy"      : "74.04",
+                                "Birth rate"    : "18.3%",
+                                "Death rate"    : "7.3%"
+                                },
+                "facts"       : [
+                                "The seventh largest country in the world",
+                                "It is the largest democracy",
+                                "Chess was invented in India",
+                                "The 'Place Value System' and the 'Decimal System' were developed in India in 100 B.C",
+                                "India never invaded any country in her last 100000 years of history",
+                                "The name 'India' is derived from the River Indus",
+                                "The Persian invaders converted it into Hindu. The name 'Hindustan' combines Sindhu and Hindu and thus refers to the land of the Hindus",
+                                "Algebra, Trigonometry and Calculus are studies, which originated in India",
+                                "The world's highest cricket ground is in Chail, Himachal Pradesh",
+                                "India has the largest number of Post Offices in the world",
+                                "The world's first university was established in Takshila in 700 BC. More than 10,500 students from all over the world studied more than 60 subjects. The University of Nalanda built in the 4th century was one of the greatest achievements of ancient India in the field of education.",
+                                "The Art of Navigation & Navigating was born in the river Sindh over 6000 years ago. The very word Navigation is derived from the Sanskrit word 'NAVGATIH'. The word navy is also derived from the Sanskrit word 'Nou'",
+                                "Ayurveda is the earliest school of medicine known to mankind. The Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago",
+                                "Bhaskaracharya rightly calculated the time taken by the earth to orbit the Sun hundreds of years before the astronomer Smart",
+                                "The value of 'pi' was first calculated by the Indian Mathematician Budhayana, and he explained the concept of what is known as the Pythagorean Theorem",
+                                "The Baily Bridge is the highest bridge in the world. It is located in the Ladakh valley between the Dras and Suru rivers in the Himalayan mountains. It was built by the Indian Army in August 1982",
+                                "Sushruta is regarded as the Father of Surgery. Over2600 years ago Sushrata & his team conducted complicated surgeries like cataract, artificial limbs, cesareans, fractures, urinary stones, plastic surgery and brain surgeries",
+                                "Usage of anaesthesia was well known in ancient Indian medicine. Detailed knowledge of anatomy, embryology, digestion, metabolism,physiology, etiology, genetics and immunity is also found in many ancient Indian texts",
+                                "India exports software to 90 countries",
+                                "The four religions born in India - Hinduism, Buddhism, Jainism, and Sikhism, are followed by 25% of the world's population",
+                                "Jainism and Buddhism were founded in India in 600 B.C. and 500 B.C. respectively",
+                                "Martial Arts were first created in India, and later spread to Asia by Buddhist missionaries",
+                                "Yoga has its origins in India and has existed for over 5,000 years",
+                                "Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today"
+                                ]
+
+    }
+}

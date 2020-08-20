@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        #overlay {
+            display: grid;
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+
+        .overlay-grid-item {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+        }
+
+        .head {
+            grid-column: 1 / span 4;
+            grid-row: 1;
+        }
+
+        .side-panel {
+            grid-column: 4;
+            grid-row: 1 / span 2;
+        }
+
+        .mid-section {
+            grid-column: 1 /span 3;
+            grid-row: 3;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="overlay">
+        <div class="head overlay-grid-item">
+            1
+        </div>
+        <div class="side-panel overlay-grid-item">
+            2
+        </div>
+        <div class="mid-section overlay-grid-item">
+            3
+        </div>
+        <div class="footer overlay-grid-item">
+            4
+        </div>
+        <div class="footer overlay-grid-item">
+            5
+        </div>
+
+
+    </div>
+</body>
+
+</html>

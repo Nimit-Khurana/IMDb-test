@@ -101,10 +101,14 @@ def wuhan():
 
 @app.route("/india")
 def india():
-    f = open("defence.txt", "r")
+    f = open("data.txt", "r")
     data = json.loads( f.read() )
     return render_template("india.html", data =data )
 
+@app.route("/india/api.html")
+def india_api():
+    f = open("data.txt", "r")
+    return f.read()
 
 @app.route("/error")
 def error():

@@ -7,6 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="static/css/new.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
@@ -26,17 +27,34 @@
                     $(id).removeClass('display-none');
                 };
             };
-            $('.drop_btn').click(function() {
+            $('.drop_btn').click(function () {
                 clicked('#branch-id', '.drop_btn');
+            });
+        });
+
+        $(document).ready(function () {
+            $('.close').click(function () {
+                $('#overlay').css('display', 'none');
+                $('#overlay-def').css('display', 'none');
+
+            });
+        });
+        $(document).ready(function () {
+            $('#overlay-btn').click(function () {
+                $('#overlay').css('display', 'block')
+            });
+        });
+        $(document).ready(function () {
+            $('#overlay-btn-def').click(function () {
+                $('#overlay-def').css('display', 'block')
             });
         });
     </script>
     <style>
         body {
-            background-color: black;
-            background-image: url('static/img/defence.jpeg');
+            background-color: #e5e5e5;
+            /*background-image: url('static/img/defence.jpeg');*/
             background-size: auto;
-            background-attachment: unset;
             background-repeat: no-repeat;
             background-attachment: fixed;
             color: #202328;
@@ -45,9 +63,99 @@
 </head>
 
 <body>
-    <div id="overlay">
 
+    <div id="overlay">
+        <div class="overlay-inner">
+            <div class="head">
+                <img class="close" style="width: 64px;height: 64px;" src="static/img/close.png">
+            </div>
+            <div class="flexbox">
+                <div class="side-panel overlay-flex-item">
+                    <h3> {{ data['india']['name'] }}</h3>
+                    <img style="border-radius: 50%;width: 300px;height: 300px;" src="static/img/india.png">
+                    <div class="inner-flex">
+                        <div class="inner-flex-1">
+                            <p> Capital : {{ data['india']['capital'] }}</p>
+                            <p> Area : {{ data['india']['area'] }}</p>
+                            <p> Time : {{ data['india']['time'] }}</p>
+                            <p>Climate : {% for item in data['india']['climate'] %}
+                            <p>{{item}}</p>
+                            {%endfor%}
+                            </p>
+
+                        </div>
+                        <div class="inner-flex-2">
+                            <p>Memberships : {{ data['india']['membership'] }}</p>
+                            <p>{{ data['india']['legislature'][0] }}</p>
+                            <p>{{ data['india']['legislature'][1] }}</p>
+                            {% for key,value in data['india']['population'].items() %}
+                            <p> {{ key }} : {{ value }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="mid-section overlay-flex-item">
+                    <h2>Facts about India</h2>
+                    <ul>
+                        {% for fact in data['india']['facts'] %}
+                        <li>{{ fact }}</li>
+                        {% endfor %}
+                    </ul>
+
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div id="overlay-def">
+        <div class="overlay-inner">
+            <div class="head">
+                <img class="close" style="width: 64px;height: 64px;" src="static/img/close.png">
+            </div>
+            <div id="defence">
+                <div class="div-defence">
+                    {% set d = data['army'] %}
+                    <img src="{{ d['image'] }}" style="height:64px;width:64px;">
+                    <a href="{{ d['site'] }}">
+                        <h2 style="color: #2a5744;">Indian Army</h2>
+                    </a>
+                    <a href="{{ d['join'] }}">Be a part of it!</a>
+                    <hr style="width:50%;color: #2a5744;">
+                    <a href="{{ d['instagram'] }}"><img src="static/img/instagram.png"></a>
+                    <a href="{{ d['twitter'] }}"><img src="static/img/twitter.png"></a>
+                    <a href="{{ d['facebook'] }}"><img src="static/img/facebook.png"></a>
+                    <a href="{{ d['youtube'] }}"><img src="static/img/youtube.png"></a>
+                </div>
+                <div class="div-defence">
+                    {% set d = data['navy'] %}
+                    <img src="{{ d['image'] }}" style="height:64px;width:64px;">
+                    <a href="{{ d['site'] }}">
+                        <h2>Indian Navy</h2>
+                    </a>
+                    <a href="{{ d['join'] }}">Be a part of it!</a>
+                    <hr style="width:50%;color: #2a5744;">
+                    <a href="{{ d['instagram'] }}"><img src="static/img/instagram.png"></a>
+                    <a href="{{ d['twitter'] }}"><img src="static/img/twitter.png"></a>
+                    <a href="{{ d['facebook'] }}"><img src="static/img/facebook.png"></a>
+                    <a href="{{ d['youtube'] }}"><img src="static/img/youtube.png"></a>
+                </div>
+                <div class="div-defence">
+                    {% set d = data['air force'] %}
+                    <img src="{{ d['image'] }}" style="height:64px;width:64px;">
+                    <a href="{{ d['site'] }}">
+                        <h2 style="color: #5294e2;">Indian Air Force</h2>
+                    </a>
+                    <a href="{{ d['join'] }}">Be a part of it!</a>
+                    <hr style="width:50%;color: #2a5744;">
+                    <a href="{{ d['instagram'] }}"><img src="static/img/instagram.png"></a>
+                    <a href="{{ d['twitter'] }}"><img src="static/img/twitter.png"></a>
+                    <a href="{{ d['facebook'] }}"><img src="static/img/facebook.png"></a>
+                    <a href="{{ d['youtube'] }}"><img src="static/img/youtube.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="main">
         <div id="menu-bar">
             <img src="static/img/map64.png">
@@ -61,6 +169,12 @@
                 </a>
                 <a href="/india">
                     <p class="active">India</p>
+                </a>
+                <a id="overlay-btn" href="#">
+                    <p>See Some Facts</p>
+                </a>
+                <a id="overlay-btn-def" href="#">
+                    <p>Know your forces</p>
                 </a>
             </div>
         </div>
@@ -108,46 +222,28 @@
 
     <hr style="margin: 4% 20% 4% 20%;border-color:orange">
 
-    <footer id="footer-defence">
-        <div class="footer-div-defence">
-            {% set d = data['army'] %}
-            <img src="{{ d['image'] }}" style="height:64px;width:64px;">
-            <a href="{{ d['site'] }}">
-                <h2 style="color: #2a5744;">Indian Army</h2>
-            </a>
-            <a href="{{ d['join'] }}">Be a part of it!</a>
-            <hr style="width:50%;color: #2a5744;">
-            <a href="{{ d['instagram'] }}"><img src="static/img/instagram.png"></a>
-            <a href="{{ d['twitter'] }}"><img src="static/img/twitter.png"></a>
-            <a href="{{ d['facebook'] }}"><img src="static/img/facebook.png"></a>
-            <a href="{{ d['youtube'] }}"><img src="static/img/youtube.png"></a>
+    <footer style="border-left: 3px solid #b00020;" id="footer">
+        <div class="footer-item">
+            <h1 style="color: #b00020;">Know Your India</h1>
+            <p>Data Fetched from:</p>
+            <li style="font-size: 10px;">investindia.gov.in (MEA)</li>
+            <li style="font-size: 10px;">indianarmy.nic.in</li>
+            <li style="font-size: 10px;">indianarforce.nic.in</li>
+            <li style="font-size: 10px;">indianavy.nic.in</li>
         </div>
-        <div class="footer-div-defence">
-            {% set d = data['navy'] %}
-            <img src="{{ d['image'] }}" style="height:64px;width:64px;">
-            <a href="{{ d['site'] }}">
-                <h2>Indian Navy</h2>
-            </a>
-            <a href="{{ d['join'] }}">Be a part of it!</a>
-            <hr style="width:50%;color: #2a5744;">
-            <a href="{{ d['instagram'] }}"><img src="static/img/instagram.png"></a>
-            <a href="{{ d['twitter'] }}"><img src="static/img/twitter.png"></a>
-            <a href="{{ d['facebook'] }}"><img src="static/img/facebook.png"></a>
-            <a href="{{ d['youtube'] }}"><img src="static/img/youtube.png"></a>
+        <div class="footer-item">
+            <h3 style="color: #b00020;">Contact Me</h3>
+            <p><img src="static/img/pin.png"> Panchkula, India</p>
+            <strong>Phone:</strong> +91 9501138443<br>
+            <strong>Email:</strong> nimitkhuranaa@gmail.com<br>
         </div>
-        <div class="footer-div-defence">
-            {% set d = data['air force'] %}
-            <img src="{{ d['image'] }}" style="height:64px;width:64px;">
-            <a href="{{ d['site'] }}">
-                <h2 style="color: #5294e2;">Indian Air Force</h2>
-            </a>
-            <a href="{{ d['join'] }}">Be a part of it!</a>
-            <hr style="width:50%;color: #2a5744;">
-            <a href="{{ d['instagram'] }}"><img src="static/img/instagram.png"></a>
-            <a href="{{ d['twitter'] }}"><img src="static/img/twitter.png"></a>
-            <a href="{{ d['facebook'] }}"><img src="static/img/facebook.png"></a>
-            <a href="{{ d['youtube'] }}"><img src="static/img/youtube.png"></a>
+        <div class="footer-item">
+            <h3 style="color: #b00020;">About</h3>
+            <p>This project here is to spread the knowledge of the diversity of India and cherish it's unsaid beauty! </p>
+            <p><a style="text-decoration: none;color:white" href="/india/api.html">Get API</p></a>
+            <p></p>
         </div>
+        
     </footer>
 
 
