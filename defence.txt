@@ -1,0 +1,54 @@
+{
+    "journals": {
+                "iiss"          : {"image": "static/img/iiss.png", "country":"UK", "institute":"International Institute for Strategic Studies", "url":"iiss.org"},
+                "csis"          : {"image": "static/img/csis.jpg", "country":"USA", "institute":"Center for Strategic and International Studies", "url":"csis.org"},
+                "idsa"          : {"image": "static/img/idsa.jpg", "country":"India", "institute":"Manohar Parrikar Institute for Defence Studies and Analyses", "url":"idsa.in"},
+                "fsss"          : {"image": "static/img/fsss.jpg", "country":"India", "institute":"Forum for Strategic and Security Studies","url":"fsss.in"},
+                "dr"            : {"image": "static/img/idr.png", "country":"India", "institute":"Indian Defence Review", "url":"http://www.indiandefencereview.com"},
+                "sipri"         : {"image": "static/img/sipri.png", "country":"Sweden", "institute":"Stockholm International Peace Research Institute", "url":"sipri.org"},
+                "beijing review": {"image": "static/img/br.jpeg", "country":"China", "institute":"Beijing Review", "url":"bjreview.com"},
+                "aviationweek"  : {"image": "static/img/aw.png", "country":"USA", "institute":"Aviation Week and Space Technology", "url":"aviationweek.com"}
+                },
+    "army" :{
+            "image"     : "static/img/ia.png",
+            "site"      : "https://indianarmy.nic.in",
+            "twitter"   : "https://twitter.com/adgpi",
+            "instagram" : "https://instagram.com/indianarmy.adgpi",
+            "facebook"  : "https://facebook.com/Indianarmy.adgpi/",
+            "youtube"   : "https://www.youtube.com/channel/UCvfH3RaugUbIqY-80iOED4Q",
+            "join"      : "joinindianarmy.nic.in"
+            },
+    "air force" :   {
+                    "image"     : "static/img/iaf.png",
+                    "site"      : "https://indianairforce.nic.in",
+                    "twitter"   : "https://twitter.com/IAF_MCC",
+                    "instagram" : "https://instagram.com/indianairforce/",
+                    "facebook"  : "https://facebook.com/IndianAirForce/",
+                    "youtube"   : "https://www.youtube.com/channel/UC4k15Q51NS6ws5Xkt-GDBBw",
+                    "join"      : "https://careerindianairforce.cdac.in/"
+                    },
+    "navy" :{
+            "image"     : "static/img/in.png",
+            "site"      : "https://indiannavy.nic.in",
+            "twitter"   : "https://twitter.com/indiannavy",
+            "instagram" : "https://instagram.com/indiannavy/",
+            "facebook"  : "https://www.facebook.com/IndianNavy",
+            "youtube"   : "https://www.youtube.com/channel/UCwf4mnzdbyCIhyuzNmjCQTw",
+            "join"      : "joinindiannavy.nic.in"
+            },
+    "websites" :    {
+                    "manufacturing" : ["https://www.investindia.gov.in/sector/defence-manufacturing"],
+                    "compare"       : ["https://armedforces.eu/compare/country_India_vs_China"]
+                    },
+    "defence updates" : {
+                            "rstv" : ""
+                        },
+    "initiatives" : {
+                    "Make In India" : {"image": "static/img/min.png"},
+                    "Swach Bharat" : {"image": "static/img/swach.png"},
+                    "Digital India" : {"image": "static/img/digital.png"},
+                    "Jal Shakti"    : {"image": "static/img/jalshakti.png"},
+                    "Smart City"   : {"image": "static/img/smart.png"},
+                    "Skill India"   : {"image": "static/img/skill.png"}
+    }
+}

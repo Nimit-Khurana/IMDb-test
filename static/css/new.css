@@ -1,0 +1,188 @@
+#menu-bar {
+    display: flex;
+    align-items: center;
+    background-color: #202328;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 70px;
+    z-index: 1000;
+}
+
+.menu-header , .menu-items {
+    color: white;
+}
+.menu-items {
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.menu-items p {
+    border-right: 1px solid white;
+    padding: 10px;
+}
+.menu-items a {
+    text-decoration: none;
+    color: white;
+}
+.menu-items a:active {
+    background-color: black;
+}
+
+#parallel-body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    margin-top: 130px;
+}
+
+.parallel {
+    width: 200px;
+    height: 60px;
+    background-color: #FFF712;
+    float: left;
+    transform: skew(20deg);
+    text-align: center;
+}
+
+.parallel p {
+    color: #202328;
+    padding: 10px;
+}
+
+.state-table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.state-table,
+th,
+td {
+    width: 70%;
+    color: #FFF712;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+.active {
+    background-color: orange;
+}
+.branch-gov {
+    background-color: #2ea35e;
+    border-radius: 10px;
+}
+.branch-journal {
+    background-color: #f31351;
+    border-radius: 10px;
+}
+.branch-header {
+    width: 100%;
+}
+.branch h2 {
+    color: white;
+    padding: 2px 0px 2px 10px;
+}
+
+
+#footer-covid {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #FFF712;
+    background-color: #202328;
+    bottom: 0px;
+}
+
+.footer-div-covid {
+    height: 200px;
+    min-width: 33%;
+    align-items: center;
+}
+
+.footer-div-covid a {
+    color: #FFF712;
+    text-decoration: none;
+}
+
+/*------------- defence -------------*/
+#footer-defence {
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+    background-color: #202328;
+    bottom: 0px;
+    overflow: hidden;
+}
+
+.footer-div-defence {
+    height: 200px;
+    min-width: 33%;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-div-defence a {
+    color: white;
+    text-decoration: none;
+    margin: 2%;
+}
+
+.social {
+    display: flex;
+}
+
+.cards {
+    background-color: black;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    text-align: center;
+    margin: 10px;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.card-image img {
+    height: 150px;
+    max-width: 100%;
+}
+
+.drop_btn {
+    transition-duration: 0.5s;
+}
+.display-flex {
+    display: flex;
+}
+.display-none {
+    display: none;
+}
+.gov-initiatives-roll {
+    justify-content: center;
+    align-items: baseline;
+    background-color: white;
+}
+
+.gov-card {
+    color: #2ea35e;
+    margin: 30px;
+    height: 50%;
+    padding: 10px;
+}

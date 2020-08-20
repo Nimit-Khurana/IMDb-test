@@ -2,9 +2,7 @@ from datetime import datetime
 import json
 from script import movie_query, imdb
 from wuhan import VirusData
-
 from flask import Flask, request, render_template, redirect, url_for
-
 from dbconfig import DBconfig
 from movie_db import (
     db,
@@ -14,7 +12,6 @@ from movie_db import (
     get_results_from_cache,
     check_update_time,
 )
-
 
 app = Flask(__name__)
 
@@ -72,6 +69,7 @@ def movie_json():
         print("Getting from database")
         return json.dumps(json.dumps(get_results_from_cache(arg)))
 
+
 @app.route("/<moviename>")
 def movie(moviename):
     title_arg = request.args["t"]
@@ -80,21 +78,32 @@ def movie(moviename):
         url = "https://imdb.com/name/" + title_arg
     else:
         url = "https://imdb.com/title/" + title_arg
-    
+
     imdb_data = imdb(url)
     if imdb_data == False:
         return render_template("error.html")
     imdb_link = "https://www.imdb.com/title/" + str(title_arg)
-    data = {"movie":moviename, "image":poster_arg, "imdbLink":imdb_link}
+    data = {"movie": moviename, "image": poster_arg, "imdbLink": imdb_link}
     data.update(imdb_data)
-    return render_template("movie.html" , data=data )
+    return render_template("movie.html", data=data)
+
 
 @app.route("/wuhan")
 def wuhan():
     x = VirusData(url="https://covid-india-cases.herokuapp.com/states/")
-    covid_data = [["Total cases",x.total_cases()], ["Total cured",x.total_cured()], ["Total deaths",x.total_deaths()]]
+    covid_data = [
+        ["Total cases", x.total_cases()],
+        ["Total cured", x.total_cured()],
+        ["Total deaths", x.total_deaths()],
+    ]
     state_data = x.state_wise_data()
     return render_template("wuhan.html", data=covid_data, state_data=state_data)
+
+@app.route("/india")
+def india():
+    f = open("defence.txt", "r")
+    data = json.loads( f.read() )
+    return render_template("india.html", data =data )
 
 
 @app.route("/error")
