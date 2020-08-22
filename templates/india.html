@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Defence</title>
+    <title>India</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="static/css/new.css">
@@ -11,8 +11,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             ang = 180;
+
             function clicked(id, btn) {
                 $(btn).css({
                     'transform': 'rotate(' + ang + 'deg)'
@@ -21,40 +22,59 @@
                 if ($(id).hasClass('display-flex')) {
                     $(id).removeClass('display-flex');
                     $(id).addClass('display-none')
-                }
-                else {
+                } else {
                     $(id).addClass('display-flex');
                     $(id).removeClass('display-none');
                 };
             };
-            $('.drop_btn').click(function () {
+            $('.drop_btn').click(function() {
                 clicked('#branch-id', '.drop_btn');
             });
         });
 
-        $(document).ready(function () {
-            $('.close').click(function () {
+        $(document).ready(function() {
+            $('.close').click(function() {
                 $('#overlay').css('display', 'none');
                 $('#overlay-def').css('display', 'none');
 
             });
+            $('.back').click(function() {
+                $('#defence-data-overlay').css('display', 'none');
+            });
         });
-        $(document).ready(function () {
-            $('#overlay-btn').click(function () {
+        $(document).ready(function() {
+            $('#overlay-btn').click(function() {
                 $('#overlay').css('display', 'block')
             });
         });
-        $(document).ready(function () {
-            $('#overlay-btn-def').click(function () {
+        $(document).ready(function() {
+            $('#overlay-btn-def').click(function() {
                 $('#overlay-def').css('display', 'block')
+            });
+        });
+        $(document).ready(function() {
+            function clicked(show, e, f) {
+                $('#defence-data-overlay').css('display', 'block');
+                $(show).css('display', 'block');
+                $(e).css('display', 'none');
+                $(f).css('display', 'none');
+            };
+            $('#army').click(function() {
+                clicked('.army', '.navy', '.airforce');
+            });
+            $('#navy').click(function() {
+                clicked('.navy', '.army', '.airforce');
+            });
+            $('#airforce').click(function() {
+                clicked('.airforce', '.army', '.navy');
             });
         });
     </script>
     <style>
         body {
             background-color: #e5e5e5;
-            /*background-image: url('static/img/defence.jpeg');*/
-            background-size: auto;
+            background-image: url('static/img/indiaa.jpg');
+            background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             color: #202328;
@@ -72,15 +92,15 @@
             <div class="flexbox">
                 <div class="side-panel overlay-flex-item">
                     <h3> {{ data['india']['name'] }}</h3>
-                    <img style="border-radius: 50%;width: 300px;height: 300px;" src="static/img/india.png">
+                    <img style="width: 500px;height: 700px;" src="static/img/india.jpg">
                     <div class="inner-flex">
                         <div class="inner-flex-1">
                             <p> Capital : {{ data['india']['capital'] }}</p>
                             <p> Area : {{ data['india']['area'] }}</p>
                             <p> Time : {{ data['india']['time'] }}</p>
                             <p>Climate : {% for item in data['india']['climate'] %}
-                            <p>{{item}}</p>
-                            {%endfor%}
+                                <p>{{item}}</p>
+                                {%endfor%}
                             </p>
 
                         </div>
@@ -112,6 +132,11 @@
             <div class="head">
                 <img class="close" style="width: 64px;height: 64px;" src="static/img/close.png">
             </div>
+            <div id="mySidenav">
+                <a href="#" id="army">Indian Army</a>
+                <a href="#" id="navy">Indian Navy</a>
+                <a href="#" id="airforce">Indian Air Force</a>
+            </div>
             <div id="defence">
                 <div class="div-defence">
                     {% set d = data['army'] %}
@@ -125,6 +150,8 @@
                     <a href="{{ d['twitter'] }}"><img src="static/img/twitter.png"></a>
                     <a href="{{ d['facebook'] }}"><img src="static/img/facebook.png"></a>
                     <a href="{{ d['youtube'] }}"><img src="static/img/youtube.png"></a>
+                    <hr style="width:50%;color: #2a5744;">
+                    <p>{{ d['about'] }}</p>
                 </div>
                 <div class="div-defence">
                     {% set d = data['navy'] %}
@@ -138,6 +165,8 @@
                     <a href="{{ d['twitter'] }}"><img src="static/img/twitter.png"></a>
                     <a href="{{ d['facebook'] }}"><img src="static/img/facebook.png"></a>
                     <a href="{{ d['youtube'] }}"><img src="static/img/youtube.png"></a>
+                    <hr style="width:50%;color: #2a5744;">
+                    <p>{{ d['about'] }}</p>
                 </div>
                 <div class="div-defence">
                     {% set d = data['air force'] %}
@@ -151,10 +180,43 @@
                     <a href="{{ d['twitter'] }}"><img src="static/img/twitter.png"></a>
                     <a href="{{ d['facebook'] }}"><img src="static/img/facebook.png"></a>
                     <a href="{{ d['youtube'] }}"><img src="static/img/youtube.png"></a>
+                    <hr style="width:50%;color: #2a5744;">
+                    <p>{{ d['about'] }}</p>
                 </div>
             </div>
         </div>
     </div>
+    <!------------ end Overlay -------------->
+
+    <div id="defence-data-overlay">
+        <div class="overlay-inner">
+            <div class="head">
+                <img class="back" src="static/img/back.png">
+            </div>
+            <div id="defence-data">
+                <div class="div-defence-data army">
+                    {% set d = data['army'] %}
+                    <img src="{{ d['image'] }}" style="height:64px;width:64px;"> {%for fact in d['facts'] %}
+                    <li>{{ fact }}</li>
+                    {%endfor%}
+                </div>
+                <div class="div-defence-data navy">
+                    {% set d = data['navy'] %}
+                    <img src="{{ d['image'] }}" style="height:64px;width:64px;"> {%for fact in d['facts'] %}
+                    <li>{{ fact }}</li>
+                    {%endfor%}
+                </div>
+                <div class="div-defence-data airforce">
+                    {% set d = data['air force'] %}
+                    <img src="{{ d['image'] }}" style="height:64px;width:64px;"> {%for fact in d['facts'] %}
+                    <li>{{ fact }}</li>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------ end Overlay Overlay -------------->
 
     <div id="main">
         <div id="menu-bar">
@@ -179,8 +241,10 @@
             </div>
         </div>
 
-        <div class="branch-journal" style="margin-top: 130px;">
-            <h2>Defence Journals <img class="drop_btn" src="static/img/down.png"></h2>
+        <hr style="margin-top: 100px; border-color: #b00020;border-width:5px;">
+
+        <div class="branch-journal">
+            <h3 style="padding:10px;">Defence Journals <img class="drop_btn" src="static/img/down.png"></h3>
 
             <div id="branch-id" class="cards display-none">
                 {% for key,value in data["journals"].items() %}
@@ -203,12 +267,11 @@
             </div>
         </div>
 
-        <hr style="margin: 4% 20% 4% 20%; border-color: orange">
+        <hr style="margin: 4% 20% 4% 20%; border-color: #b00020">
     </div>
 
     <div class="branch-gov">
-        <h2>Govt. Initiatives</h2>
-
+        <h3 style="padding:10px;">Government Initiatives</h3>
         <div class="gov-initiatives-roll display-flex">
             {% for key,value in data['initiatives'].items() %}
             <div class="gov-card">
@@ -220,7 +283,7 @@
     </div>
 
 
-    <hr style="margin: 4% 20% 4% 20%;border-color:orange">
+    <hr style="margin: 4% 20% 4% 20%;border-color:#b00020">
 
     <footer style="border-left: 3px solid #b00020;" id="footer">
         <div class="footer-item">
@@ -230,6 +293,7 @@
             <li style="font-size: 10px;">indianarmy.nic.in</li>
             <li style="font-size: 10px;">indianarforce.nic.in</li>
             <li style="font-size: 10px;">indianavy.nic.in</li>
+            <li style="font-size: 10px;">india.gov.in</li>
         </div>
         <div class="footer-item">
             <h3 style="color: #b00020;">Contact Me</h3>
@@ -239,11 +303,12 @@
         </div>
         <div class="footer-item">
             <h3 style="color: #b00020;">About</h3>
-            <p>This project here is to spread the knowledge of the diversity of India and cherish it's unsaid beauty! </p>
+            <p>This project here is to spread the knowledge of the diversity of India and cherish it's unsaid beauty!
+            </p>
             <p><a style="text-decoration: none;color:white" href="/india/api.html">Get API</p></a>
-            <p></p>
+                <p></p>
         </div>
-        
+
     </footer>
 
 

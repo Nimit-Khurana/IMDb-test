@@ -16,7 +16,23 @@
             "instagram" : "https://instagram.com/indianarmy.adgpi",
             "facebook"  : "https://facebook.com/Indianarmy.adgpi/",
             "youtube"   : "https://www.youtube.com/channel/UCvfH3RaugUbIqY-80iOED4Q",
-            "join"      : "joinindianarmy.nic.in"
+            "join"      : "joinindianarmy.nic.in",
+            "articles"  : "https://www.indianarmy.nic.in/Site/FormTemplete/frmTempSimple.aspx?MnId=LERR2Y5x6w/du8QQG8HoSg==&ParentID=dSiezeMAwp5hOouLHbdcHA==&flag=HCbsTma8kXfFvOo6xa2FXA==",
+            "about"     : "The Indian subcontinent had witnessed the cohesive concentration of many Empires in the quest for control of military power, and governance of the State. As time rolled by, societal norms found an ethos in the workplace, the system of rights and privileges, and service under the flag. The Indian Army, as we know it today became operational after the Country gained independence from British colonialism. The Indian Army's HQ is located in New Delhi and functions under the Chief of Army Staff (COAS), who is responsible for the command, control, and administration as a whole. The Army is divided into six operational commands (field armies) and one training command, each under the command of a Lieutenant General, who has an equal status to the Vice-Chief of Army Staff (VCOAS), working under the control of Army HQ in New Delhi.",
+            "facts"     : [
+                                "The Indian Army is the 2nd largest standing army in the world. Indian Army has about 1, 129, 900 active troops and 960,000 reserve troops",
+                                "On January 15, 1949, Lieutenant General K. M. Cariappa took over from General Sir Francis Butcher, thus becoming the first Commander-in-Chief of the Indian Army. In order to honour that historic occasion and the brave men and women who have served this nation, January 15 is celebrated as Army Day every year",
+                                "Indian Army functions at the Siachen Glacier which is about 5000 meters above sea level. The glacier is regarded as the highest battlefield in the world",
+                                "The Indian army has a horsed cavalry regiment which is among last 3 such regiments in the world",
+                                "In December 1971, the Battle of Longewala was fought between India and Pakistan. This battle is interesting because with just 120 Indian soldiers and a jeep with a M40 recoilless rifle stood its ground against 2000 Pakistani soldiers. As the Indian soldiers held their ground all through the night. The help from the Air Force came in the morning",
+                                " The Bailey bridge, the highest altitude bridge in the world, is built by the Indian army",
+                                " India ranks 4th in the list of global fire power, next only to USA, Russia and China",
+                                "Agni and Prithvi are the two most accurate nuclear-capable basaltic missiles in the world in their respective categories",
+                                "Indian Military holds the World Record for accepting the Largest Military Surrender. In the year 1971; 93,000 Pakistani Soldiers surrendered to the Indian Army",
+                                "Indian soldiers are considered among the Best in high altitude and mountain warfare: The Indian Army’s High Altitude Warfare School (HAWS) is one of the most elite military training centers of the world and is frequented by Special Ops teams from the U.S, U.K, and Russia. U.S. Special Forces were trained at HAWS before their deployment during the invasion of Afghanistan",
+                                "It is recorded that Adolf Hitler expressed his desire to acquire the Gurkha Regiment because he believed that he could have acquired the whole of Europe if he had Gurkha, as it was the only force in the whole world that could confront and withstand a German Attack",
+                                "The 16th Light Cavalry, a regiment of the Armoured Corps, a primary combat arm of the Indian Army was formed in 1776 and is the oldest armored regiment created by the East India Company at Kolkata"
+                          ]
             },
     "air force" :   {
                     "image"     : "static/img/iaf.png",
@@ -25,7 +41,18 @@
                     "instagram" : "https://instagram.com/indianairforce/",
                     "facebook"  : "https://facebook.com/IndianAirForce/",
                     "youtube"   : "https://www.youtube.com/channel/UC4k15Q51NS6ws5Xkt-GDBBw",
-                    "join"      : "https://careerindianairforce.cdac.in/"
+                    "join"      : "https://careerindianairforce.cdac.in/",
+                    "about"     : "The Indian Air Force was officially established on 8th October 1932, and on 1st April 1954, Air Marshal Subroto Mukherjee, one of the founding members of the Air Force took over as the first Indian Chief of Air Staff. With the passage of time, the Indian Air Force undertook massive upgrading of its aircraft and equipments, and as part of the process, it introduced more than twenty new types of aircrafts. The last decade of the twentieth century saw a phenomenal change in the structure of the Indian Air Force with induction of women into the Air Force for short service commissions. It was also a time when the Air Force undertook some of the most perilous operations ever undertaken.",
+                    "facts"     : [
+                                        "With around 1, 70,000 personnel and 1,500 aircraft, IAF is the fourth largest air force in the world after the US, Russia and China. The Indian air force is also the seventh strongest air force in the world",
+                                        "The Indian Air Force has an out-station base in Tajikistan and is seeking another in Afghanistan",
+                                        "IAF's Hindon Air Force Station, situated near Ghaziabad is the largest in Asia and 8th largest in the world. The highest Air Force Station is Siachen Glacier AFS situated at a height of 22,000 ft or (or 6,706 m)",
+                                        "Flying officer Nirmal Jit Singh Sekhon was the first and only IAF officer to be awarded the Param Veer Chakra posthumously for his bravery in the 1971 India-Pakistan war",
+                                        "IAF has one Air Marshal at a time and Padmavathy Bandopadhyay is the first woman Air Marshal of the Indian Air Force. Also, she was the second woman in the Indian armed forces who was promoted to three-star rank",
+                                        "The IAF destroyed more than 40 APCs, 29 Pakistani tanks, and a railway train during the Battle of Longewala in the 1971 Indo-Pak War",
+                                        "Its motto Nabha Sparsham Deeptham is taken from the eleventh chapter of the Bhagavad Gita"
+                                  ]
+
                     },
     "navy" :{
             "image"     : "static/img/in.png",
@@ -34,7 +61,20 @@
             "instagram" : "https://instagram.com/indiannavy/",
             "facebook"  : "https://www.facebook.com/IndianNavy",
             "youtube"   : "https://www.youtube.com/channel/UCwf4mnzdbyCIhyuzNmjCQTw",
-            "join"      : "joinindiannavy.nic.in"
+            "join"      : "joinindiannavy.nic.in",
+            "about"     : "The foundation of the modern Indian Navy was laid in the seventeenth century when the East India Company had established a maritime force, thereby graduating in time to the establishment of the Royal Indian Navy in 1934. The Headquarters of the Indian Navy is located in New Delhi, and is under the command of the Chief of the naval staff – an Admiral. The Indian navy is deployed under three area commands, each headed by a flag officer. The Western Naval Command is headquartered in Bombay on the Arabian Sea; the Southern Naval Command in Kochi (Cochin), in Kerala, also on the Arabian Sea; and the Eastern Naval Command in Vishakhapatnam, Andhra Pradesh, on the Bay of Bengal.",
+            "facts"     : [
+                                "The Ezhimala Naval Academy in Kerala is the largest of its kind in Asia",
+                                "India’s first aircraft carrier was INS Vikrant. INS Viraat of the Indian navy is the largest aircraft carrier in India.",
+                                "Indian navy holds the distinction of one of the only two naval aerobatic teams in the world. The name of the aerobatic demonstration team is Sagar Pawan which uses 4 HJT-16 Kiran Mk.2 trainer aircrafts. The colour scheme used by the naval aircrafts is dark blue on white. The other aerobatic demonstration team is Blue Angels of the US Navy",
+                                "The naval variant of BrahMos missile is the fastest cruise missile in the world. The missile can zoom at a speed of Mach 2.8 – 3.0. This capability makes India the only country with supersonic cruise missiles in all of their defense forces",
+                                "Chhatrapati Shivaji Raje Bhosale is considered as the Father of Indian Navy. Chhatrapati built a strong naval presence across the coast of Konkan and Goa to protect sea trade",
+                                "The Naval soldiers of the Indian Navy have successfully completed an expedition to the North Pole and the South Pole",
+                                "Indian Navy was the first navy in the world to send a submariner to an expedition to Mt. Everest. The expedition was led by Lt. Cdr. M.S. Kohli in 1965",
+                                "The first independent operation of the Indian Navy’s was against Portuguese Navy during the liberation of Goa in 1961",
+                                "Indian Navy played a decisive role in the success of Kargil War. However, this information was kept under wraps for a long time. Personals from the MARCOS unit fought alongside Indian army in the Himalayas under the naval operation, Talwar",
+                                "INS Arihant is the first ballistic missile submarine to have been built by a country other than the five permanent members of the UNSC. It is a 6,000-tonne vessel and India’s only nuclear-powered ballistic missile submarine"
+                          ]
             },
     "websites" :    {
                     "manufacturing" : ["https://www.investindia.gov.in/sector/defence-manufacturing"],
@@ -105,7 +145,9 @@
                                 "Jainism and Buddhism were founded in India in 600 B.C. and 500 B.C. respectively",
                                 "Martial Arts were first created in India, and later spread to Asia by Buddhist missionaries",
                                 "Yoga has its origins in India and has existed for over 5,000 years",
-                                "Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today"
+                                "Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today",
+                                "India has a 14818 km long complex border wit extreme geography like swamps, deserts, fertile lands and tropical jungles and a 7516 km coastline: Pakistan-3323km, China-3488km, Nepal-1751km, Bhutan-699km, Bangladesh-4097km, Myanmar-1643km",
+                                "MP, Haryana, Delhi, Chattisgarh, Jharkhand and Telangana do not have an international boundary."
                                 ]
 
     }

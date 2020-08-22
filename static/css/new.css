@@ -1,4 +1,6 @@
-#overlay, #overlay-def {
+#overlay,
+#defence-data-overlay,
+#overlay-def {
     position: fixed;
     display: none;
     width: 100%;
@@ -7,49 +9,104 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.9);
-    z-index: 1001;
-    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.9);
     color: white;
     overflow-y: scroll;
     font-family: 'VT323', monospace;
     font-size: 20px;
+    z-index: 1001;
 }
+
+#defence-data-overlay {
+    display: none;
+    z-index: 1002;
+}
+
 .overlay-inner {
+    display: block;
     padding: 40px;
     width: auto;
+    z-index: 1002;
 }
-.flexbox{
+
+.flexbox {
     display: flex;
 }
+
 .overlay-flex-item {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     background-color: black;
 }
-.side-panel, .mid-section {
-   width: 50%;
+
+.side-panel,
+.mid-section {
+    width: 50%;
 }
+
 .head {
     background-color: rgba(216, 189, 189, 0.8);
     position: relative;
     padding-left: 20px;
 }
+
 .side-panel {
     height: 50%;
     text-align: center;
 }
-.mid-section {
-   
-}
+
+.mid-section {}
+
 .inner-flex {
     display: flex;
 }
-.inner-flex-1, .inner-flex-2 {
+
+.inner-flex-1,
+.inner-flex-2 {
     width: 50%;
 }
 
+#mySidenav a {
+    position: fixed;
+    left: -110px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 130px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #b00020;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+}
 
+#mySidenav a:hover {
+    left: 0;
+}
+
+.army,
+.navy,
+.airforce {
+    display: none;
+}
+
+#army {
+    top: 130px;
+    background-color: #2a5744;
+    z-index: 1;
+}
+
+#navy {
+    top: 200px;
+    background-color: white;
+}
+
+#airforce {
+    top: 270px;
+    background-color: #5294e2;
+}
+
+
+/*-----------------------------------------------------------------------*/
 
 #menu-bar {
     display: flex;
@@ -63,22 +120,27 @@
     z-index: 1000;
 }
 
-.menu-header , .menu-items {
+.menu-header,
+.menu-items {
     color: white;
 }
+
 .menu-items {
     margin: auto;
     display: flex;
     justify-content: flex-end;
 }
+
 .menu-items p {
     border-right: 1px solid white;
     padding: 10px;
 }
+
 .menu-items a {
     text-decoration: none;
     color: white;
 }
+
 .menu-items a:active {
     background-color: black;
 }
@@ -128,22 +190,28 @@ td {
 .active {
     background-color: #b00020;
 }
+
 .branch-gov {
     background-color: #2ea35e;
-    border-radius: 10px;
 }
+
 .branch-journal {
     background-color: #f31351;
+}
+
+.branch-gov,
+.branch-journal {
     border-radius: 10px;
 }
+
 .branch-header {
     width: 100%;
 }
+
 .branch h2 {
     color: white;
     padding: 2px 0px 2px 10px;
 }
-
 
 #footer-covid {
     display: flex;
@@ -165,12 +233,11 @@ td {
     text-decoration: none;
 }
 
+
 /*------------- india -------------*/
-#defence, #footer {
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+#defence-data {
+    display: block;
     width: 100%;
     color: white;
     background-color: #202328;
@@ -178,12 +245,43 @@ td {
     overflow: hidden;
 }
 
-.div-defence{
+#defence,
+#footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    background-color: #202328;
+    bottom: 0px;
+    overflow: hidden;
+}
+
+#footer {
+    height: 250px;
+    align-items: center;
+}
+
+.div-defence-data {
+    margin: 3px;
+    height: auto;
+    padding: 20px;
+}
+
+#defence,
+.div-defence {
+    height: auto;
+    align-items: flex-start;
+}
+
+.div-defence {
+    margin: 3px;
     align-items: center;
     text-align: center;
 }
-.div-defence, .footer-item {
-    height: 200px;
+
+.div-defence,
+.footer-item {
+    height: 100%;
     min-width: 33%;
 }
 
@@ -198,7 +296,7 @@ td {
 }
 
 .cards {
-    background-color: black;
+    background-color: white;
     flex-flow: row wrap;
     justify-content: space-around;
     align-content: space-between;
@@ -223,16 +321,19 @@ td {
 .drop_btn {
     transition-duration: 0.5s;
 }
+
 .display-flex {
     display: flex;
 }
+
 .display-none {
     display: none;
 }
+
 .gov-initiatives-roll {
     justify-content: center;
     align-items: baseline;
-    background-color: #e5e5e5;
+    background-color: white;
 }
 
 .gov-card {
