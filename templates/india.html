@@ -69,6 +69,24 @@
                 clicked('.airforce', '.army', '.navy');
             });
         });
+        $(document).ready(function() {
+            $('#mobile-menu').click(function() {
+                if (!$('.mobile-menu-items').hasClass("display-block")) {
+                    $('.mobile-menu-items').addClass("display-block");
+                    $('.mobile-menu-items').removeClass("display-none");
+                    $('.menu-icon-1').css("opacity", "0");
+                    $('.menu-icon-3').css("opacity", "0");
+                    $('.hr').css("margin-top", "280px")
+                } else {
+                    $('.menu-icon-1').css("opacity", "1");
+                    $('.menu-icon-3').css("opacity", "1");
+                    $('.mobile-menu-items').removeClass("display-block");
+                    $('.mobile-menu-items').addClass("display-none");
+                    $('.hr').css("margin-top", "100px")
+                }
+
+            });
+        });
     </script>
 </head>
 
@@ -233,8 +251,31 @@
 
     <div id="main">
         <div id="menu-bar">
-            <img src="static/img/map64.png">
+            <img src="static/img/map64.png" style="float: left;">
             <h1 class="menu-header">Incredible India!</h1>
+            <div id="mobile-menu" style="position: absolute;right:0px; top: 30px">
+                <div class="menu-icon-1"></div>
+                <div class="menu-icon-2"></div>
+                <div class="menu-icon-3"></div>
+            </div>
+            <div class="mobile-menu-items display-none">
+                <a href="/wuhan">
+                    <p>COVID</p>
+                </a>
+                <a href="/">
+                    <p>IMDb</p>
+                </a>
+
+                <a class="overlay-btn" href="#">
+                    <p>See Some Facts</p>
+                </a>
+                <a class="overlay-btn-def" href="#">
+                    <p>Know your forces</p>
+                </a>
+
+            </div>
+
+
             <div class="menu-items">
                 <a href="/wuhan">
                     <p>COVID</p>
@@ -252,31 +293,10 @@
                     <p>Know your forces</p>
                 </a>
             </div>
-            <a href="#" id="mobile-menu">
-                <div class="menu-icon"></div>
-                <div class="menu-icon"></div>
-                <div class="menu-icon"></div>
-                <div class="mobile-menu-items">
-                    <a href="/wuhan">
-                        <p>COVID</p>
-                    </a>
-                    <a href="/">
-                        <p>IMDb</p>
-                    </a>
-                    <a href="/india">
-                        <p class="active">India</p>
-                    </a>
-                    <a class="overlay-btn" href="#">
-                        <p>See Some Facts</p>
-                    </a>
-                    <a class="overlay-btn-def" href="#">
-                        <p>Know your forces</p>
-                    </a>
-                </div>
-            </a>
+
         </div>
 
-        <hr style="margin-top: 100px; border-color: #b00020;border-width:5px;">
+        <hr class="hr" style="border-color: #b00020;border-width:5px;">
 
 
 
