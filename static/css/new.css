@@ -1,3 +1,12 @@
+body {
+    background-color: black;
+    background-image: url('static/img/inda.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #202328;
+}
+
 #overlay,
 #defence-data-overlay,
 #overlay-def {
@@ -195,6 +204,7 @@ td {
 
 .branch-gov {
     background-color: #2ea35e;
+    max-width: 100%;
 }
 
 .branch-journal {
@@ -261,6 +271,7 @@ td {
 #footer {
     height: 250px;
     align-items: center;
+    border-left: 3px solid #b00020;
 }
 
 .div-defence-data {
@@ -339,6 +350,10 @@ td {
     display: flex;
 }
 
+.display-block {
+    display: block;
+}
+
 .display-none {
     display: none;
 }
@@ -356,9 +371,60 @@ td {
     padding: 10px;
 }
 
-@media screen and (max-device-width: 680px) {
-    .menu-bar {
+@media only screen and (max-width: 600px) {
+    .menu-items {
         display: none;
-        color: green;
+    }
+    .mobile-menu-items {
+        display: none;
+        margin: 10px;
+        padding: 10px;
+        background-color: black;
+        position: relative;
+    }
+    .menu-icon {
+        width: 35px;
+        height: 4px;
+        margin: 6px;
+        background-color: white;
+    }
+    #mobile-menu:hover .mobile-menu-items {
+        display: block;
+    }
+    #mobile-menu {
+        position: absolute;
+        right: 0px;
+    }
+    .mobile-menu-items a {
+        text-decoration: none;
+        color: white;
+    }
+    .gov-initiatives-roll {
+        display: block;
+        align-items: center;
+    }
+    .gov-card {
+        color: #2ea35e;
+        padding: 10px;
+    }
+    .gov-card img {
+        height: 60px;
+        width: auto;
+        float: left;
+    }
+    .gov-card p {
+        font-size: 10px;
+        ;
+    }
+    #footer {
+        display: block;
+        width: 100%;
+        color: white;
+        background-color: #202328;
+        bottom: 0px;
+        height: auto;
+        align-items: center;
+        border-left: none;
+        padding: 5px;
     }
 }

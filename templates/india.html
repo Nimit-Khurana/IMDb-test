@@ -43,12 +43,12 @@
             });
         });
         $(document).ready(function() {
-            $('#overlay-btn').click(function() {
+            $('.overlay-btn').click(function() {
                 $('#overlay').css('display', 'block')
             });
         });
         $(document).ready(function() {
-            $('#overlay-btn-def').click(function() {
+            $('.overlay-btn-def').click(function() {
                 $('#overlay-def').css('display', 'block')
             });
         });
@@ -70,16 +70,6 @@
             });
         });
     </script>
-    <style>
-        body {
-            background-color: black;
-            background-image: url('static/img/inda.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            color: #202328;
-        }
-    </style>
 </head>
 
 <body>
@@ -255,16 +245,35 @@
                 <a href="/india">
                     <p class="active">India</p>
                 </a>
-                <a id="overlay-btn" href="#">
+                <a class="overlay-btn" href="#">
                     <p>See Some Facts</p>
                 </a>
-                <a id="overlay-btn-def" href="#">
+                <a class="overlay-btn-def" href="#">
                     <p>Know your forces</p>
                 </a>
-                <a id="overlay-btn-def" href="#">
-                    <p>Hiking</p>
-                </a>
             </div>
+            <a href="#" id="mobile-menu">
+                <div class="menu-icon"></div>
+                <div class="menu-icon"></div>
+                <div class="menu-icon"></div>
+                <div class="mobile-menu-items">
+                    <a href="/wuhan">
+                        <p>COVID</p>
+                    </a>
+                    <a href="/">
+                        <p>IMDb</p>
+                    </a>
+                    <a href="/india">
+                        <p class="active">India</p>
+                    </a>
+                    <a class="overlay-btn" href="#">
+                        <p>See Some Facts</p>
+                    </a>
+                    <a class="overlay-btn-def" href="#">
+                        <p>Know your forces</p>
+                    </a>
+                </div>
+            </a>
         </div>
 
         <hr style="margin-top: 100px; border-color: #b00020;border-width:5px;">
@@ -289,10 +298,10 @@
 
     <hr style="margin: 4% 20% 4% 20%;border-color:#b00020">
 
-    <footer style="border-left: 3px solid #b00020;" id="footer">
+    <footer id="footer">
         <div class="footer-item">
-            <h1 style="color: #b00020;">Know Your India</h1>
-            <p>Data Fetched from:</p>
+            <h1 style="color: #b00020;border-left: 3px solid #b00020;">Know Your India</h1>
+            <strong>Data Fetched from:</strong>
             <li style="font-size: 10px;">investindia.gov.in (MEA)</li>
             <li style="font-size: 10px;">indianarmy.nic.in</li>
             <li style="font-size: 10px;">indianarforce.nic.in</li>
@@ -300,16 +309,16 @@
             <li style="font-size: 10px;">india.gov.in</li>
         </div>
         <div class="footer-item">
-            <h3 style="color: #b00020;">Contact Me</h3>
+            <h3 style="color: #b00020;border-bottom: 2px solid #b00020;">Contact Me</h3>
             <p><img src="static/img/pin.png"> Panchkula, India</p>
             <strong>Phone:</strong> +91 9501138443<br>
             <strong>Email:</strong> nimitkhuranaa@gmail.com<br>
         </div>
         <div class="footer-item">
-            <h3 style="color: #b00020;">About</h3>
+            <h3 style="color: #b00020;border-bottom: 2px solid #b00020;">About</h3>
             <p>This project here is to spread the knowledge of the diversity of India and cherish it's unsaid beauty!
             </p>
-            <a style="text-decoration: none;color:#b00020" href="/india/api.html">
+            <a style="text-decoration: none;cursor: pointer;color:white" href="/india/api.html">
                 Get API
             </a>
         </div>
