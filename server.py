@@ -72,20 +72,23 @@ def movie_json():
 
 @app.route("/<moviename>")
 def movie(moviename):
-    title_arg = request.args["t"]
-    poster_arg = request.args["i"]
-    if title_arg.startswith("nm"):
-        url = "https://imdb.com/name/" + title_arg
-    else:
-        url = "https://imdb.com/title/" + title_arg
+    try:
+        title_arg = request.args["t"]
+        poster_arg = request.args["i"]
+        if title_arg.startswith("nm"):
+            url = "https://imdb.com/name/" + title_arg
+        else:
+            url = "https://imdb.com/title/" + title_arg
 
-    imdb_data = imdb(url)
-    if imdb_data == False:
-        return render_template("error.html")
-    imdb_link = "https://www.imdb.com/title/" + str(title_arg)
-    data = {"movie": moviename, "image": poster_arg, "imdbLink": imdb_link}
-    data.update(imdb_data)
-    return render_template("movie.html", data=data)
+        imdb_data = imdb(url)
+        if imdb_data == False:
+            return render_template("error.html")
+        imdb_link = "https://www.imdb.com/title/" + str(title_arg)
+        data = {"movie": moviename, "image": poster_arg, "imdbLink": imdb_link}
+        data.update(imdb_data)
+        return render_template("movie.html", data=data)
+    except KeyError:
+        return moviename
 
 
 @app.route("/wuhan")

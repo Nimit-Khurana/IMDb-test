@@ -66,7 +66,7 @@
     width: 50%;
 }
 
-#mySidenav a {
+#def-sidenav a {
     position: fixed;
     left: -110px;
     transition: 0.3s;
@@ -79,7 +79,7 @@
     text-align: center;
 }
 
-#mySidenav a:hover {
+#def-sidenav a:hover {
     left: 0;
 }
 
@@ -98,11 +98,13 @@
 #navy {
     top: 200px;
     background-color: white;
+    z-index: 1;
 }
 
 #airforce {
     top: 270px;
     background-color: #5294e2;
+    z-index: 1;
 }
 
 
@@ -296,25 +298,36 @@ td {
 }
 
 .cards {
-    background-color: white;
+    background-color: #202328;
     flex-flow: row wrap;
     justify-content: space-around;
     align-content: space-between;
 }
 
 .card {
-    width: 300px;
+    width: 250px;
     height: 300px;
     background-color: white;
     text-align: center;
     margin: 10px;
-    border-radius: 5px;
     position: relative;
     box-shadow: 10px 10px 5px grey;
 }
 
+.site {
+    margin: 0px 20%;
+    padding: auto;
+    overflow: hidden;
+    max-height: 50px;
+}
+
+.site:hover {
+    background-color: #f31351;
+}
+
 .card-image img {
-    height: 150px;
+    background-color: greenyellow;
+    height: 130px;
     max-width: 100%;
 }
 
@@ -341,4 +354,11 @@ td {
     margin: 30px;
     height: 50%;
     padding: 10px;
+}
+
+@media screen and (max-device-width: 680px) {
+    .menu-bar {
+        display: none;
+        color: green;
+    }
 }

@@ -1,15 +1,17 @@
 {
-    "journals": {
+        "journals": {
                 "iiss"          : {"image": "static/img/iiss.png", "country":"UK", "institute":"International Institute for Strategic Studies", "url":"iiss.org"},
                 "csis"          : {"image": "static/img/csis.jpg", "country":"USA", "institute":"Center for Strategic and International Studies", "url":"csis.org"},
                 "idsa"          : {"image": "static/img/idsa.jpg", "country":"India", "institute":"Manohar Parrikar Institute for Defence Studies and Analyses", "url":"idsa.in"},
                 "fsss"          : {"image": "static/img/fsss.jpg", "country":"India", "institute":"Forum for Strategic and Security Studies","url":"fsss.in"},
                 "dr"            : {"image": "static/img/idr.png", "country":"India", "institute":"Indian Defence Review", "url":"http://www.indiandefencereview.com"},
+                "ipcs"          : {"image": "static/img/ipcs.png", "country":"India", "institute":"Institute of Peace and Conflict Studies", "url":"https://ipcs.org"},
                 "sipri"         : {"image": "static/img/sipri.png", "country":"Sweden", "institute":"Stockholm International Peace Research Institute", "url":"sipri.org"},
                 "beijing review": {"image": "static/img/br.jpeg", "country":"China", "institute":"Beijing Review", "url":"bjreview.com"},
-                "aviationweek"  : {"image": "static/img/aw.png", "country":"USA", "institute":"Aviation Week and Space Technology", "url":"aviationweek.com"}
-                },
-    "army" :{
+                "aviationweek"  : {"image": "static/img/aw.png", "country":"USA", "institute":"Aviation Week and Space Technology", "url":"aviationweek.com"},
+                "idrw"          : {"image": "static/img/idrw.png", "country":"India", "institute":"Indian Defence Reasearch Wing", "url":"https://idrw.org"}
+        },
+        "army" :{
             "image"     : "static/img/ia.png",
             "site"      : "https://indianarmy.nic.in",
             "twitter"   : "https://twitter.com/adgpi",
@@ -33,37 +35,37 @@
                                 "It is recorded that Adolf Hitler expressed his desire to acquire the Gurkha Regiment because he believed that he could have acquired the whole of Europe if he had Gurkha, as it was the only force in the whole world that could confront and withstand a German Attack",
                                 "The 16th Light Cavalry, a regiment of the Armoured Corps, a primary combat arm of the Indian Army was formed in 1776 and is the oldest armored regiment created by the East India Company at Kolkata"
                           ]
-            },
-    "air force" :   {
-                    "image"     : "static/img/iaf.png",
-                    "site"      : "https://indianairforce.nic.in",
-                    "twitter"   : "https://twitter.com/IAF_MCC",
-                    "instagram" : "https://instagram.com/indianairforce/",
-                    "facebook"  : "https://facebook.com/IndianAirForce/",
-                    "youtube"   : "https://www.youtube.com/channel/UC4k15Q51NS6ws5Xkt-GDBBw",
-                    "join"      : "https://careerindianairforce.cdac.in/",
-                    "about"     : "The Indian Air Force was officially established on 8th October 1932, and on 1st April 1954, Air Marshal Subroto Mukherjee, one of the founding members of the Air Force took over as the first Indian Chief of Air Staff. With the passage of time, the Indian Air Force undertook massive upgrading of its aircraft and equipments, and as part of the process, it introduced more than twenty new types of aircrafts. The last decade of the twentieth century saw a phenomenal change in the structure of the Indian Air Force with induction of women into the Air Force for short service commissions. It was also a time when the Air Force undertook some of the most perilous operations ever undertaken.",
-                    "facts"     : [
-                                        "With around 1, 70,000 personnel and 1,500 aircraft, IAF is the fourth largest air force in the world after the US, Russia and China. The Indian air force is also the seventh strongest air force in the world",
-                                        "The Indian Air Force has an out-station base in Tajikistan and is seeking another in Afghanistan",
-                                        "IAF's Hindon Air Force Station, situated near Ghaziabad is the largest in Asia and 8th largest in the world. The highest Air Force Station is Siachen Glacier AFS situated at a height of 22,000 ft or (or 6,706 m)",
-                                        "Flying officer Nirmal Jit Singh Sekhon was the first and only IAF officer to be awarded the Param Veer Chakra posthumously for his bravery in the 1971 India-Pakistan war",
-                                        "IAF has one Air Marshal at a time and Padmavathy Bandopadhyay is the first woman Air Marshal of the Indian Air Force. Also, she was the second woman in the Indian armed forces who was promoted to three-star rank",
-                                        "The IAF destroyed more than 40 APCs, 29 Pakistani tanks, and a railway train during the Battle of Longewala in the 1971 Indo-Pak War",
-                                        "Its motto Nabha Sparsham Deeptham is taken from the eleventh chapter of the Bhagavad Gita"
-                                  ]
+        },
+        "air force" :   {
+                "image"     : "static/img/iaf.png",
+                "site"      : "https://indianairforce.nic.in",
+                "twitter"   : "https://twitter.com/IAF_MCC",
+                "instagram" : "https://instagram.com/indianairforce/",
+                "facebook"  : "https://facebook.com/IndianAirForce/",
+                "youtube"   : "https://www.youtube.com/channel/UC4k15Q51NS6ws5Xkt-GDBBw",
+                "join"      : "https://careerindianairforce.cdac.in/",
+                "about"     : "The Indian Air Force was officially established on 8th October 1932, and on 1st April 1954, Air Marshal Subroto Mukherjee, one of the founding members of the Air Force took over as the first Indian Chief of Air Staff. With the passage of time, the Indian Air Force undertook massive upgrading of its aircraft and equipments, and as part of the process, it introduced more than twenty new types of aircrafts. The last decade of the twentieth century saw a phenomenal change in the structure of the Indian Air Force with induction of women into the Air Force for short service commissions. It was also a time when the Air Force undertook some of the most perilous operations ever undertaken.",
+                "facts"     : [
+                                "With around 1, 70,000 personnel and 1,500 aircraft, IAF is the fourth largest air force in the world after the US, Russia and China. The Indian air force is also the seventh strongest air force in the world",
+                                "The Indian Air Force has an out-station base in Tajikistan and is seeking another in Afghanistan",
+                                "IAF's Hindon Air Force Station, situated near Ghaziabad is the largest in Asia and 8th largest in the world. The highest Air Force Station is Siachen Glacier AFS situated at a height of 22,000 ft or (or 6,706 m)",
+                                "Flying officer Nirmal Jit Singh Sekhon was the first and only IAF officer to be awarded the Param Veer Chakra posthumously for his bravery in the 1971 India-Pakistan war",
+                                "IAF has one Air Marshal at a time and Padmavathy Bandopadhyay is the first woman Air Marshal of the Indian Air Force. Also, she was the second woman in the Indian armed forces who was promoted to three-star rank",
+                                "The IAF destroyed more than 40 APCs, 29 Pakistani tanks, and a railway train during the Battle of Longewala in the 1971 Indo-Pak War",
+                                "Its motto Nabha Sparsham Deeptham is taken from the eleventh chapter of the Bhagavad Gita"
+                                ]
 
-                    },
-    "navy" :{
-            "image"     : "static/img/in.png",
-            "site"      : "https://indiannavy.nic.in",
-            "twitter"   : "https://twitter.com/indiannavy",
-            "instagram" : "https://instagram.com/indiannavy/",
-            "facebook"  : "https://www.facebook.com/IndianNavy",
-            "youtube"   : "https://www.youtube.com/channel/UCwf4mnzdbyCIhyuzNmjCQTw",
-            "join"      : "joinindiannavy.nic.in",
-            "about"     : "The foundation of the modern Indian Navy was laid in the seventeenth century when the East India Company had established a maritime force, thereby graduating in time to the establishment of the Royal Indian Navy in 1934. The Headquarters of the Indian Navy is located in New Delhi, and is under the command of the Chief of the naval staff – an Admiral. The Indian navy is deployed under three area commands, each headed by a flag officer. The Western Naval Command is headquartered in Bombay on the Arabian Sea; the Southern Naval Command in Kochi (Cochin), in Kerala, also on the Arabian Sea; and the Eastern Naval Command in Vishakhapatnam, Andhra Pradesh, on the Bay of Bengal.",
-            "facts"     : [
+        },
+        "navy" :{
+                "image"     : "static/img/in.png",
+                "site"      : "https://indiannavy.nic.in",
+                "twitter"   : "https://twitter.com/indiannavy",
+                "instagram" : "https://instagram.com/indiannavy/",
+                "facebook"  : "https://www.facebook.com/IndianNavy",
+                "youtube"   : "https://www.youtube.com/channel/UCwf4mnzdbyCIhyuzNmjCQTw",
+                "join"      : "joinindiannavy.nic.in",
+                "about"     : "The foundation of the modern Indian Navy was laid in the seventeenth century when the East India Company had established a maritime force, thereby graduating in time to the establishment of the Royal Indian Navy in 1934. The Headquarters of the Indian Navy is located in New Delhi, and is under the command of the Chief of the naval staff – an Admiral. The Indian navy is deployed under three area commands, each headed by a flag officer. The Western Naval Command is headquartered in Bombay on the Arabian Sea; the Southern Naval Command in Kochi (Cochin), in Kerala, also on the Arabian Sea; and the Eastern Naval Command in Vishakhapatnam, Andhra Pradesh, on the Bay of Bengal.",
+                "facts"     : [
                                 "The Ezhimala Naval Academy in Kerala is the largest of its kind in Asia",
                                 "India’s first aircraft carrier was INS Vikrant. INS Viraat of the Indian navy is the largest aircraft carrier in India.",
                                 "Indian navy holds the distinction of one of the only two naval aerobatic teams in the world. The name of the aerobatic demonstration team is Sagar Pawan which uses 4 HJT-16 Kiran Mk.2 trainer aircrafts. The colour scheme used by the naval aircrafts is dark blue on white. The other aerobatic demonstration team is Blue Angels of the US Navy",
@@ -75,23 +77,25 @@
                                 "Indian Navy played a decisive role in the success of Kargil War. However, this information was kept under wraps for a long time. Personals from the MARCOS unit fought alongside Indian army in the Himalayas under the naval operation, Talwar",
                                 "INS Arihant is the first ballistic missile submarine to have been built by a country other than the five permanent members of the UNSC. It is a 6,000-tonne vessel and India’s only nuclear-powered ballistic missile submarine"
                           ]
-            },
-    "websites" :    {
-                    "manufacturing" : ["https://www.investindia.gov.in/sector/defence-manufacturing"],
-                    "compare"       : ["https://armedforces.eu/compare/country_India_vs_China"]
-                    },
-    "defence updates" : {
-                            "rstv" : ""
-                        },
-    "initiatives" : {
-                    "Make In India" : {"image": "static/img/min.png"},
-                    "Swach Bharat" : {"image": "static/img/swach.png"},
-                    "Digital India" : {"image": "static/img/digital.png"},
-                    "Jal Shakti"    : {"image": "static/img/jalshakti.png"},
-                    "Smart City"   : {"image": "static/img/smart.png"},
-                    "Skill India"   : {"image": "static/img/skill.png"}
-    },
-    "india" :  {       
+        },
+        "armedforces" : "The Indian Armed Forces are the military forces of the Republic of India. It consists of three professional uniformed services: the Indian Army, Indian Navy, and Indian Air Force. Additionally, the Indian Armed Forces are supported by the Indian Coast Guard and paramilitary organisations (Assam Rifles, and Special Frontier Force) and various inter-service commands and institutions such as the Strategic Forces Command, the Andaman and Nicobar Command and the Integrated Defence Staff. The President of India is the Supreme Commander of the Indian Armed Forces. The Indian Armed Forces are under the management of the Ministry of Defence (MoD) of the Government of India. With strength of over 1.4 million active personnel, it is the world's second-largest military force and has the world's largest volunteer army. It also has the third-largest defence budget in the world. As per 2015 Credit Suisse report, the Indian Armed Forces is the world's fifth-most powerful military, whereas the 2020 GlobalFirepower report lists it as the fourth most-powerful military",
+        "websites" :   {
+                        "manufacturing" : ["https://www.investindia.gov.in/sector/defence-manufacturing"],
+                        "compare"       : ["https://armedforces.eu/compare/country_India_vs_China"],
+                        "info"          : ["https://www.globalsecurity.org"]
+        },
+        "defence updates" : {
+                                "rstv" : ""
+        },
+        "initiatives" : {
+                        "Make In India" : {"image": "static/img/min.png"},
+                        "Swach Bharat" : {"image": "static/img/swach.png"},
+                        "Digital India" : {"image": "static/img/digital.png"},
+                        "Jal Shakti"    : {"image": "static/img/jalshakti.png"},
+                        "Smart City"   : {"image": "static/img/smart.png"},
+                        "Skill India"   : {"image": "static/img/skill.png"}
+        },
+        "india" :  {       
                 "name"        : "Republic of India or Bhartiya Ganrajya", 
                 "capital"     : "New Delhi",
                 "area"        : "3,287,263 km2",
@@ -135,6 +139,7 @@
                                 "The world's first university was established in Takshila in 700 BC. More than 10,500 students from all over the world studied more than 60 subjects. The University of Nalanda built in the 4th century was one of the greatest achievements of ancient India in the field of education.",
                                 "The Art of Navigation & Navigating was born in the river Sindh over 6000 years ago. The very word Navigation is derived from the Sanskrit word 'NAVGATIH'. The word navy is also derived from the Sanskrit word 'Nou'",
                                 "Ayurveda is the earliest school of medicine known to mankind. The Father of Medicine, Charaka, consolidated Ayurveda 2500 years ago",
+				"Bhargava stated that India is considered as the pharmacy of the world",
                                 "Bhaskaracharya rightly calculated the time taken by the earth to orbit the Sun hundreds of years before the astronomer Smart",
                                 "The value of 'pi' was first calculated by the Indian Mathematician Budhayana, and he explained the concept of what is known as the Pythagorean Theorem",
                                 "The Baily Bridge is the highest bridge in the world. It is located in the Ladakh valley between the Dras and Suru rivers in the Himalayan mountains. It was built by the Indian Army in August 1982",
@@ -147,8 +152,29 @@
                                 "Yoga has its origins in India and has existed for over 5,000 years",
                                 "Varanasi, also known as Benaras, was called 'the Ancient City' when Lord Buddha visited it in 500 B.C., and is the oldest, continuously inhabited city in the world today",
                                 "India has a 14818 km long complex border wit extreme geography like swamps, deserts, fertile lands and tropical jungles and a 7516 km coastline: Pakistan-3323km, China-3488km, Nepal-1751km, Bhutan-699km, Bangladesh-4097km, Myanmar-1643km",
-                                "MP, Haryana, Delhi, Chattisgarh, Jharkhand and Telangana do not have an international boundary."
+                                "MP, Haryana, Delhi, Chattisgarh, Jharkhand and Telangana do not have an international boundary"
                                 ]
-
-    }
+        },
+        "kashmir" : [
+                        "Syed Ahmad Khan (1817–1898) as the architect of the two-nation theory",
+                        "Jamaat-e-islami was once the face of Hizbul Mujahedeen and provided cadre to the PDP and abrogation of 370 flushed their money that they had pumped in Kashmir for an anti-India narrative. So, JeI was basically negotiating with India for a de-facto control over Kashmir through PDP"
+        ],
+        "justfacts"  : {
+                        "chemistry" : [
+                                "DNA is flame retardant",
+                                "Cu is the only metal to naturally have anti-bacterial properties",
+                                "Dynamite contains peanuts as an ingredient",
+                                "20% of oxygen is produced by amazon forest",
+                                "Talc is the softest known substance",
+                                "Graphine(the miracle material) is best conductor of electricity",
+                                "8 nobel metals- Ruthenium, Rhodium, Silver, Osmium, Iridium, Platinum and Gold do not rust",
+                                "Each litre of seawater has 13 billionth of a gram of gold",
+                                "Bose-Einstein condensate superfluid(the coldest form of matter) defies gravity and flows upward",
+                                "Osmium is the densest known stable element on earth"
+                        ],
+                        "internet" : [
+                                "internet delivers bytes of data as single bits at a time",
+                                ""
+                        ]
+        }
 }

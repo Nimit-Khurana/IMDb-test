@@ -72,8 +72,8 @@
     </script>
     <style>
         body {
-            background-color: #e5e5e5;
-            background-image: url('static/img/indiaa.jpg');
+            background-color: black;
+            background-image: url('static/img/inda.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -83,7 +83,7 @@
 </head>
 
 <body>
-
+    <!---------------- Overlay ------------------->
     <div id="overlay">
         <div class="overlay-inner">
             <div class="head">
@@ -132,11 +132,14 @@
             <div class="head">
                 <img class="close" style="width: 64px;height: 64px;" src="static/img/close.png">
             </div>
-            <div id="mySidenav">
+            <div id="def-sidenav">
                 <a href="#" id="army">Indian Army</a>
                 <a href="#" id="navy">Indian Navy</a>
                 <a href="#" id="airforce">Indian Air Force</a>
             </div>
+            <p style="padding: 20px;">
+                {{ data['armedforces'] }}
+            </p>
             <div id="defence">
                 <div class="div-defence">
                     {% set d = data['army'] %}
@@ -160,12 +163,12 @@
                         <h2>Indian Navy</h2>
                     </a>
                     <a href="{{ d['join'] }}">Be a part of it!</a>
-                    <hr style="width:50%;color: #2a5744;">
+                    <hr style="width:50%;color: white;">
                     <a href="{{ d['instagram'] }}"><img src="static/img/instagram.png"></a>
                     <a href="{{ d['twitter'] }}"><img src="static/img/twitter.png"></a>
                     <a href="{{ d['facebook'] }}"><img src="static/img/facebook.png"></a>
                     <a href="{{ d['youtube'] }}"><img src="static/img/youtube.png"></a>
-                    <hr style="width:50%;color: #2a5744;">
+                    <hr style="width:50%;color: white;">
                     <p>{{ d['about'] }}</p>
                 </div>
                 <div class="div-defence">
@@ -175,13 +178,33 @@
                         <h2 style="color: #5294e2;">Indian Air Force</h2>
                     </a>
                     <a href="{{ d['join'] }}">Be a part of it!</a>
-                    <hr style="width:50%;color: #2a5744;">
+                    <hr style="width:50%;color: #5294e2;">
                     <a href="{{ d['instagram'] }}"><img src="static/img/instagram.png"></a>
                     <a href="{{ d['twitter'] }}"><img src="static/img/twitter.png"></a>
                     <a href="{{ d['facebook'] }}"><img src="static/img/facebook.png"></a>
                     <a href="{{ d['youtube'] }}"><img src="static/img/youtube.png"></a>
-                    <hr style="width:50%;color: #2a5744;">
+                    <hr style="width:50%;color: #5294e2;">
                     <p>{{ d['about'] }}</p>
+                </div>
+            </div>
+            <div class="branch-journal">
+                <h3 style="padding:10px;">Defence Journals <img class="drop_btn" src="static/img/down.png"></h3>
+
+                <div id="branch-id" class="cards display-none">
+                    {% for key,value in data["journals"].items() %}
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{ value['image'] }}">
+                        </div>
+                        <div style="color:black; height:120px; background-color: lawngreen;">
+                            <h3>{{ value["institute"] }} - {{ value["country"] }}</h3>
+                        </div>
+                        <div class="site">
+                            <a href="https:/{{ value['url'] }}" style="text-decoration: none;color: black;">Visit this
+                                site</a>
+                        </div>
+                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -238,34 +261,15 @@
                 <a id="overlay-btn-def" href="#">
                     <p>Know your forces</p>
                 </a>
+                <a id="overlay-btn-def" href="#">
+                    <p>Hiking</p>
+                </a>
             </div>
         </div>
 
         <hr style="margin-top: 100px; border-color: #b00020;border-width:5px;">
 
-        <div class="branch-journal">
-            <h3 style="padding:10px;">Defence Journals <img class="drop_btn" src="static/img/down.png"></h3>
 
-            <div id="branch-id" class="cards display-none">
-                {% for key,value in data["journals"].items() %}
-                <div class="card">
-                    <div class="card-image">
-                        <img src="{{ value['image'] }}">
-                    </div>
-                    <div style="top:50%">
-                        <h3>{{ value["institute"] }}</h3>
-                    </div>
-                    <div>
-                        <a href="https:/{{ value['url'] }}" style="text-decoration: none;color: #f31351;">Visit this
-                            site</a>
-                    </div>
-                    <div style="bottom: 0;position: absolute;">
-                        {{ value["country"] }}
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
 
         <hr style="margin: 4% 20% 4% 20%; border-color: #b00020">
     </div>
@@ -305,8 +309,9 @@
             <h3 style="color: #b00020;">About</h3>
             <p>This project here is to spread the knowledge of the diversity of India and cherish it's unsaid beauty!
             </p>
-            <p><a style="text-decoration: none;color:white" href="/india/api.html">Get API</p></a>
-                <p></p>
+            <a style="text-decoration: none;color:#b00020" href="/india/api.html">
+                Get API
+            </a>
         </div>
 
     </footer>
