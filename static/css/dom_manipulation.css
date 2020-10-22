@@ -25,7 +25,7 @@
         overflow: hidden;
     }
     
-    .card {
+    .movie-card {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         /*max-width: 300px;*/
         text-align: center;
@@ -55,25 +55,25 @@
     }
     /* ---------------------------------------*/
     
-    ::-webkit-scrollbar {
+     ::-webkit-scrollbar {
         width: 10px;
     }
     /* Track */
     
-    ::-webkit-scrollbar-track {
+     ::-webkit-scrollbar-track {
         box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
         border-radius: 18px;
         background: black;
     }
     /* Handle */
     
-    ::-webkit-scrollbar-thumb {
+     ::-webkit-scrollbar-thumb {
         background: #c7bbbc;
         border-radius: 10px;
     }
     /* Handle on hover */
     
-    ::-webkit-scrollbar-thumb:hover {
+     ::-webkit-scrollbar-thumb:hover {
         background: #330104;
     }
     /*------------------------------------------------*/
@@ -161,7 +161,7 @@
         [class*="carousel-background"] {
             width: 100%;
         }
-        [class*="card"] {
+        [class*="movie-card"] {
             width: 45%;
             height: 200px;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

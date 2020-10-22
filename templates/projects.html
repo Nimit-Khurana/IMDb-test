@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<title>Nimit Khurana</title>
+<link rel="icon" href="static/img/site/title.png" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="static/css/site/style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.5.0/viewer.css">
+
+<body class="w3-black">
+
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+        <!-- Avatar image in top left corner -->
+        <img src="static/img/site/profile.jpg" style="width:100%">
+        <a href="{{ url_for('index') }}" class="w3-bar-item w3-button w3-padding-large w3-black">
+            <i class="fa fa-home w3-xxlarge"></i>
+            <p>Home</p>
+        </a>
+    </nav>
+
+
+
+    <!-- Navbar on small screens (Hidden on medium and large screens) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+            <a href="#" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+        </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="w3-padding-large" id="main">
+
+        <!-- About Section -->
+        <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+            <h2 class="w3-text-light-grey"><a target=_blank href="https://www.github.com/Nimit-Khurana/IMDb-test"><i class="fa fa-github w3-hover-opacity" ></i></a> IMDb API Wrapper</h2>
+            <hr style="width:200px" class="w3-opacity">
+            <div>
+                <p>Screenshots</p>
+                <img class="image" src="static/img/site/imdb1.png">
+                <img class="image" src="static/img/site/imdb2.png">
+                <img class="image" src="static/img/site/imdb3.png">
+                <p>Have a look at the documentation!</p>
+                <div class="card-box">
+                    <div class="card">
+                        <img src="static/img/site/pdf.png">
+                        <h3>Getting started with flask</h3>
+                        <p><a target="_blank" href="https://drive.google.com/file/d/121EtoKmM9q6WDMZyIca86mxBRcgK9Ljz/view?usp=sharing">Download</a></p>
+                    </div>
+                    <div class="card">
+                        <img src="static/img/site/pdf.png">
+                        <h3>Getting started with Nginx</h3>
+                        <p><a target="_blank" href="https://drive.google.com/open?id=1hscxzFwD0oqx2-d8qvyZVvHT7osdeykl">Download</a></p>
+                    </div>
+                    <div class="card">
+                        <img src="static/img/site/pdf.png">
+                        <h3>Getting started with MySQL server</h3>
+                        <p><a target="_blank" href="https://drive.google.com/open?id=1hscxzFwD0oqx2-d8qvyZVvHT7osdeykl">Download</a></p>
+                    </div>
+                    <div class="card">
+                        <img src="static/img/site/pdf.png">
+                        <h3>Arch Linux</h3>
+                        <p><a target="_blank" href="https://drive.google.com/open?id=1hscxzFwD0oqx2-d8qvyZVvHT7osdeykl">Download</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+            <h2 class="w3-text-light-grey"><a target=_blank href="https://www.github.com/Nimit-Khurana/nba-scores"><i class="fa fa-github w3-hover-opacity" ></i></a> NBA Info.</h2>
+            <hr style="width:200px" class="w3-opacity">
+            <div>
+                <p>Screenshots</p>
+                <img class="image" src="static/img/site/nba1.png">
+                <img class="image" src="static/img/site/nba2.png">
+                <img class="image" src="static/img/site/nba3.png">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+        <h2 class="w3-text-light-grey">Contact Me</h2>
+        <hr style="width:200px" class="w3-opacity">
+
+        <div class="w3-section">
+            <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Panchkula</p>
+            <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +91 9501138443</p>
+            <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: nimitkhuranaa@gmail.com</p>
+        </div><br>
+        <!-- End Contact Section -->
+    </div>
+    <div>
+        <button id="home-button">back to home</button>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge footer">
+        <a target=_blank href="https://www.instagram.com/_ri_ch_ie"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a target=_blank href="https://www.github.com/Nimit-Khurana"><i class="fa fa-github w3-hover-opacity" ></i></a>
+        <a target=_blank href="https://www.quora.com/profile/Nimit-Khurana"><i class="fa fa-quora w3-hover-opacity"></i></a>
+        <!-- End footer -->
+    </footer>
+
+    <!-- END PAGE CONTENT -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.5.0/viewer.js"></script>
+    <script type="module" src="static/js/site/imageViewer.js"></script>
+    <script type="text/javascript" src="static/js/site/scrollto.js"></script>
+</body>
+
+</html>

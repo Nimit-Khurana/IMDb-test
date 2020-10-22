@@ -159,6 +159,12 @@
                         "Syed Ahmad Khan (1817–1898) as the architect of the two-nation theory",
                         "Jamaat-e-islami was once the face of Hizbul Mujahedeen and provided cadre to the PDP and abrogation of 370 flushed their money that they had pumped in Kashmir for an anti-India narrative. So, JeI was basically negotiating with India for a de-facto control over Kashmir through PDP"
         ],
+        "knowmore" : {
+                        "Festival of Bharat" : {
+                                                "youtube": "https://www.youtube.com/channel/UCv5R3jfWsdvsmNJbAjiZ53g",
+                                                "website": "https://festivalofbharat.com"
+                        }
+        },
         "justfacts"  : {
                         "chemistry" : [
                                 "DNA is flame retardant",

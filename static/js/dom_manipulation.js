@@ -8,7 +8,7 @@ $(document).ready(function() {
 
         $.ajax({
             'type': "GET",
-            'url': "/moviejson?query=" + inputValue,
+            'url': "/movieJsonDataEndpoint?query=" + inputValue,
             contentType: 'application/json;charset=UTF-8',
             beforeSend: function() {},
             success: function(response) {
@@ -24,7 +24,7 @@ $(document).ready(function() {
                     const title = data[i]['id']
                     const movieposter = data[i]['image']
                     const moviename = data[i]['name']
-                    const myHtml = "<div class='card'><img class='poster' src='" + movieposter + "'><a target='_blank' href='/" + moviename + "?t=" + title + "&i=" + movieposter + "'><p id='card_p' style='text-align:center;color:white;'>" + moviename + "</p></a></div>";
+                    const myHtml = "<div class='movie-card'><img class='poster' src='" + movieposter + "'><a target='_blank' href='/" + moviename + "?t=" + title + "&i=" + movieposter + "'><p id='card_p' style='text-align:center;color:white;'>" + moviename + "</p></a></div>";
                     console.log(myHtml);
                     if (data) {
                         $('#main_div').append(myHtml);

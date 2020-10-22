@@ -16,6 +16,8 @@
     <link href="static/css/style.css" rel="stylesheet">
     <link href="static/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
     <link href="static/css/dom_manipulation.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -33,6 +35,7 @@
             </div>
         </div>
     </header>
+
     <div class="error">
         {% block error %} {% endblock %}
     </div>
@@ -57,8 +60,9 @@
                     </div>
                     <div class="col-lg-3 col-md-6 footer-contact">
                         <h4>Visit other places</h4>
-                        <a href="/india">Know your India</a><br>
-                        <a href="/wuhan">COVID-19</a>
+                        <a href="{{ url_for('index') }}">About Me</a><br>
+                        <a href="{{ url_for('india') }}">Know India</a><br>
+                        <a href="{{ url_for('wuhan') }}">COVID-19</a>
                     </div>
                     <div class="col-lg-3 col-md-6 footer-contact">
                         <h4>About</h4>

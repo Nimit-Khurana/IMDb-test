@@ -5,6 +5,12 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #202328;
+    margin: 0px;
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
 }
 
 #overlay,
@@ -139,12 +145,13 @@ body {
 .menu-items {
     margin: auto;
     display: flex;
+    align-items: center;
     justify-content: flex-end;
 }
 
 .menu-items p {
-    border-right: 1px solid white;
     padding: 10px;
+    text-align: center;
 }
 
 .menu-items a {
@@ -198,11 +205,8 @@ td {
     padding: 5px;
 }
 
-.active {
-    background-color: #b00020;
-}
-
-.branch-gov {
+.branch-gov,
+.branch-twitter {
     background-color: #2ea35e;
     max-width: 100%;
 }
@@ -212,8 +216,10 @@ td {
 }
 
 .branch-gov,
-.branch-journal {
+.branch-journal,
+.branch-twitter {
     border-radius: 10px;
+    margin-top: 30px;
 }
 
 .branch-header {
@@ -258,21 +264,20 @@ td {
 }
 
 #defence,
-#footer {
+#india-footer {
     display: flex;
     justify-content: center;
     width: 100%;
     color: white;
-    background-color: #202328;
+    background-color: #111111;
     bottom: 0px;
     overflow: hidden;
 }
 
-#footer {
+#india-footer {
     max-width: 100%;
-    height: 250px;
+    height: 400px;
     align-items: center;
-    padding-left: 10px;
 }
 
 .div-defence-data {
@@ -296,8 +301,17 @@ td {
 .div-defence,
 .footer-item {
     height: 100%;
-    min-width: 30%;
-    margin: 6px;
+    width: 25%;
+    margin: 10px;
+}
+
+.footer-item {
+    padding: 20px 0px 0px 0px;
+}
+
+.footer-item-heading {
+    margin-bottom: 10px;
+    margin-top: 40px;
 }
 
 .div-defence a {
@@ -325,6 +339,60 @@ td {
     margin: 10px;
     position: relative;
     box-shadow: 10px 10px 5px grey;
+}
+
+.twitter_div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    background-color: #212121;
+    ;
+}
+
+.twitter-user-card {
+    border-radius: 3px;
+    max-height: 300px;
+    width: 200px;
+    color: black;
+    margin: 20px;
+}
+
+.twitter-image {
+    border: 3px solid white;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    background-image: url("static/img/64.png");
+    position: relative;
+    left: 50px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 1;
+    text-align: center;
+    opacity: 0.5;
+}
+
+.twitter-hidden {
+    display: none;
+    position: relative;
+    background-color: #1e1b26;
+    height: 190px;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: .3s transform ease-in-out;
+}
+
+.twitter-user-card:hover .twitter-hidden {
+    display: block;
+}
+
+.twitter-user-card:hover .card-footer {
+    color: #5294e2;
+    background-color: white;
 }
 
 .site {
@@ -363,7 +431,7 @@ td {
 .gov-initiatives-roll {
     justify-content: center;
     align-items: baseline;
-    background-color: white;
+    background-color: #EEEEEE;
 }
 
 .gov-card {
@@ -387,6 +455,9 @@ td {
     .mobile-menu-items {
         padding: 4px;
         background-color: #202328;
+    }
+    .mobile-menu-items a {
+        color: white;
     }
     #menu-bar {
         display: block;
@@ -422,17 +493,20 @@ td {
     }
     .gov-card p {
         font-size: 10px;
-        ;
     }
-    #footer {
+    #india-footer {
         display: block;
         width: 100%;
         color: white;
-        background-color: #202328;
+        background-color: #111;
         bottom: 0px;
         height: auto;
         align-items: center;
         border-left: none;
         padding: 5px;
+    }
+    .footer-item {
+        width: 100%;
+        margin: 5px;
     }
 }

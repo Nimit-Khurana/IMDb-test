@@ -1,106 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %} {% block header %}
+<a href="#intro" class="scrollto"><img src="static/img/map64.png">Incredible India</a> {% endblock %} {% block section_intro %}
+<div id="main">
 
-<head>
-    <meta charset="utf-8">
-    <title>IMDb</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
 
-    <link href="static/img/title.png" rel="icon">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <hr class="hr" style="border-color: #b00020;border-width:5px;">
 
-    <link href="static/css/style.css" rel="stylesheet">
-    <link href="static/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="static/css/dom_manipulation.css" rel="stylesheet">
-</head>
-
-<body>
-
-    <div class="loading-div">
-        <img src="static/img/loading.gif">
-    </div>
-
-    <header id="header">
-        <div class="container-fluid">
-            <div id="logo" class="pull-left">
-                <h1><a href="#intro" class="scrollto">IMDb</a></h1>
-            </div>
-        </div>
-    </header>
-
-    <section id="intro">
-        <div class="intro-container">
-            <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
-                <ol class="carousel-indicators"></ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
-
-                        <div class="carousel-background"><img src="static/img/intro.jpg" alt="">
-                            <div class="carousel-container">
-                                <div class="carousel-content">
-                                    <div class="md-form mt-0">
-                                        <h2 class="search-text">Search for movies</h2>
-                                        <form id="form">
-                                            <input class="form-control" type="text" id="query_input" name="query">
-                                            <a href="#" id="ajax_button" class="btn-get-started scrollto">Search</a>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <div class="branch-twitter">
+        <h3 style="padding:10px;color:black"><img src="static/img/twitter.png">A few twitter handles</h3>
+        <div class="twitter_div">
+            {%for profile in twitter_data%}
+            <div class="twitter-user-card">
+                <div style="height: 80px; background-color: #1da1f2;">
+                    <div class="twitter-image">
+                        <img src="static/img/64.png">
                     </div>
                 </div>
-            </div>
-        </div>
+                <div style="width:100%; height: 3px;background-color:#b00020"></div>
+                <div class="twitter-hidden ">
+                    <p style="padding-top: 40px; color: #1da1f2;"><strong>{{ profile['username'] }}</strong></p>
+                    <p style="color: white;font-size: 12px;"><strong>Description</strong></p>
+                    <a href="{{ profile['url'] }}"><img src="static/img/twitter.png" style="position: relative; top: 30px;"></a>
+                </div>
 
-    </section>
-    {% block div %} {% endblock %}
-    <section id="about">
-        <div class="container">
-            <div class="moviegif1"><img src="static/img/movie1.gif"></div>
-            <header class="section-header">
-                <h3>About</h3>
-                <p>! Lights|Camera|Action !</p>
-                <p><strong>Search for movies without any hassle</strong></p>
-            </header>
-        </div>
-    </section>
-
-    <div id="main_div">
-    </div>
-
-    <footer id="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-3 col-md-6 footer-info">
-                        <h3>Nimit Khurana</h3>
-                    </div>
-                    <div class="col-lg-3 col-md-6 footer-contact">
-                        <h4>Contact</h4>
-                        <p>
-                            <p><img src="static/img/pin.png"> Panchkula, India</p>
-                            <strong>Phone:</strong> +91 9501138443<br>
-                            <strong>Email:</strong> nimitkhuranaa@gmail.com<br>
-                        </p>
-                    </div>
+                <div class="card-footer" style="height: 30px; background-color: #1e1b26;">
+                    <p style="width:50%; margin-left:50%; text-align: center;">
+                        <a href="https://www.google.com/search?q={{ profile['url'] }}" style="text-decoration: none;color: #1da1f2; text-align: center;">More Info</a>
+                    </p>
 
                 </div>
-                <p>© Since 2019</p>
             </div>
+            {%endfor%}
         </div>
-    </footer>
+    </div>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="static/js/main.js"></script>
-    <script src="static/js/dom_manipulation.js"></script>
-</body>
-
-</html>
+    <div class="branch-gov">
+        <h3 style="padding:10px;color:black">Government Initiatives</h3>
+        <div class="gov-initiatives-roll display-flex">
+            {% for key,value in data['initiatives'].items() %}
+            <div class="gov-card">
+                <img src="{{ value['image'] }}">
+                <h3 style="text-align: center;"> {{ key }}</h3>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div> {%endblock%}
