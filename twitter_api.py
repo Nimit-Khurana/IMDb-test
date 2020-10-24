@@ -2,15 +2,11 @@ import requests
 import os
 import json
 from requests_oauthlib import OAuth1
+from twitter_keys import consumer_key, consumer_secretkey, access_secret, access_token
 
 
 # To set your enviornment variables in your terminal run the following line:
 # export 'BEARER_TOKEN'='<your_bearer_token>'
-consumer_key= "EfnqyFq999jGw2UN0svm2hkeK"
-consumer_secretkey= "F0hXK63u1GQVVqwPQpzbGG5YoSz2LBaBGlXGuzLnrsZX83JIPn"
-access_token="832638225206243328-JlL2gT0JyxLYF3EnpJxdXWZLOsRre8b"
-access_secret="Ih4Yt8eUZrMXI8v3x5rKgMARTnxhZDAipM1kDmD3Xo6qt"
-
 
 def bearer_auth():
     return os.environ.get("BEARER_TOKEN")
@@ -53,7 +49,8 @@ def create_headers(bearer_token):
 
 
 def connect_to_endpoint(url, oauth):
-    response = requests.request("GET", url, auth=oauth)  
+    response = requests.request("GET", url, auth=oauth)
+    
     return response.json()
 
 def auth(url):
@@ -63,15 +60,22 @@ def auth(url):
 
 
 def get_user_by_username(username):
-    url = create_url(username=username)
-    tweets = create_url_for_tweets(username)
-    return auth(url)
+    user_url = create_url(username=username)
+    tweets_url = create_url_for_tweets(username)
+    auth_for_user = auth(user_url)
+    auth_for_user_tweets = auth(tweets_url)
+    return auth_for_user_tweets
 
 def get_users_by_listof_usernames():
     usernames = "usernames=iamsrk,narendramodi,PMOIndia,SrBachchan,KanganaTeam,akshaykumar,iHrithik,sachin_rt"
     url = create_url(usernames=usernames)
     return auth(url)
 
+def get_user_tweets():
+    url = create_url_for_tweets()()
+    headers = create_headers(bearer_token)
+    json_response = connect_to_endpoint(url, headers)
+    print(json.dumps(json_response, indent=4, sort_keys=True))
 #print (get_user_by_username("username_richie"))
 #def get_twitter_data():
     #oauth = OAuth1(consumer_key, consumer_secretkey, access_token, access_secret)

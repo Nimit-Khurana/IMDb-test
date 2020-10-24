@@ -12,7 +12,7 @@ var text = "";
     if (letter.length === text.length) {
         count++;
         index = 0;
-        setInterval(() => { console.log("s"); }, 2000)
+        setTimeout(() => {}, 2000)
     }
     if (count === data.length) {
         count = 0;
