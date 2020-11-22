@@ -64,7 +64,7 @@ def get_user_by_username(username):
     tweets_url = create_url_for_tweets(username)
     auth_for_user = auth(user_url)
     auth_for_user_tweets = auth(tweets_url)
-    return auth_for_user_tweets
+    return auth_for_user
 
 def get_users_by_listof_usernames():
     usernames = "usernames=iamsrk,narendramodi,PMOIndia,SrBachchan,KanganaTeam,akshaykumar,iHrithik,sachin_rt"
