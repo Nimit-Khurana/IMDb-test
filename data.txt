@@ -11,6 +11,10 @@
                 "aviationweek"  : {"image": "static/img/aw.png", "country":"USA", "institute":"Aviation Week and Space Technology", "url":"aviationweek.com"},
                 "idrw"          : {"image": "static/img/idrw.png", "country":"India", "institute":"Indian Defence Reasearch Wing", "url":"https://idrw.org"}
         },
+        "ir" : {
+                "cfr"   : {"image":"", "country":"USA", "institute": "Council on Foreign Relations", "url":"cfr.org"},
+                "fa"    : {"image":"", "country":"USA", "institute": "Foreign Relations pub. by CFR", "url":"foreignaffairs.com"}
+        },
         "army" :{
             "image"     : "static/img/ia.png",
             "site"      : "https://indianarmy.nic.in",

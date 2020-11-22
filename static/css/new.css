@@ -178,10 +178,10 @@ a {
     float: left;
     transform: skew(20deg);
     text-align: center;
+    margin: 30px;
 }
 
 .parallel p {
-    color: #202328;
     padding: 10px;
 }
 

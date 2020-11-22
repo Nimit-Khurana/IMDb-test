@@ -128,8 +128,14 @@ def india_api():
 
 @app.route("/test")
 def error():
-    
-    return render_template("test.html")
+    x = VirusData(url="https://covid-india-cases.herokuapp.com/states/")
+    covid_data = [
+        ["Total cases", x.total_cases()],
+        ["Total cured", x.total_cured()],
+        ["Total deaths", x.total_deaths()],
+    ]
+    state_data = x.state_wise_data()
+    return render_template("test.html", data=covid_data, state_data=state_data)
 
 @app.route("/twitter")
 def twitter():

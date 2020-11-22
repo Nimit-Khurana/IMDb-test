@@ -1,57 +1,53 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
+{% extends "base.html" %} {% block header %}
+<a href="#intro" class="scrollto"><img src="/static/img/pandemic.png">Covid-19</a> {% endblock %} {% block section_intro %}
+<section id="intro">
+    <div class="intro-container">
+        <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators"></ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+                    <div class="carousel-background"><img src="static/img/wuhan.jpg" alt="">
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <div class="md-form mt-0">
+                                    <h2>India</h2>
+                                    <div id="parallel-body">
+                                        {% for d in data %}
+                                        <div class="parallel">
+                                            <p style="color:black">{{ d[0] }} {{ d[1] }}</p>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
 
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            margin: 0px;
-            padding: 0px;
-        }
-        
-        .test {
-            position: relative;
-            font-size: 30px;
-        }
-        
-        .test::after {
-            content: "";
-            right: -10px;
-            border-right: 2px solid white;
-            animation: blink 0.9s infinite ease;
-        }
-        
-        @keyframes blink {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <div id="div" style="color:orange;background-color: black;">
-        <p class="test">Hi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
+{% endblock %} {% block main_div %}
 
-</body>
-<script src="static/js/typewriter.js" type="text/javascript"></script>
 
-</html>
+<table class="state-table">
+    <tr>
+        <th>State</th>
+        <th>Total cases</th>
+        <th>Total cured</th>
+        <th>Total deaths</th>
+    </tr>
+    {% for item in state_data %}
+    <tr>
+        <th>{{ item["state"] }}</th>
+        <th>{{ item["noOfCases"] }}</th>
+        <th>{{ item["cured"] }}</th>
+        <th>{{ item["deaths"] }}</th>
+    </tr>
+    {% endfor %}
+</table>
+
+</div>
+{% endblock %}
