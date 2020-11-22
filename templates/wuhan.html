@@ -1,88 +1,54 @@
-<!DOCTYPE html>
+{% extends "base.html" %} {% block header %}
+<a href="#intro" class="scrollto"><img src="/static/img/pandemic.png">Covid-19</a> {% endblock %} {% block section_intro %}
+<section id="intro">
+    <div class="intro-container">
+        <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators"></ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
 
-<head>
-    <title>wuhan virus</title>
-    <link rel="stylesheet" href="static/css/new.css">
+                    <div class="carousel-background"><img src="static/img/wuhan.jpg" alt="">
+                        <div class="carousel-container">
+                            <div class="carousel-content">
+                                <div class="md-form mt-0">
+                                    <h2>India</h2>
+                                    <p style="font-size: 10px;"> Data fetched from Herakuapp.com</p>
+                                    <div id="parallel-body">
+                                        {% for d in data %}
+                                        <div class="parallel">
+                                            <p style="color:black">{{ d[0] }} {{ d[1] }}</p>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
 
-    <style>
-        body {
-            background-image: url('static/img/wuhan.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-            color: #202328;
-        }
-    </style>
-</head>
-
-<body>
-
-    <div id="main">
-        <div id="menu-bar">
-            <img src="/static/img/pandemic.png">
-            <h1 class="menu-header">Wuhan Virus</h1>
-            <div class="menu-items">
-                <a href="/wuhan">
-                    <p class="active">COVID</p>
-                </a>
-                <a href="/">
-                    <p>IMDb</p>
-                </a>
-                <a href="/india">
-                    <p>India</p>
-                </a>
-                <a href="/twitter">
-                    <p>Twitter API</p>
-                </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div id="parallel-body">
-            {% for d in data %}
-            <div class="parallel">
-                <p>{{ d[0] }} : {{ d[1] }}</p>
-            </div>
-            {% endfor %}
-        </div>
-        <hr style="margin: 4% 20% 4% 20%">
-        <table class="state-table">
-            <tr>
-                <th>State</th>
-                <th>Total cases</th>
-                <th>Total cured</th>
-                <th>Total deaths</th>
-            </tr>
-            {% for item in state_data %}
-            <tr>
-                <th>{{ item["state"] }}</th>
-                <th>{{ item["noOfCases"] }}</th>
-                <th>{{ item["cured"] }}</th>
-                <th>{{ item["deaths"] }}</th>
-            </tr>
-            {% endfor %}
-        </table>
-        <button>
-            Download today's data
-        </button>
     </div>
-    <hr style="margin: 4% 20% 4% 20%">
+</section>
+{% endblock %} {% block main_div %}
 
-    <footer id="footer-covid">
-        <div class="footer-div-covid">
-            <h2> COVID-19 </h2>
-            <p style="font-size: 10px;"> Data fetched from Herakuapp.com</p>
-        </div>
-        <div class="footer-div-covid">
-            <h2> Check other sites</h2>
-            <p><a href="https://www.mygov.in/covid-19/"> India gov.</a></p>
-            <p><a href="https://www.worldometers.info/coronavirus/">worldometers.info</a></p>
-            <p><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/">WHO</a></p>
-        </div>
-        <div class="footer-div-covid">
-            <p><img src="static/img/32cov.png">Stay safe!</p>
-            <p><img src="static/img/guide.png">Follow the guidlines!</p>
-            <p><img src="static/img/popcorn.png">Enjoy the lockdown!</p>
-        </div>
-    </footer>
 
-</body>
+<table class="state-table">
+    <tr>
+        <th>State</th>
+        <th>Total cases</th>
+        <th>Total cured</th>
+        <th>Total deaths</th>
+    </tr>
+    {% for item in state_data %}
+    <tr>
+        <th>{{ item["state"] }}</th>
+        <th>{{ item["noOfCases"] }}</th>
+        <th>{{ item["cured"] }}</th>
+        <th>{{ item["deaths"] }}</th>
+    </tr>
+    {% endfor %}
+</table>
 
-</html>
+</div>
+{% endblock %}
