@@ -30,7 +30,7 @@ def create_url(**kwargs):
     return url
 
 def create_url_for_tweets(username):
-    query = "from:"+str(username)+" -is:retweet"
+    query = "from:" + str(username)
     # Tweet fields are adjustable.
     # Options include:
     # attachments, author_id, context_annotations,
@@ -38,8 +38,10 @@ def create_url_for_tweets(username):
     # in_reply_to_user_id, lang, non_public_metrics, organic_metrics,
     # possibly_sensitive, promoted_metrics, public_metrics, referenced_tweets,
     # source, text, and withheld
-    tweet_fields = "tweet.fields=author_id,"
-    url = "https://api.twitter.com/2/tweets/search/recent?query={}&{}".format(query, tweet_fields)
+    tweet_fields = "tweet.fields=author_id"
+    url = "https://api.twitter.com/2/tweets/search/recent?query={}&{}".format(
+        query, tweet_fields
+    )
     return url
 
 
@@ -50,32 +52,33 @@ def create_headers(bearer_token):
 
 def connect_to_endpoint(url, oauth):
     response = requests.request("GET", url, auth=oauth)
-    
     return response.json()
 
 def auth(url):
     oauth = OAuth1(consumer_key, consumer_secretkey, access_token, access_secret)
-    json_response = connect_to_endpoint(url, oauth)
-    return json.dumps(json_response, indent=4, sort_keys=True)
-
-
-def get_user_by_username(username):
-    user_url = create_url(username=username)
-    tweets_url = create_url_for_tweets(username)
-    auth_for_user = auth(user_url)
-    auth_for_user_tweets = auth(tweets_url)
-    return auth_for_user
+    return oauth
 
 def get_users_by_listof_usernames():
     usernames = "usernames=iamsrk,narendramodi,PMOIndia,SrBachchan,KanganaTeam,akshaykumar,iHrithik,sachin_rt"
     url = create_url(usernames=usernames)
-    return auth(url)
+    authorise = auth(url)
+    json_response = connect_to_endpoint(url, authorise)
+    return json.dumps(json_response, indent=4, sort_keys=True)
 
-def get_user_tweets():
-    url = create_url_for_tweets()()
-    headers = create_headers(bearer_token)
-    json_response = connect_to_endpoint(url, headers)
-    print(json.dumps(json_response, indent=4, sort_keys=True))
+def get_user_by_username(username):
+    user_url = create_url(username=username)
+    auth_for_user = auth(user_url)
+    json_response = connect_to_endpoint(user_url, auth_for_user)
+
+    tweets_url = create_url_for_tweets(username)
+    auth_for_user_tweets = auth(tweets_url)
+    json_response_tweets = connect_to_endpoint(tweets_url, auth_for_user_tweets)
+    print (type(json_response_tweets))
+    print (json_response_tweets)
+    user_data = json_response.update(json_response_tweets)
+    return json.dumps(json_response_tweets, indent=4, sort_keys=True)
+
+    
 #print (get_user_by_username("username_richie"))
 #def get_twitter_data():
     #oauth = OAuth1(consumer_key, consumer_secretkey, access_token, access_secret)
